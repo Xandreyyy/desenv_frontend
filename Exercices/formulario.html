@@ -7,12 +7,47 @@
     <title>Questionário</title>
 </head>
 <body>
-    <h1>Formulário</h1>
-    <label>Informe seu nome: </label><br/>
-    <input id="nome"><br/>
-    <label>Digite um texto:</label><br/>
-    <textarea rows="3"></textarea><br/>
-    <button id="enviar">ENVIAR</button>
+    <form>
+        <h1>Formulário</h1>
+        <label for="text">Informe seu nome: </label><br/>
+        <input type="text" id="nome" placeholder="Digite o seu nome"><br/>
+        <label for="banana" >Digite um texto: </label><br/>
+        <textarea id="banana" rows="3" placeholder="Conte-nos sobre você"></textarea><br/>
+        <label for="email">Email: </label><br/>
+        <input type="email" placeholder="Insira o e-mail aqui"><br/>
+        <label for="number">Informe seu celular: </label><br/>
+        <input type="number" placeholder="Formato: +55 DDD"><br/>
+        <label for="password">Senha: </label><br/>
+        <input type="password" placeholder="Insira uma senha forte."></input><br/>
+        <label for="color">Selecione a cor laranja:</label><br/>
+        <input type="color"></input><br/>
+        <label for="selec1">Nível de estudo:</label><br/>
+        <select id="selec1">
+            <option>Fundamental completo</option>
+            <option>Fundamental incompleto</option>
+            <option selected>Médio completo</option>
+            <option>Médio incompleto</option>
+            <option>Superior completo</option>
+            <option>Superior incompleto</option>
+        </select><br/>
+        <label>Tecnologias que você usa:</label>
+        <select multiple>
+            <option selected>Python</option>
+            <option>JavaScript</option>
+            <option>Java</option>
+            <option>HTML</option>
+            <option>CSS</option>
+        </select><br/>
+        <label>Selecione sua cor favorita: </label><br/>
+        <input type="radio" name="fav_color" id="cor_Amarelo"/><label for="cor_Amarelo">Amarelo</label><br/>
+        <input type="radio" name="fav_color" id="cor_Azul"/><label for="cor_Azul">Azul</label><br/>
+        <input type="radio" name="fav_color" id="cor_Laranja" checked/><label for="cor_Laranja">Laranja</label><br/>
+        <input type="radio" name="fav_color" id="cor_Verde"/><label for="cor_Verde">Verde</label><br/>
+        <input type="radio" name="fav_color" id="cor_Vermelho"/><label for="cor_Vermelho">Vermelho</label><br/>
+        <input type="radio" name="fav_color" id="cor_Rosa"/><label for="Rosa">Rosa</label><br/>
+        <button id="enviar" type="submit">ENVIAR</button>
+        <button type="reset">LIMPAR</button>
+    </form>
 </body>
 <footer>
     <br/>
