@@ -1,0 +1,7 @@
+*Qual é a função do HTML, CSS e JavaScript para o desenvolvimento web?
+Para o desenvolvimento web são essenciais 3 tecnologias, são elas: HTML, CSS e JavaScript. O funcionamento que cada uma desempenha, respectivamente são:
+*Estruturar o conteúdo da página, responsável por montar o esqueleto do website, por assim dizer, através de tags que demarcam o conteúdo dentro do código;
+*Estilizar o site com base no esqueleto montado pelo HTML, deixando mais atraente aos olhos dos usuários. Para dar estilo ao esqueleto do HTML, é preciso "chamar" o conteúdo dese-
+jado que foi anteriormente definido no HTML com ".", "#" ou pode chamar uma determinada tag.
+*E por último, não menos importante, dar o dinamismo à página, a deixando "com vida". Por exemplo, um uso comum do JavaScript é a atualização do feed, das notícias exibidas, o uso de
+menus interativos e entre outros exemplos. O uso do JavaScript em páginas web é possível através de pequenos scripts que são executados automaticamente durante o uso da página.
