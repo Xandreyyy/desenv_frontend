@@ -1,75 +1,62 @@
 <!DOCTYPE html>
-<!-- (c) Games Shop - Todos os direitos reservados 2023. -->
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>HOME</title>
+    <title>Games Shop - A sua loja de games</title>
 </head>
 <body>
     <header>
         <div class="container">
+            <h1>GAMES SHOP</h1>
             <nav>
-                <h1>GAMES SHOP</h1>
-                <ul>
-                    <li><a href="#about" title="Saiba mais!">SOBRE A LOJA</a></li>
-                    <li><a href="#contactar" title="Onde nos encontrar?">CONTANTO</a></li>
+                <ul class="Lnavegate">
+                    <li><a href="#sobre" title="Saiba quem somos!">SOBRE A LOJA</a></li>
+                    <li><a href="#contatos" title="Onde nos encontrar?">CONTATOS</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <main>
-        <section id="about">
+        <section id="sobre">
             <div class="container">
-                <img id="fachada" src="../assets/main-loja.jpg" alt="Foto ilustrativa sobre a loja">
-                <h1>SOBRE A LOJA</h1>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam congue, nisl et porttitor<br/> facilisis, nulla mauris cursus augue,
-                    Duis venenatis, quam vitae rhoncus tristique, felis ligula consectetur elit, et lobortis nulla<br/> orci lacinia libero. Donec quis eleifend dolor.
-                    Duis eget lectus id nisi laoreet facilisis vel varius ligula. Ut nulla dolor, porta sed faucibus vitae, egestas a magna. Orci varius natoque penatibus.
-                    Nullam venenatis viverra lacus at eleifend. Fusce vestibulum sem viverra, consequat neque ut, sagittis diam. Pellentesque pretium libero tincidunt efficitur dignissim.
-                    Curabitur elementum nunc ac ultricies imperdiet. Quisque cursus elit id volutpat tincidunt.
-                </p>
-                <ul class="listaicones">
-                    <li><img src="../assets/nintendo.png" alt="Logomarca da Nintendo"/></li>
-                    <li><img src="../assets/xbox.png" alt="Logomarca da Xbox"/></li>
-                    <li><img src="../assets/playstation.png" alt="Logomarca da PlayStation"/></li>
-                </ul>
+                <img class="fachadaloja" src="../assets/main-loja.jpg" alt="Foto da fachada da loja"/>
+                <div>
+                    <h2>SOBRE A LOJA</h2>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae laudantium, magni reprehenderit beatae, ullam
+                        molestias aspernatur odit explicabo vel enim id earum quam tenetur accusamus facilis natus illo pariatur optio?
+                        Iusto, repellendus temporibus modi aut culpa mollitia, similique quis, asperiores quibusdam ad voluptate expedita sint voluptas.<br/><br/>
+                        Ullam architecto illum adipisci doloribus officia! Temporibus eum, sequi tempora quam accusantium quas hic, facilis
+                        culpa unde voluptate minus optio sit dignissimos! Odio facilis iste reiciendis perspiciatis, magnam distinctio sint impedit consequatur iure sed unde,
+                        doloribus provident nostrum maiores commodi, totam dolorum. Quas, placeat!
+                    </p>
+                    <ul class="Lplataformas">
+                        <li><img src="../assets/nintendo.png" alt="Logotipo da Nintendo"/></li>
+                        <li><img src="../assets/xbox.png" alt="Logotipo da Xbox"/></li>
+                        <li><img src="../assets/playstation.png" alt="Logotipo da PlayStation"/></li>
+                    </ul>
+                </div>
             </div>
         </section>
     </main>
-    <footer>
-        <section id="contatos">
-            <div class="container">
-                    <h2>CONTATO</h2>
-                    <div class="formulario">
-                        <form>
-                            <h4>FALE CONOSCO</h4>
-                            <input type="text" placeholder="Seu nome" id="nome" required/><br/>
-                            <input type="email" placeholder="Seu e-mail" id="email" required/><br/>
-                            <input type="tel" placeholder="Seu telefone (opcional)" id="telefone"/><br/>
-                            <textarea placeholder="Sua mensagem" required></textarea><br/>
-                            <button type="submit">ENVIAR</button>
-                        </form>
-                    </div>
+    <section id="contatos">
+        <div class="container">
+            <h2>CONTATO</h2>
+            <div class="contatos">
                 <div>
-                    <h4>NOS ACOMPANHE</h4>
-                    <ul class="socialmidia">
-                        <li><a href="#" title="Insagram da Games Shop"><img src="../assets/instagram.png" alt="Logomarca do Instagram"/></a></li>
-                        <li><a href="#" title="Facebook da Games Shop"><img src="../assets/facebook.png" alt="Logomarca do Facebook"/></a></li>
-                        <li><a href="#" title="YouTube da Games Shop"><img src="../assets/youtube.png" alt="Logomarca do YouTube"/></a></li>
-                    </ul>
-                </div>
-                <div class="venhaatenos">
-                    <h4>VENHA ATÉ NÓS</h4><br/>
-                    <p>
-                        Rua JavaScript nº 123, Vila HTML - São Paulo, SP
-                    </p>
+                    <h3>FALE CONOSCO</h3>
+                    <form>
+                        <input type="text" placeholder="" required/>
+                        <input type="text" placeholder="" required/>
+                        <input type="text" placeholder=""/>
+                        <textarea></textarea>
+                        <button></button>
+                    </form>
                 </div>
             </div>
-        </section>
-    </footer>
+        </div>
+    </section>
 </body>
 </html>
