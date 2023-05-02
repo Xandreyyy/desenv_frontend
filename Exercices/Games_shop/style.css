@@ -4,27 +4,37 @@
     box-sizing: border-box;
 }
 
-header{
-    padding: 16px 0px;
+header, #footer{
+    padding: 16px 0;
     background-color: #182C61;
-    color: #ecf0f1;
+    color: #ffff;
 }
 
-header nav li{
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+header h1,
+section h2{
+    font-family: 'Bungee', cursive;
+}
+
+.Lnavegate li{
     display: inline;
     margin-left: 16px;
     font-size: 18px;
 }
 
-header nav li a{
-    color:#ecf0f1;
+.Lnavegate li a{
     text-decoration: none;
+    color: #ffff;
 }
 
 .container{
     max-width: 1280px;
     width: 100%;
     margin: 0 auto;
+    align-items: center;
 }
 
 header .container{
@@ -33,17 +43,18 @@ header .container{
     justify-content: space-between;
 }
 
-header .container, section .container{
+header .container,
+section .container{
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
 }
 
-.listaicones img{
+.Lplataformas img{
     height: 24px;
 }
 
-.listaicones li{
+.Lplataformas li{
     display: inline;
     margin-right: 8px;
 }
@@ -54,21 +65,18 @@ section .container{
 
 section{
     padding: 24px 0;
-}
-
-#about h1{
-    margin-bottom: 16px;
-}
-
-section{
     color: #182C61;
 }
 
 section p{
-    margin-bottom: 8px;
+    color: black;
 }
 
-#fachada{
+section h2{
+    margin-bottom: 16px;
+}
+
+.fachadaloja{
     margin-right: 32px;
 }
 
@@ -76,15 +84,17 @@ section p{
     display: block;
 }
 
-.formulario input{
+.contatct-methods{
     display: flex;
     justify-content: space-between;
 }
 
-form input, form textarea, form button{
+form input,
+form textarea,
+form button{
     display: block;
-    width: 320px;
     margin-bottom: 8px;
+    width: 320px;
     padding: 8px;
 }
 
@@ -94,29 +104,29 @@ form textarea{
 }
 
 form button{
-    background-color: #182C61;
-    color: #ecf0f1;
     border: none;
     cursor: pointer;
+    background-color: #182C61;
+    color: #ffff;
 }
 
 form button:hover{
-    background-color: #314e93;
+    background-color: #314e9e;
 }
 
 input:focus, textarea:focus{
     outline-color: #182C61;
 }
 
-.socialmedia img{
+.RedesSociais img{
     height: 24px;
 }
 
-.socialmedia li{
+.RedesSociais li{
     display: inline;
     margin-right: 8px;
 }
 
-.socialmedia li a{
+.RedesSociais li a{
     text-decoration: none;
 }
