@@ -4,19 +4,27 @@
     box-sizing: border-box;
 }
 
+<<<<<<< HEAD
 header, #footer{
+=======
+header{
+>>>>>>> f38603fef7c40d5241fc89add21dcc0e1c6deb9b
     padding: 16px 0;
     background-color: #182C61;
     color: #ffff;
 }
 
 body{
+<<<<<<< HEAD
     font-family: 'Roboto', sans-serif;
 }
 
 header h1,
 section h2{
     font-family: 'Bungee', cursive;
+=======
+    background-color: grey;
+>>>>>>> f38603fef7c40d5241fc89add21dcc0e1c6deb9b
 }
 
 .Lnavegate li{
@@ -84,38 +92,57 @@ section h2{
     display: block;
 }
 
+<<<<<<< HEAD
 .contatct-methods{
+=======
+.contatos{
+>>>>>>> f38603fef7c40d5241fc89add21dcc0e1c6deb9b
     display: flex;
     justify-content: space-between;
 }
 
 form input,
 form textarea,
+<<<<<<< HEAD
 form button{
+=======
+form button {
+>>>>>>> f38603fef7c40d5241fc89add21dcc0e1c6deb9b
     display: block;
     margin-bottom: 8px;
     width: 320px;
     padding: 8px;
 }
 
-form textarea{
+form textarea {
     resize: none;
     height: 180px;
 }
 
+<<<<<<< HEAD
 form button{
+=======
+form button {
+    background-color: #182C61;
+    color: #ecf0f1;
+>>>>>>> f38603fef7c40d5241fc89add21dcc0e1c6deb9b
     border: none;
     cursor: pointer;
     background-color: #182C61;
     color: #ffff;
 }
 
+<<<<<<< HEAD
 form button:hover{
+=======
+form button:hover {
+>>>>>>> f38603fef7c40d5241fc89add21dcc0e1c6deb9b
     background-color: #314e9e;
 }
 
-input:focus, textarea:focus{
+input:focus, textarea:focus {
     outline-color: #182C61;
+<<<<<<< HEAD
 }
 
 .RedesSociais img{
@@ -129,4 +156,6 @@ input:focus, textarea:focus{
 
 .RedesSociais li a{
     text-decoration: none;
+=======
+>>>>>>> f38603fef7c40d5241fc89add21dcc0e1c6deb9b
 }
