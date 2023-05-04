@@ -4,8 +4,8 @@ function calcularTab(tabuadaUser) {
     let tamanho = 1;
     let multi = 0;
     while (tamanho <=10) {
-        multi = tamanho * tabuada;
-        alert(`${tabuada}x${tamanho} = ${multi}`)
+        multi = tamanho * tabuadaUser;
+        alert(`${tabuadaUser}x${tamanho} = ${multi}`)
         tamanho +=1;
     }
 }
