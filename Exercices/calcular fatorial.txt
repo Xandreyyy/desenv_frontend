@@ -1,11 +1,11 @@
-num = prompt("Insira um número a ser fatorado: ")
+let num = prompt("Insira um número para ser fatorado: ")
 
-function fatorar(num) {
-  if (num === 0 || num === 1)
-    return 1;
-  for (var i = num - 1; i >= 1; i--) {
-    num *= i;
-  }
-  return num;
+function calcFatorial(num) {
+    fatorar = 1
+    for (let i = 1; i <num; i++) {
+        resultado *= i;
+    }
+    return fatorar;
 }
-fatorar(num);
+
+console.log(calcFatorial(num))
