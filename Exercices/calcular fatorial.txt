@@ -1,7 +1,7 @@
-let num = prompt("Insira um número para ser fatorado: ")
+const num = prompt("Insira um número para ser fatorado: ")
 
 function calcFatorial(num) {
-    fatorar = 1
+    let fatorar = 1
     for (let i = 1; i <num; i++) {
         resultado *= i;
     }
