@@ -34,7 +34,7 @@ input{
 
 input, button {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     width: 270px;
     padding: 15px;
     border-radius: 12px;
@@ -50,4 +50,14 @@ button:hover{
     background-color: rgb(10, 153, 153);
     cursor: pointer;
     border: none;
+}
+
+.mensagem_erro{
+    background-color: rgb(133, 6, 6);
+    color: #ffffffde;
+    width: 270px;
+    padding: 9px;
+    border-radius: 12px;
+    margin-bottom: 8px;
+    display: none;
 }

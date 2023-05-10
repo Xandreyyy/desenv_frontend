@@ -23,3 +23,7 @@ form.addEventListener('submit', function(e){
         alert(`Falha! Você não seguiu as instruções!`)
     }
 })
+
+entrada1.addEventListener("keyup", function(e){
+    
+})
