@@ -11,14 +11,17 @@
     <body>
         <h1>COMPARAR</h1>
             <h2>Insira o maior número na primeira entrada, caso contrário dará erro!</h2>
+            <p class="mensagem_sucesso">
+                Parabéns! Você seguiu as instruções!
+            </p>
         <div class="container">
             <div>
                 <form id="form_input">
-                    <input id="entrada1" type="number" required placeholder="Insira o MAIOR valor"/>
+                    <input id="entrada1" type="number" required placeholder="Primeira entrada (maior)"/>
                     <p class="mensagem_erro">
                         A segunda entrada é maior que esta.
                     </p>
-                    <input id="entrada2" type="number" required placeholder="Insira o MENOR valor"/>
+                    <input id="entrada2" type="number" required placeholder="Segunda entrada (menor)"/>
                     <button id="botao_enviar" type="submit">ENVIAR</button>
                 </form>
             </div>
