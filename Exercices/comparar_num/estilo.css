@@ -44,6 +44,7 @@ button{
     width: 270px;
     background-color: rgb(8, 192, 192);
     font-weight: 680;
+    border: none;
 }
 
 button:hover{
@@ -53,6 +54,16 @@ button:hover{
 }
 
 .mensagem_erro{
+    background-color: rgb(133, 6, 6);
+    color: #ffffffde;
+    width: 270px;
+    padding: 9px;
+    border-radius: 12px;
+    margin-bottom: 8px;
+    display: none;
+}
+
+.mensagem_igual{
     background-color: rgb(133, 6, 6);
     color: #ffffffde;
     width: 270px;
