@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+
+    <title>Calcular médias</title>
+</head>
+<body>
+    <header>
+        <img src="./assets/logo.png" alt="Ícone logo escolar"/>
+        <h1>RESULTADO</h1>
+    </header>
+    <form>
+        <input type="text" required placeholder="Nome da atividade"/>
+        <input type="number" required placeholder="Nota da atividade"/>
+        <button type="submit">Adicionar+</button>
+    </form>
+    <!-- difine tabela-->
+    <table>
+        <!-- difine cabeçalho-->
+        <thead>
+            <!-- difine linha da tabela-->
+            <tr>
+                <th>
+                    Nome da atividade   
+                </th>
+                <th>
+                    Nota   
+                </th>
+                <th>
+                    Aprovado? 
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Atividade 1</td>
+                <td>7</td>
+                <td><img src="assets/aprovado.png" alt="Ícone aprovado"></td>
+            </tr>
+            <tr>
+                <td>Atividade 2</td>
+                <td>5.6</td>
+                <td><img src="assets/reprovado.png" alt="Ícone reprovado"></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Nota média</td>
+                <td>19,6</td>
+                <td>Aprovado</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
