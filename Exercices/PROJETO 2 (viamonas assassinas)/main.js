@@ -5,7 +5,7 @@ const valor_media = document.querySelector("#valor_media")
 const MensagemAprovado = document.querySelector("#aprovado")
 const MensagemReprovado = document.querySelector("#reprovado")
 
-let nome, nota, media, notas = [], somar
+let nome, nota, media, notas = []
 
 function calcMedia(notas) {
     somar = 0
@@ -16,6 +16,7 @@ function calcMedia(notas) {
     return media
 }
 
+//escuta as entradas do usuário e manda, respectivamente, às variáveis: nome, nota
 nomeA_obj.addEventListener("keyup", function(e){
     nome = e.target.value
 })
@@ -26,14 +27,14 @@ nota_obj.addEventListener("keyup", function(e){
 
 function decidirEmoji() {
     if (nota_obj.value >=7){
-        celula_tabela = document.createElement("td")
-        celula_img = document.createElement("img")
-        celula_img.src="assets/aprovado.png"
-        linha_tabela.appendChild(celula_img)
+        celula_tabela = document.createElement("td")//cria uma celula
+        celula_img = document.createElement("img")//cria um arquivo img
+        celula_img.src="assets/aprovado.png"//diz a src do elemento "celula_img"
+        linha_tabela.appendChild(celula_img)//como a "linha_tabela" está "associada" ao "tBody", basta apenas colocar um appendchild na celula_img
     }else{
         celula_tabela = document.createElement("td")
         celula_img = document.createElement("img")
-        celula_img.src="assets/reprovado.png"
+        celula_img.src="assets/reprovado.png"//a diferença deste bloco para o outro é que muda a src da img
         linha_tabela.appendChild(celula_img)
     }
 }
@@ -50,12 +51,12 @@ function displayMensagem() {
     }
 }
 
-
+//ao clicar no botão, o valor que está em "nota" é adicionado em "notas = []"
 form_obj.addEventListener("submit", function(e){
     e.preventDefault()
     notas.push(nota)
-    calcMedia(notas)
-    valor_media.innerHTML= media.toFixed(2)
+    calcMedia(notas)//ao clicar no botão, chama a função principal que calcula a média
+    valor_media.innerHTML= media.toFixed(2)//injeta o retorno da função principal através da "valor_media" com 2 casas decimais. valor_media está "selecionado" pelo "document.querySelector("#valor_media")"
     
     displayMensagem()
 
