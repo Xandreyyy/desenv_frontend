@@ -44,22 +44,8 @@ select_paises.addEventListener("change", function(e){
 })
 
 formAdd.addEventListener("submit", function(e){
-    e.preventDefault()
-    tabela_obj = document.querySelector("#tBody")
-    linha_tabela = document.createElement("tr")
-    tabela_obj.appendChild(linha_tabela)
-    celula_tabela = document.createElement("td")
-    linha_tabela.appendChild(celula_tabela)
-    nomearContato = document.createTextNode(nomeContato)
-    celula_tabela.appendChild(nomearContato)
-    celula_tabela = document.createElement("td")
-    linha_tabela.appendChild(celula_tabela)
-    numContato = document.createTextNode(numeroCelular)
-    celula_tabela.appendChild(numContato)
-
-    nomeContato_obj.value= ""
-    numeroCelular_obj.value= ""
-
-    menuAdd.style.display = "none"
-    menuPadrao.style.display = "block"
+    console.log(`nomeContato: ${nomeContato}\nnumeroCelular: ${numeroCelular}`)
+    contatos.push(dados)
 })
+
+//array multidimensional - array dentro de um array
