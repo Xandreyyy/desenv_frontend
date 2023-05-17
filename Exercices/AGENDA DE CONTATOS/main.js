@@ -2,8 +2,9 @@ const botaoAdd = document.getElementById("btn_add")
 const menuPadrao = document.getElementById("opcoes_padrao")
 const menuAdd = document.querySelector(".addContato")
 const formAdd = document.getElementById("form_add")
+const semSoma = document.querySelector("#num_semsoma")
 
-let nomeContato, numeroCelular
+let nomeContato, numeroCelular, entradas = []
 
 //abre menu para add
 botaoAdd.addEventListener("click", function(e){
@@ -43,6 +44,7 @@ select_paises.addEventListener("change", function(e){
     }
 })
 
+
 formAdd.addEventListener("submit", function(e){
     e.preventDefault()
     tabela_obj = document.querySelector("#tBody")
@@ -59,6 +61,7 @@ formAdd.addEventListener("submit", function(e){
 
     nomeContato_obj.value= ""
     numeroCelular_obj.value= ""
+    select_paises.value = ""
 
     menuAdd.style.display = "none"
     menuPadrao.style.display = "block"

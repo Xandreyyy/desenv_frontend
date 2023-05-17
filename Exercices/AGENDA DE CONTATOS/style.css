@@ -13,7 +13,7 @@ header{
 }
 
 body{
-    background-color: rgb(31, 2, 58);
+    background-color: rgba(31, 2, 58, 0.753);
 } 
 
 .addContato{
@@ -54,7 +54,7 @@ body{
 }
 
 #btn_excluir{
-    background-color: rgba(252, 20, 128, 0.692);
+    background-color: rgba(185, 48, 112, 0.692);
 }
 
 table{
@@ -132,10 +132,31 @@ table thead th{
     text-align: center;
     padding: 16px 60px 0;
     font-weight: 500;
+    border-bottom: 1.7px black solid;
 }
 
 table td{
-    border-bottom: 1px black solid;
+    border-bottom: 1.7px black solid;
     padding: 16px 0;
 }
 
+#num_semsoma{
+    background-color: rgb(199, 0, 0);
+    border-radius: 12px;
+    color: white;
+    display: none;
+}
+
+#num_nospace{
+    background-color: rgb(199, 0, 0);
+    border-radius: 12px;
+    color: white;
+    display: none;
+}
+
+#num_invalido{
+    background-color: rgb(199, 0, 0);
+    border-radius: 12px;
+    color: white;
+    display: none;
+}
