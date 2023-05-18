@@ -6,7 +6,7 @@ const formAdd = document.getElementById("form_add")
 const semEspaco = document.querySelector("#num_nospace")
 const semPais = document.querySelector("#num_sempais")
 
-let nomeContato, numeroCelular, arrayNumeros = [], dados = [], entradas = []
+let nomeContato, numeroCelular
 
 //abre menu para add
 botaoAdd.addEventListener("click", function(e){
@@ -45,6 +45,7 @@ select_paises.addEventListener("change", function(e){
     if (select_paises.value == ""){
         semPais.style.display = "block"
         semPais.innerHTML = "Selecione um país!"
+        numeroCelular_obj.value = null
     }else{
         numeroCelular_obj.value = `${ddd} `
         semPais.style.display = "none"
@@ -78,10 +79,10 @@ formAdd.addEventListener("submit", function(e){
         numContato = document.createTextNode(numeroCelular)
         celula_tabela.appendChild(numContato)
 
-    nomeContato_obj.value= ""
-    numeroCelular_obj.value= ""
-    select_paises.value = ""
-    select_paises.value = ""
+        nomeContato_obj.value= ""
+        numeroCelular_obj.value= ""
+        select_paises.value = ""
+        select_paises.value = ""
 
         menuAdd.style.display = "none"
         menuPadrao.style.display = "block"

@@ -152,6 +152,7 @@ table td{
     border-radius: 12px;
     color: white;
     display: none;
+    padding: 10px;
 }
 #num_semsoma{
     background-color: rgb(199, 0, 0);
@@ -182,4 +183,13 @@ table td{
     border-radius: 12px;
     color: white;
     display: none;
+    padding: 10px;
+}
+
+#num_sempais{
+    background-color: rgb(199, 0, 0);
+    border-radius: 12px;
+    color: white;
+    display: none;
+    padding: 10px;
 }
