@@ -34,3 +34,6 @@ $(document).ready(function(){
         $("#endereco_imagem").val("")
     })
 })
+
+//Site com imagens livres de direitos autorais: Pixabay (https://pixabay.com/pt/)
+//Imagem vetorial: imagem que mantém a proporção ao ser redimensionada. É uma extensão de imagem desevolvida pela Adobe.
