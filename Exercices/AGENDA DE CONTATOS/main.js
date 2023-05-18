@@ -3,7 +3,10 @@ const menuPadrao = document.getElementById("opcoes_padrao")
 const menuAdd = document.querySelector(".addContato")
 const formAdd = document.getElementById("form_add")
 
-let nomeContato, numeroCelular
+const semEspaco = document.querySelector("#num_nospace")
+const semPais = document.querySelector("#num_sempais")
+
+let nomeContato, numeroCelular, arrayNumeros = [], dados = []
 
 //abre menu para add
 botaoAdd.addEventListener("click", function(e){
@@ -16,6 +19,9 @@ botaoAdd.addEventListener("click", function(e){
 const botaoCancelarAdd = document.querySelector("#cancelar_add")
 botaoCancelarAdd.addEventListener("click", function(e){
     e.preventDefault()
+    nomeContato_obj.value= ""
+    numeroCelular_obj.value= ""
+    select_paises.value = ""
     menuAdd.style.display = "none"
     menuPadrao.style.display = "block"
 })
@@ -36,13 +42,20 @@ numeroCelular_obj.addEventListener("keyup", function(e) {
 const select_paises = document.getElementById("select_paises")
 select_paises.addEventListener("change", function(e){
     let ddd = e.target.value
-    if (ddd == ""){
-        alert(`Selecione um país!`)
+    if (select_paises.value == ""){
+        semPais.style.display = "block"
+        semPais.innerHTML = "Selecione um país!"
     }else{
+        semPais.style.display = "none"
         numeroCelular_obj.value = `${ddd} `
     }
 })
 
+function validarPais() {
+    
+}
+
+//Uma opção para validar a entrada é adicionar: numeroCelular.startsWith("+"). "startsWith()" verifica se uma string inicia com tal caracter.
 formAdd.addEventListener("submit", function(e){
     e.preventDefault()
     tabela_obj = document.querySelector("#tBody")
@@ -59,6 +72,7 @@ formAdd.addEventListener("submit", function(e){
 
     nomeContato_obj.value= ""
     numeroCelular_obj.value= ""
+    select_paises.value = ""
 
     menuAdd.style.display = "none"
     menuPadrao.style.display = "block"

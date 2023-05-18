@@ -45,7 +45,6 @@ num2.addEventListener("keyup", function(e){
     imprimir(comparar)
 })
 
-
 form.addEventListener("submit", function(e){
     e.preventDefault()
     if (comparar(entrada1, entrada2) == 1){
@@ -55,6 +54,6 @@ form.addEventListener("submit", function(e){
         num2.value = ""
         setTimeout(function(){
             MensagemSucesso.style.display = "none"
-        }, 5000 )
+        }, 3000 )
     }
 })

@@ -32,6 +32,8 @@ numeroCelular_obj.addEventListener("keyup", function(e) {
     numeroCelular = e.target.value
 })
 
+
+
 //insere número automaticamente um ddd
 const select_paises = document.getElementById("select_paises")
 select_paises.addEventListener("change", function(e){
