@@ -6,7 +6,7 @@ const formAdd = document.getElementById("form_add")
 const semEspaco = document.querySelector("#num_nospace")
 const semPais = document.querySelector("#num_sempais")
 
-let nomeContato, numeroCelular, arrayNumeros = [], dados = []
+let nomeContato, numeroCelular, arrayNumeros = [], dados = [], entradas = []
 
 //abre menu para add
 botaoAdd.addEventListener("click", function(e){
@@ -46,34 +46,44 @@ select_paises.addEventListener("change", function(e){
         semPais.style.display = "block"
         semPais.innerHTML = "Selecione um país!"
     }else{
-        semPais.style.display = "none"
         numeroCelular_obj.value = `${ddd} `
+        semPais.style.display = "none"
     }
 })
 
 function validarPais() {
-    
+    if (select_paises.value == ""){
+        semPais.style.display = "block"
+        semPais.innerHTML = "Selecione um país!"
+        return false
+    }else{
+        semPais.style.display = "none"
+        return true
+    }
 }
 
 //Uma opção para validar a entrada é adicionar: numeroCelular.startsWith("+"). "startsWith()" verifica se uma string inicia com tal caracter.
 formAdd.addEventListener("submit", function(e){
     e.preventDefault()
-    tabela_obj = document.querySelector("#tBody")
-    linha_tabela = document.createElement("tr")
-    tabela_obj.appendChild(linha_tabela)
-    celula_tabela = document.createElement("td")
-    linha_tabela.appendChild(celula_tabela)
-    nomearContato = document.createTextNode(nomeContato)
-    celula_tabela.appendChild(nomearContato)
-    celula_tabela = document.createElement("td")
-    linha_tabela.appendChild(celula_tabela)
-    numContato = document.createTextNode(numeroCelular)
-    celula_tabela.appendChild(numContato)
+    if (validarPais()){
+        tabela_obj = document.querySelector("#tBody")
+        linha_tabela = document.createElement("tr")
+        tabela_obj.appendChild(linha_tabela)
+        celula_tabela = document.createElement("td")
+        linha_tabela.appendChild(celula_tabela)
+        nomearContato = document.createTextNode(nomeContato)
+        celula_tabela.appendChild(nomearContato)
+        celula_tabela = document.createElement("td")
+        linha_tabela.appendChild(celula_tabela)
+        numContato = document.createTextNode(numeroCelular)
+        celula_tabela.appendChild(numContato)
 
     nomeContato_obj.value= ""
     numeroCelular_obj.value= ""
     select_paises.value = ""
+    select_paises.value = ""
 
-    menuAdd.style.display = "none"
-    menuPadrao.style.display = "block"
+        menuAdd.style.display = "none"
+        menuPadrao.style.display = "block"
+    }
 })
