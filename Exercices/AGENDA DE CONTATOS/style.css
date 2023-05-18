@@ -70,6 +70,7 @@ input{
     padding: 10px;
     border-radius: 10px;
     background-color: rgba(133, 132, 132, 0.63);
+    border: none;
 }
 
 h1{
@@ -84,6 +85,7 @@ header button{
 
 button{
     cursor: pointer;
+    border: none;
 }
 
 ::placeholder{
@@ -140,13 +142,6 @@ table td{
     padding: 16px 0;
 }
 
-#num_semsoma{
-    background-color: rgb(199, 0, 0);
-    border-radius: 12px;
-    color: white;
-    display: none;
-}
-
 #num_nospace{
     background-color: rgb(199, 0, 0);
     border-radius: 12px;
@@ -155,22 +150,6 @@ table td{
     padding: 10px;
 }
 #num_semsoma{
-    background-color: rgb(199, 0, 0);
-    border-radius: 12px;
-    color: white;
-    display: none;
-    padding: 10px;
-}
-
-#num_nospace{
-    background-color: rgb(199, 0, 0);
-    border-radius: 12px;
-    color: white;
-    display: none;
-    padding: 10px;
-}
-
-#num_invalido{
     background-color: rgb(199, 0, 0);
     border-radius: 12px;
     color: white;
