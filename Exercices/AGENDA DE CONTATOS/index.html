@@ -20,7 +20,8 @@
         <div class="addContato">
             <form id="form_add" autocomplete="off">
                 <h2>ADICIONAR CONTATO:</h2>
-                <input type="text" id="nomeContato" required placeholder="Nome para o contato">
+                <p id="nome_inval"></p>
+                <input type="text" id="nomeContato" title="Insira um nome para o contato." required placeholder="Nome para o contato">
                 <div class="menu_add">
                     <select id="select_paises">
                         <option value="">Selec. região</option>
@@ -37,10 +38,7 @@
                         <option value="+598">Uruguai</option>
                         <option value="+58">Venezuela</option>
                     </select>
-                    <input type="tel" id="numeroCelular" required placeholder="Número de telefone">
-                    <!-- <p id="num_semsoma">É necessário adicionar "+" ao número!</p>
-                    <p id="num_nospace">É preciso que haja um espaço entre os DDDs, ex: +XX XX XXXX-XXXX</p>
-                    <p id="num_invalido">Número inválido.</p> -->
+                    <input type="text" id="numeroCelular" required title="Insira o número de telefone." placeholder="Número de telefone">
                     <p id="num_nospace"></p>
                     <p id="num_invalido"></p>
                     <p id="num_sempais"></p>

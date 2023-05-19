@@ -34,10 +34,10 @@ body{
     justify-content: center;
     align-items: center;
     margin-top: 100px;
-  }
+}
 
 .menu_add{
-    margin: 8px 0 0 2px;
+    margin: 8px 0;
     display: flex;
 }
 
@@ -46,7 +46,7 @@ body{
 }
 
 .botoes_add{
-    margin-top: 8px;
+    display: flex;
 }
 
 #btn_add{
@@ -78,14 +78,32 @@ h1{
     color: white;
 }
 
-header button{
+#botoes button{
     padding: 12px;
     border-radius: 12px;
+    margin-left: 4px;
 }
 
 button{
     cursor: pointer;
     border: none;
+    color: rgb(231, 231, 231);
+}
+
+#btn_add:hover, #botao_criar:hover{
+    background-color: rgb(8, 107, 21);
+    color: rgb(202, 202, 202);
+}
+
+/*o cancelar add n ficou lgl com essa cor*/
+#btn_excluir:hover, #cancelar_add:hover{
+    background-color: rgba(184, 12, 92, 0.692);
+    color: rgb(202, 202, 202);
+}
+
+#cancelar_add:hover{
+    background-color: rgba(184, 12, 92, 0.692);
+    color: rgb(202, 202, 202);
 }
 
 ::placeholder{
@@ -98,20 +116,25 @@ option{
 }
 
 select{
-    padding: 10px;
+    padding: 8px;
     border-radius: 12px;
     background-color: rgba(133, 132, 132, 0.63);
     color: white;
 }
 
+input:focus, select:focus{
+    outline: solid rgb(255, 86, 227) 1px;
+}
+
 .addContato button{
-    padding: 7px;
     border-radius: 12px;
     color: white;
+    padding: 7px;
 }
 
 #botao_criar{
     background-color: rgb(8, 136, 25);
+    margin-right: 4px;
 }
 
 #cancelar_add{
@@ -142,33 +165,24 @@ table td{
     padding: 16px 0;
 }
 
-#num_nospace{
+#num_nospace,
+#num_semsoma,
+#num_invalido,
+#num_sempais {
     background-color: rgb(199, 0, 0);
     border-radius: 12px;
     color: white;
     display: none;
-    padding: 10px;
-}
-#num_semsoma{
-    background-color: rgb(199, 0, 0);
-    border-radius: 12px;
-    color: white;
-    display: none;
-    padding: 10px;
+    padding: 7px;
+    margin-left: 3px;
 }
 
-#num_invalido{
+#nome_inval{
     background-color: rgb(199, 0, 0);
     border-radius: 12px;
     color: white;
     display: none;
-    padding: 10px;
-}
-
-#num_sempais{
-    background-color: rgb(199, 0, 0);
-    border-radius: 12px;
-    color: white;
-    display: none;
-    padding: 10px;
+    padding: 7px;
+    margin-bottom: 5px;
+    max-width: 150px;
 }

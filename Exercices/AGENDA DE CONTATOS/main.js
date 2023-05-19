@@ -1,33 +1,41 @@
 const botaoAdd = document.getElementById("btn_add")
+const table = document.querySelector("table")
 const menuPadrao = document.getElementById("opcoes_padrao")
 const menuAdd = document.querySelector(".addContato")
 const formAdd = document.getElementById("form_add")
 
 //possíveis erros
 const semPais = document.querySelector("#num_sempais")
-const numInv = document.querySelector("#num_invalido")
+const numnoSpace = document.querySelector("#num_nospace")
+const nomeInval = document.querySelector("#nome_inval")
 
-function erroGenerico() {
-    numInv.style.display = "block"
-    numInv.innerHTML = "Número inválido."
+
+function erroEspaco() {
+    numnoSpace.style.display = "block"
+    numnoSpace.innerHTML = "Um número válido possui 3 espaçamentos!"
 
     semPais.style.display = "none"
-    numInv.style.display = "none"
 }
 
 function erroPais() {
     semPais.style.display = "block"
     semPais.innerHTML = "Selecione um país!"
 
-    numInv.style.display = "none"
+    numnoSpace.style.display = "none"
 }
 
-let nomeContato, numeroCelular
+function erroNome() {
+    nomeInval.style.display = "block"
+    nomeInval.innerHTML = "Nome inválido!"
+}
+
+let nomeContato, numeroCelular, testes = []
 //abre menu para add
 botaoAdd.addEventListener("click", function(e){
     e.preventDefault()
     menuPadrao.style.display = "none"
     menuAdd.style.display = "block"
+    table.style.display = "none"
 })
 
 //botao cancelar faz voltar
@@ -39,6 +47,8 @@ botaoCancelarAdd.addEventListener("click", function(e){
     select_paises.value = ""
     menuAdd.style.display = "none"
     menuPadrao.style.display = "block"
+    numnoSpace.style.display = "none"
+    semPais.style.display = "none"
 })
 
 //pega o nome da entrada do tipo text
@@ -80,19 +90,47 @@ function validarPais() {
 function validarTam(numeroCel) {
     const arrayNum = numeroCel.split(" ")
     if (arrayNum.length ==3){
-        numInv.style.display = "none"
+        numnoSpace.style.display = "none"
         return true
     }else{
-        numInv.style.display = "block"
-        numInv.innerHTML = "Número inválido."
+        erroEspaco()
         return false
     }
 }
 
+function validarDigitos(numeroCel) {
+    let ddd = [], id = [], num = [], numeroCompleto = []
+    const arrayCel = numeroCel.split(" ")
+    ddd.push(arrayCel[0])
+    id.push(parseInt(arrayCel[1]))
+    num.push(parseInt(arrayCel[2]))
+    numeroCompleto.push(ddd, id, num)
+}
+
+function verifNome() {
+    if (isNaN(nomeContato_obj.value)){
+        return true
+    }else{
+        erroNome()
+        return false
+    }
+}
+
+// function verifNome() {
+//     for (let i = 0; i < nomeContato_obj.value.length; i++) {
+//       if (!isNaN(nomeContato_obj.value[i])) {
+//         erroNome();
+//         return false;
+//       }
+//     }
+//     return true;
+//   }
+
 //Uma opção para validar a entrada é adicionar: numeroCelular.startsWith("+"). "startsWith()" verifica se uma string inicia com tal caracter.
 formAdd.addEventListener("submit", function(e){
     e.preventDefault()
-    if (validarPais() && validarTam(numeroCelular_obj.value)){
+    validarDigitos(numeroCelular_obj.value)
+    if (validarPais() && validarTam(numeroCelular_obj.value) && verifNome()){
         tabela_obj = document.querySelector("#tBody")
         linha_tabela = document.createElement("tr")
         tabela_obj.appendChild(linha_tabela)
@@ -112,6 +150,7 @@ formAdd.addEventListener("submit", function(e){
 
         menuAdd.style.display = "none"
         menuPadrao.style.display = "block"
+        table.style.display = "block"
     }
 })
 
