@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TAREFAS</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Roboto:wght@500&family=Ubuntu&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1>ADICIONAR OU REMOVER TAREFA</h1>
+            <p><a id="add_text" href="#">Adicione</a> ou <a id="del_text" href="#">remova</a> uma tarefa! Para remover, clique na mesma.</p>
+        </header>
+        <div class="container">
+            <div class="formAdd">
+                <form autocomplete="off">
+                    <h3><b>ADICIONAR:</b></h3>
+                    <input id="entrada_tarefa" required placeholder="Insira o nome da tarefa"/>
+                    <button type="submit" id="btn_OK">OK</button>
+                    <button type="reset" id="btn_cancel">cancelar</button>
+                </form>
+            </div>
+            <div class="tabelaTarefas">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>FEITO</th>
+                            <th>TAREFA</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tBody">
+                        <tr>
+                            <td><img id="imgCerto" src="./midia/checkemoji.png" alt="Emoji indicando acerto"/></td>
+                            <td id="i_teste1">estudar</td>
+                        </tr>
+                        <tr>
+                            <td><img id="imgErrado" src="./midia/wrongemoji.png" alt="Emoji indicando erro"/></td>
+                            <td id="i_teste2">comer</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.7.0.min.js">
+        </script>
+        <script src="main.js">
+        </script>
+    </body>
+</html>
+
+<!-- bit.ly/jovem_aprendiz_2023 -->
