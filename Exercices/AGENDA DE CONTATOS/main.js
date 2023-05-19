@@ -76,6 +76,7 @@ select_paises.addEventListener("change", function(e){
     }
 })
 
+//garante que pelo menos o usuário tenha selecionado um dos países
 function validarPais() {
     if (select_paises.value == ""){
         semPais.style.display = "block"
@@ -87,6 +88,7 @@ function validarPais() {
     }
 }
 
+//verifica os espaçamentos
 function validarTam(numeroCel) {
     const arrayNum = numeroCel.split(" ")
     if (arrayNum.length ==3){
@@ -98,38 +100,20 @@ function validarTam(numeroCel) {
     }
 }
 
-function validarDigitos(numeroCel) {
-    let ddd = [], id = [], num = [], numeroCompleto = []
-    const arrayCel = numeroCel.split(" ")
-    ddd.push(arrayCel[0])
-    id.push(parseInt(arrayCel[1]))
-    num.push(parseInt(arrayCel[2]))
-    numeroCompleto.push(ddd, id, num)
-}
-
 function verifNome() {
-    if (isNaN(nomeContato_obj.value)){
-        return true
-    }else{
-        erroNome()
-        return false
+    //loop for que percorre o tamanho do valor (value) da entrada (nomeContato_obj), e caso o número digitado for um digito, então chama a função erroNome()
+    for (let i = 0; i < nomeContato_obj.value.length; i++) {
+        if (!isNaN(nomeContato_obj.value[i])){
+            erroNome()
+            return false
+        }
     }
+    return true
 }
-
-// function verifNome() {
-//     for (let i = 0; i < nomeContato_obj.value.length; i++) {
-//       if (!isNaN(nomeContato_obj.value[i])) {
-//         erroNome();
-//         return false;
-//       }
-//     }
-//     return true;
-//   }
 
 //Uma opção para validar a entrada é adicionar: numeroCelular.startsWith("+"). "startsWith()" verifica se uma string inicia com tal caracter.
 formAdd.addEventListener("submit", function(e){
     e.preventDefault()
-    validarDigitos(numeroCelular_obj.value)
     if (validarPais() && validarTam(numeroCelular_obj.value) && verifNome()){
         tabela_obj = document.querySelector("#tBody")
         linha_tabela = document.createElement("tr")
@@ -153,10 +137,3 @@ formAdd.addEventListener("submit", function(e){
         table.style.display = "block"
     }
 })
-
-// Como usar jQuery
-// 1- Baixar a jQuery na pasta do projeto (contém muitos arquivos, pode acontecer que o projeto tenha uma resposta mais lenta)
-// 2- Importar a jQuery, ou seja, usar remotamente.
-// 
-//
-//

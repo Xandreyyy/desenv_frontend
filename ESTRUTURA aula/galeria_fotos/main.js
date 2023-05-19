@@ -35,5 +35,10 @@ $(document).ready(function(){
     })
 })
 
+
+// Como usar jQuery:
+// 1- Baixar a jQuery na pasta do projeto (contém muitos arquivos, pode acontecer que o projeto tenha uma resposta mais lenta)
+// 2- Importar a jQuery, ou seja, usar remotamente.
+
 //Site com imagens livres de direitos autorais: Pixabay (https://pixabay.com/pt/)
 //Imagem vetorial: imagem que mantém a proporção ao ser redimensionada. É uma extensão de imagem desevolvida pela Adobe.
