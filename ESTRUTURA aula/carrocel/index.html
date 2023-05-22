@@ -1,26 +1,35 @@
+<!-- CTRL + D para selecionar vários elementos com a mesma tag (de cima para baixo) -->
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SENAC Motors</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <div class="container">
-            <h1>SENAC Motors</h1>
-            <div class="menu_hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SENAC Motors</title>
+        <!-- fontes -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+        <!-- linkar css padrão -->
+        <link rel="stylesheet" href="style.css">
+        <!-- linkar css com o slick -->
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <!-- slick -->
+        <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    </head>
+    <body>
+        <header>
+            <div class="container container_flex">
+                <h1>SENAC Motors</h1>
+                <div class="menu_hamburguer">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
             <nav>
-                <div class="container"></div>
+                <div class="container">
                     <ul>
                         <li><a href="#">SOBRE</a></li>
                         <li><a href="#">EM DESTAQUE</a></li>
@@ -29,7 +38,146 @@
                     </ul>
                 </div>
             </nav>
+        </header>
+        <div id="carrossel_imagens">
+            <img src="./images/slide1.png" alt="Porche Carrera">
+            <img src="./images/slide2.png" alt="Carro da BMW">
+            <img src="./images/slide3.png" alt="Ford GT">
         </div>
-    </header>
-</body>
+        <section id="sobre_a_loja">
+            <div class="container container_flex">
+                <img src="./images/loja.jpg" alt="Fachada da loja">
+                <div class="texto">
+                    <h2>Sobre a loja</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis distinctio suscipit quas ad saepe dolores incidunt, itaque dignissimos ipsa animi repellendus provident blanditiis cum eos quis velit non quia pariatur!</p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum facilis maiores quam nulla harum! Omnis ut sunt voluptate harum autem enim doloribus eos sed? Porro, quae sed! Maiores, sequi itaque?</p>
+                </div>
+            </div>
+        </section>
+        <section id="destaque">
+            <div class="container">
+                <h2>Em destaque</h2>
+                <ul class="container_flex lista_veiculos">
+                    <li>
+                        <h3>Carro BMW </h3>
+                        <img src="./images/carro-bmw.png" alt="Carro BMW">
+                        <p>Câmbio automático, 4 portas, vidros e travas elétricas.</p>
+                        <strong>R$75.000,00</strong>
+                        <button type="button">Tenho interesse</button>
+                    </li>
+                    <li class="item_central">
+                        <h3>Chevrolet Captiva</h3>
+                        <img src="./caros-sell/Chevrolet Captiva.jpg" alt="Carro BMW">
+                        <p>Câmbio automático, 4 portas, vidros e travas elétricas.</p>
+                        <strong>R$75.000,00</strong>
+                        <button type="button">Tenho interesse</button>
+                    </li>
+                    <li>
+                        <h3>Carro BMW </h3>
+                        <img src="./caros-sell/" alt="Carro BMW">
+                        <p>Câmbio automático, 4 portas, vidros e travas elétricas.</p>
+                        <strong>R$75.000,00</strong>
+                        <button type="button">Tenho interesse</button>
+                    </li>
+                    <li>
+                        <h3>Carro BMW </h3>
+                        <img src="./images/carro-bmw.png" alt="Carro BMW">
+                        <p>Câmbio automático, 4 portas, vidros e travas elétricas.</p>
+                        <strong>R$75.000,00</strong>
+                        <button type="button">Tenho interesse</button>
+                    </li>
+                    <li class="item_central">
+                        <h3>Carro BMW </h3>
+                        <img src="./images/carro-bmw.png" alt="Carro BMW">
+                        <p>Câmbio automático, 4 portas, vidros e travas elétricas.</p>
+                        <strong>R$75.000,00</strong>
+                        <button type="button">Tenho interesse</button>
+                    </li>
+                    <li>
+                        <h3>Carro BMW </h3>
+                        <img src="./images/carro-bmw.png" alt="Carro BMW">
+                        <p>Câmbio automático, 4 portas, vidros e travas elétricas.</p>
+                        <strong>R$75.000,00</strong>
+                        <button type="button">Tenho interesse</button>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section id="promocao">
+            <div class="container">
+                <h2>Promoções</h2>
+                <ul class="container_flex lista_veiculos">
+                    <li>
+                        <h3>Toyota Land Cruiser</h3>
+                        <img src="./cars-promo/Toyota Land Cruiser.png" alt="Carro BMW">
+                        <p>Carro esportivo potente, também muito adequado para ambientes com lama e barro.</p>
+                        <div class="preco">
+                            <del>R$200.000,00</del>
+                            <strong>R$160.000,00</strong>
+                            <button type="button">Tenho interesse</button>
+                        </div>
+                    </li>
+                    <li class="item_central">
+                        <h3>Ford F-150</h3>
+                        <img src="./cars-promo/Ford F-150.png" alt="Carro BMW">
+                        <p>Perfeito para o dia a dia, com espaço, conforto e tecnologia.</p>
+                        <div class="preco">
+                            <del>R$150.000,00</del>
+                            <strong>R$120.000,00</strong>
+                            <button type="button">Tenho interesse</button>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>Kia Picanto</h3>
+                        <img src="./cars-promo/KiaPicanto.png" alt="Carro BMW">
+                        <p>Carro híbrido econômico e sustentável, ideal para quem valoriza eficiência e baixas emissões.</p>
+                        <div class="preco">
+                            <del>R$100.000,00</del>
+                            <strong>R$75.000,00</strong>
+                            <button type="button">Tenho interesse</button>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>Seat Mii Electric</h3>
+                        <img src="./cars-promo/SeatMiiElectric.png" alt="Carro BMW">
+                        <p> Um SUV de alta qualidade e elegância, com potência e conforto para enfrentar qualquer desafio.</p>
+                        <div class="preco">
+                            <del>R$99.000,00</del>
+                            <strong>R$89.000,00</strong>
+                            <button type="button">Tenho interesse</button>
+                        </div>
+                    </li>
+                    <li class="item_central">
+                        <h3>Volkswagen Up</h3>
+                        <img src="./cars-promo/VolkswagenUp.png" alt="Carro BMW">
+                        <p>Sedã elétrico de luxo com autonomia excepcional! Muito recomendado para o uso no dia a dia.</p>
+                        <div class="preco">
+                            <del>R$89.000,00</del>
+                            <strong>R$78.000,00</strong>
+                            <button type="button">Tenho interesse</button>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>Suzuki Ignis</h3>
+                        <img src="./cars-promo/SuzukiIgnis.png" alt="Carro BMW">
+                        <p> Um SUV de alta qualidade e elegância, com potência e conforto para enfrentar qualquer desafio.</p>
+                        <div class="preco">
+                            <del>R$99.000,00</del>
+                            <strong>R$89.000,00</strong>
+                            <button type="button">Tenho interesse</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section id="formulario">
+            <form></form>
+        </section>
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script type="text/javascript" src="slick/slick.min.js"></script>
+        <script src="main.js"></script>
+        </script>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    </body>
 </html>

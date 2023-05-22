@@ -1,3 +1,4 @@
+/*aplicar carrocel - https://kenwheeler.github.io/slick/*/
 *{
     margin: 0;
     padding: 0;
@@ -11,9 +12,15 @@ header{
     color: white;
 }
 
+/*se uma img for maior que a outra, esconde*/
+html{
+    overflow-x: hidden;
+}
+
 nav{
     background-color: #575fcf;
     padding: 16px;
+    display: none;
 }
 
 nav li{
@@ -31,14 +38,101 @@ nav li a{
 }
 
 .menu_hamburguer{
-    width: 32px;
+    width: 32px; /*tamanho do menu*/
+    cursor: pointer;
 }
 
 .menu_hamburguer span{
-    height: 2px;
+    height: 2px; /*a altura de cada span*/
     /*esse width faz com que o span ocupe 100% do espaço disponível, ou seja, os 32px da propriedade acima*/
     width: 100%;
     background-color: white;
     display: block;
-    margin-bottom: 4px;
+    margin-bottom: 4px; /*margem para separar cada linha*/
+}
+
+.container{
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header > .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 16px;
+}
+/*prestar atenção na estrutura dos container no HTML, pois essa é semelhante ao "SOBRE A LOJA" da GamesShop*/
+.container_flex{
+    display: flex;
+}
+
+#sobre_a_loja img{
+    max-width: 480px;
+}
+
+.texto h2, .texto p{
+    margin: 16px;
+    text-align: justify;
+}
+
+.texto h2{
+    margin-top: 0;
+}
+
+section{
+    padding: 48px 0;
+}
+
+section h2{
+    margin-bottom: 16px;
+}
+
+.lista_veiculos{
+    flex-wrap: wrap;
+}
+
+/*como fez para que fique 3 itens na mesma linha*/
+.lista_veiculos li{
+    list-style: none;
+    max-width: 30%;
+    margin-bottom: 24px;
+}
+
+.lista_veiculos li img{
+    max-width: 100%;
+}
+
+.lista_veiculos li h3{
+    margin: 16px 0;
+}
+
+.item_central{
+    margin: 0 5%;
+}
+
+.lista_veiculos li button{
+    display: block;
+    width: 100%;
+    padding: 8px;
+    border: none;
+    background-color: #119759;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+/*esse display block é interessante*/
+strong, .preco{
+    margin: 16px 0;
+    display: block;
+}
+
+.preco del{
+    color: #ccc;
+    font-size: 14px;
 }

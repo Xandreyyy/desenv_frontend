@@ -52,19 +52,27 @@ a{
     justify-content: center;
     margin-bottom: 70px;
     background-color: rgba(138, 139, 31, 0.637);
-    width: 400px; /* Defina a largura desejada */
-    height: 200px; /* Defina a altura desejada */
+    width: 500px; 
+    height: 200px;
     margin: 0 auto;
     border-radius: 12px;
     padding: 30px;
+}
+
+.formAdd{
+    display: none;
 }
 
 .formAdd div{
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
+    width: 250px;
 }
 
+#div_horario{
+    width: 100px;
+}
 
 .tabelaTarefas{
     display: flex;
