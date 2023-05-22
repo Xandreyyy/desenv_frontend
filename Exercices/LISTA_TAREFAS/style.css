@@ -39,38 +39,32 @@ a{
     text-decoration: none;
 }
 
-#i_teste1{
-    text-decoration: line-through;
-}
-
-#imgErrado{
-    height: 38px;
-    cursor: pointer;
-}
-
-#imgCerto{
-    height: 34px;
-    cursor: pointer;
-}
-
 /*POSICIONAMENTO*/
 .container{
+    display: flex;
     justify-content: center;
     flex-direction: column;
 }
 
-.formAdd{
-    /*------------------*/
-    /*------------------*/
-    display: none;
+.formAdd {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    margin-bottom: 110px;
+    margin-bottom: 70px;
     background-color: rgba(138, 139, 31, 0.637);
-    max-width: 600px;
-    margin-left: 675px;
+    width: 400px; /* Defina a largura desejada */
+    height: 200px; /* Defina a altura desejada */
+    margin: 0 auto;
     border-radius: 12px;
     padding: 30px;
 }
+
+.formAdd div{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
 
 .tabelaTarefas{
     display: flex;
@@ -79,9 +73,9 @@ a{
 }
 
 /*ESTILIZAÇÃO DOS ITENS POSICIONADOS*/
-.formAdd h3{
+label{
     color: rgb(233, 233, 233);
-    margin-left: 1px;
+    font-weight: 600;
 }
 
 #entrada_tarefa{
@@ -91,11 +85,18 @@ a{
     background-color: rgba(77, 90, 58, 0.384);
 }
 
+#entrada_data{
+    padding: 3px 1px 3px 1px;
+    border-radius: 7px;
+    border: none;
+    background-color: rgba(77, 90, 58, 0.384);
+}
+
 ::placeholder{
     color: rgb(212, 212, 212) ;
 }
 
-#entrada_tarefa:focus{
+#entrada_tarefa:focus, #entrada_data:focus{
     border: none;
     outline: solid 1px rgb(136, 185, 2);
 }
@@ -104,31 +105,32 @@ a{
     padding: 5px;
     border-radius: 8px;
     border: none;
-    cursor: pointer;
-    color: rgb(250, 250, 250);
+    color: rgb(226, 226, 226);
     font-weight: 600;
 }
 
 #btn_OK{
+    color: white;
     background-color: rgb(136, 216, 7);
+    cursor: pointer;
 }
 
 #btn_cancel{
     background-color: rgb(247, 66, 66);
+    cursor: pointer;
 }
 
 #btn_OK:hover{
+    color: rgb(226, 226, 226);
     background-color: rgb(116, 185, 4);
 }
 
 #btn_cancel:hover{
+    color: rgb(202, 200, 200);
     background-color: rgb(214, 32, 32);
 }
 
 table{
-    /*------------------*/
-    /*------------------*/
-    /* display: none; */
     text-align: center;
 }
 
@@ -148,3 +150,16 @@ tbody td{
     font-size: 18px;
 }
 
+.nomeTarefa:hover{
+    cursor: pointer;
+    font-size: 23px;
+}
+
+.concluido{
+    text-decoration: line-through;
+}
+
+#concluido{
+    margin: 7px 0 0 24.5px;
+    display: none;
+}

@@ -18,8 +18,14 @@
         <div class="container">
             <div class="formAdd">
                 <form autocomplete="off">
-                    <h3><b>ADICIONAR:</b></h3>
-                    <input id="entrada_tarefa" required placeholder="Insira o nome da tarefa"/>
+                    <div>
+                        <label for="entrada_tarefa">NOMEAR TAREFA:</label>
+                        <input id="entrada_tarefa" placeholder="Insira o nome da tarefa"/>
+                    </div>
+                    <div>
+                        <label for="entrada_data">HORÁRIO:</label>
+                        <input required type="time" id="entrada_data"/>
+                    </div>
                     <button type="submit" id="btn_OK">OK</button>
                     <button type="reset" id="btn_cancel">cancelar</button>
                 </form>
@@ -33,14 +39,8 @@
                         </tr>
                     </thead>
                     <tbody id="tBody">
-                        <tr>
-                            <td><img id="imgCerto" src="./midia/checkemoji.png" alt="Emoji indicando acerto"/></td>
-                            <td id="i_teste1">estudar</td>
-                        </tr>
-                        <tr>
-                            <td><img id="imgErrado" src="./midia/wrongemoji.png" alt="Emoji indicando erro"/></td>
-                            <td id="i_teste2">comer</td>
-                        </tr>
+                        <img src="./midia/checkemoji.png" id="concluido" alt="Emoji indicando acerto" title="Tarefa realizada"./>
+                        <!-- itens adicionados pelo js -->
                     </tbody>
                 </table>
             </div>
