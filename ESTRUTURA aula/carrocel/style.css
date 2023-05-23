@@ -136,3 +136,15 @@ strong, .preco{
     color: #ccc;
     font-size: 14px;
 }
+
+.preco {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+}
+
+#destaque img, #promocao img{
+    max-height: 200px;
+    height: 100%;
+}
