@@ -6,7 +6,7 @@
     font-family: 'Roboto', sans-serif;
 }
 
-header{
+header, footer{
     background-color: #192a56;
     padding: 16px 0;
     color: white;
@@ -57,7 +57,16 @@ nav li a{
     margin: 0 auto;
 }
 
-header > .container{
+/*essa config faz com que o cabeçalho fique estático ao scrollar*/
+header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    /*z-index: 1 mexe com a profundidade do elemento, trazendo ele mais para frente*/
+    z-index: 1;
+}
+
+header > .container, footer .container{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -112,7 +121,7 @@ section h2{
     margin: 0 5%;
 }
 
-.lista_veiculos li button{
+button{
     display: block;
     width: 100%;
     padding: 8px;
@@ -148,3 +157,49 @@ strong, .preco{
     max-height: 200px;
     height: 100%;
 }
+
+.form_campo{
+    margin-bottom: 16px;
+}
+
+/*display block deixa os itens um embaixo do outro nesta ocasião*/
+.form_campo label{
+    font-weight: bold;
+    display: block;
+}
+
+.form_campo input, .form_campo textarea{
+    width: 100%;
+    display: block;
+    /*esse padding é bom para input de forms*/
+    padding: 8px;
+}
+
+/*desabilita opção de alterar o tamanho do textarea*/
+.form_campo textarea{
+    resize: none;
+    height: 120px;
+}
+
+form{
+    max-width: 300px;
+}
+
+form button{
+    max-width: 120px;
+}
+
+footer li{
+    list-style: none;
+    margin-left: 16px;
+}
+
+footer li img{
+    height: 32px;
+}
+
+footer .container{
+    justify-content: space-between;
+    align-items: center;
+}
+
