@@ -5,7 +5,6 @@ email;
 telefone;
 cpf;
 endereço completo;
-completo
 
 Utilize o plugin jQueryMaskPlugin para aplicar máscara aos campos de CPF e CEP
 Crie uma branch cahmada exercicio_plugins_jquery e envie para "jtsilva@senacrs.com.br"

@@ -1,0 +1,14 @@
+Para criar uma expressão regular usa-se "[]"
+Caso eu queira apenas caracteres alfabéticos - "a-z", em maiúscula: "A-Z"~
+Caso eu queira apenas caracteres numéricos - "0-9"
+
+o "keyup blur" é um variante do "keyup" que evita caracteres sejam digitados digitados dentro do campo (tanto num. quando alfab.)
+g, tudo que a expressão regular não for o que ela aceita, substitui por ""
+
+
+$("nome").bind("keyup blur", function(){
+    let i = $(this)
+    i.val(i.val().replace(/[^a-z A-Z]/g, ""))
+})
+
+debuggar é verificar se cada linha do código está funcionando

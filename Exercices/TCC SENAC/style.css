@@ -87,7 +87,7 @@ main button:hover{
 /*https://prnt.sc/UbsUVrGtDPDR - estilização interessante*/
 
 .container_main{
-    background-image: url(./images/background-body.png);
+    background-image: url(./images/background_body.png);
     background-size: cover; /*cobre o espaço com a imagem*/
     background-position: center center; /*(lado da imagem)centraliza o centro da img no centro da tela  (posição da tela)*/
     max-width: 1360px;
@@ -97,4 +97,75 @@ main button:hover{
     display: flex;
     align-items: flex-end;
     justify-content: center;
+}
+
+#novidades a{
+    text-decoration: none;
+}
+
+#novidades img{
+    height: 230px;
+    border-radius: 12px;
+    width: 100%;
+}
+
+#novidades h2{
+    text-align: center;
+}
+
+.lermais{
+    font-weight: 600;
+    color: gold;
+    transition: 0.5s;
+}
+
+.lermais:hover{
+    color: rgb(185, 158, 3);
+}
+
+.container_novidade{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.container_novidade h2{
+    color: white;
+    width: 100%;
+    margin: 300px 0 50px 0;
+    font-size: 35px;
+}
+
+.novidade{
+    max-width: 396px;
+    background-color: rgba(128, 128, 128, 0.767);
+    border-radius: 12px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 30%;
+    text-align: justify;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.novidade h3{
+    color: white;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.novidade p{
+    margin-bottom: 20px;
+}
+
+.imagem_novidade{
+    width: 390px;
+}
+
+.item_central{
+    margin: 0 5%;
 }
