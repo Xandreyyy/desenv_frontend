@@ -1,11 +1,40 @@
+//validação mais precisa - expressões regulares
+//replicar for mais tarde - https://flexiple.com/javascript/javascript-capitalize-first-letter/
 $(document).ready(function(){
     $("#formCadastro").validate({
         rules:{
             entrada_nome:{
+                required: true,
                 maxlength: 26,
-                minlength: 7
+                minlength: 7,
+                minWords: 2,
+            },
+            entrada_email:{
+                required: true,
+                email: true
+            },
+            entrada_telefone:{
+                required: true,
+                minlength: 16,
+                maxlength: 16,
+            },
+            entrada_cpf:{
+                required: true,
+                cpfBR: true
+            },
+            entrada_endereco:{
+                required: true,
+                maxWords: 3 
             }
         }
+    })
+
+    $("#entrada_telefone").mask("(00) 00000-00000",{
+        placeholder: "ex: (12) 34567-8910"
+    })
+
+    $("#entrada_cpf").mask("00000000000",{
+        placeholder: "ex: 12345678912"
     })
 })
 
