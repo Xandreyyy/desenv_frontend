@@ -8,31 +8,44 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>REALIZAR CADASTRO!</h1>
-        <form>
-            <div class="form">
-                <label for="entrada_nome">insira seu nome:</label>
-                <input id="entrada_nome" placeholder="seu nome" type="text" required/>
-
-                <label for="entrada_nome">insira seu email:</label>
-                <input id="entrada_nome" placeholder="seu e-mail" type="text" required/>
-
-                <label for="entrada_nome">insira seu telefone:</label>
-                <input id="entrada_nome" placeholder="seu telefone" type="tel" required/>
-
-                <label for="entrada_nome">insira seu CPF:</label>
-                <input id="entrada_nome" placeholder="seu CPF" type="text" required/>
-
-                <label for="entrada_nome">insira seu endereço:</label>
-                <input id="entrada_nome" placeholder="seu endereço" type="text" required/>
-                
-                <button type="submit">ENVIAR</button>
-                <button type="reset">CANCELAR</button>
-            </div>
-            <!-- <label for="entrada_nome">insira seu nome:</label>
-            <input id="entrada_nome" type="text" required/> -->
-        </form>
+    <div class="fora">
+        <div class="container">
+            <h1>REALIZAR CADASTRO!</h1>
+            <form name="formCadastro" id="formCadastro">
+                <div class="form">
+                    <div>
+                        <label for="entrada_nome">insira seu nome:</label>
+                        <input id="entrada_nome" name="entrada_nome" placeholder="seu nome" type="text" required/>
+                    </div>
+                    <div>
+                        <label for="entrada_email">insira seu email:</label>
+                        <input id="entrada_email" name="entrada_email" placeholder="seu e-mail" type="email"/>
+                    </div>
+                    <div>
+                        <label for="entrada_telefone">insira seu telefone:</label>
+                        <input id="entrada_telefone" name="entrada_telefone" placeholder="seu telefone" type="tel"/>
+                    </div>
+                    <div>
+                        <label for="entrada_cpf">insira seu CPF:</label>
+                        <input id="entrada_cpf" name="entrada_cpf" placeholder="seu CPF" type="number" />
+                    </div>
+                    <div>
+                        <label for="entrada_endereco">insira seu endereço:</label>
+                        <input id="entrada_endereco" name="entrada_endereco" placeholder="seu endereço" type="text"/>
+                    </div>
+                    <div>
+                        <button type="submit">ENVIAR</button>
+                        <button type="reset">CANCELAR</button>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.0.slim.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="./js/additional-methods.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.mask.min.js"></script>
+    <script type="text/javascript" src="./js/messages_pt_BR.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
 </body>
 </html>
