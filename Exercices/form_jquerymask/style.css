@@ -8,9 +8,18 @@ html{
     background-color: blueviolet;
 }
 
-form{
-    color: rgb(88, 88, 88);
+form label{
+    color: rgb(104, 58, 131);
+    font-weight: 600;
     transition: 1s;
+}
+
+.error{
+    color: red;
+}
+
+input .error{
+    background-color: red;
 }
 
 form div label{
@@ -29,10 +38,7 @@ h1{
     max-width: 600px;
     width: 100%;
     border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 500px;
+    height: 700px;
     margin-top: 20px;
     background-color: rgb(255, 255, 255);
     transition: 1s;
@@ -45,7 +51,13 @@ h1{
 .form{
     margin-top: 5px;
     font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
 }
+
 
 input{
     margin-bottom: 10px;

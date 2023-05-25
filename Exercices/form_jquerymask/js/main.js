@@ -15,7 +15,8 @@ $(document).ready(function(){
             },
             entrada_telefone:{
                 required: true,
-                maxlength: 11,
+                minlength: 16,
+                maxlength: 16,
             },
             entrada_cpf:{
                 required: true,
