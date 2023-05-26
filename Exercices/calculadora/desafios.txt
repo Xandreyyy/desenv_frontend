@@ -1,0 +1,2 @@
+DESAFIO 1 - criar calculadora conforme especificado (tem que ser funcional)
+DESAFIO 2 - a mesma calculadora, porém utilizando teclas

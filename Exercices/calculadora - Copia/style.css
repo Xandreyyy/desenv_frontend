@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 50%;
+}
+
+h1{
+    font-size: 3em;
+}
+
+input{
+    max-width: 100%;
+    padding: 8px 40px;
+}
+
+#botoesNumericos, #botoesOperacoes{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.botaoNumerico, .botaoOperacao, .botaoResultado{
+    background-color: rgb(88, 88, 88);
+    border-radius: 6px;
+    margin: 5% 5%;
+    padding: 6px;
+    cursor: pointer;
+}
+
+body{
+    background-color: rgb(114, 114, 114);
+}
+
+#resetar{
+    padding: 5px;
+}

@@ -1,0 +1,20 @@
+UNIDADE DE MEDIDA ESTÁTICO
+px - tamanho fixo à imagem, mantém a mesma quantidade de medida independente do dispositivo
+pt - (point / 1pt = 1/72pol) - interessante quando se trabalha com elementos bem pequenos, qualquer mudança em pt é difícil de perceber
+vw - (viewport width) largura - 
+vh - (viewport height) altura - 
+
+UNIDADE DE MEDIDA RELATIVO
+% - tamanho baseado no tamanho da tela (costuma-se chamar MEDIDA RELATIVA) (medida relativa)
+em - (ephemeral unit)
+Layout responsivo é:
+    Que mantém a aparência independente do dispositivo que está acessando
+
+Sobre CSS responsivo:
+    [<meta name="viewport" content="width=device-width, initial-scale=1.0">]
+    'name="viewport"' - ??
+    'content="width=device-width"' - conteúdo da página vai ser = ao tamanho da tela do dispositivo
+    '"initial-scale=1.0"' - qual será a escala (zoom) ao iniciar a página (1.0 = zoom padrão)
+
+    Na linha de código acima, embaixo "Sobre CSS responsivo", é possível adicionar a seguinte linha de código:
+    initial-scale=1.0|,

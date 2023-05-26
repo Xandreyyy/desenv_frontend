@@ -33,9 +33,11 @@
                 </div>
             </nav>
         </header>
+        <!-- main também tem um img (aplicado pelo css) -->
         <main class="container_main">
             <button type="button">BAIXAR</button>
         </main>
+        <!-- seção de novidades, cada div .novidade é um item da seção -->
         <section id="novidades">
             <div class="container_novidade container">
                 <h2>NOVIDADES</h2>
@@ -61,7 +63,14 @@
                         <img src="../images/img_noticia1.png" alt="Imagem ilustrando a novidade"/>
                     </div>
                 </div>
-                <div class="container_novidade container" id="botao_novidade">
+                <div id="mostrarMais_novidades" title="clique para mostrar mais novidades!">
+                    <p>mostrar mais<span class="span_setaNoticia">▽</p></span>
+                </div>
+                <div id="mostrarMenos_novidades">
+                    <p>mostrar mais<span class="span_setaNoticia">△</p></span>
+                </div>
+                <!-- a div abaixo está oculta porque tem um botão para revelar as novidades -->
+                <div class="container_novidade container" id="novidadesplus">
                     <div class="novidade">
                         <h3>Título da novidade</h3>
                         <p> 
@@ -110,5 +119,6 @@
             </div>
         </section>
         <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+        <script src="../js/main.js"></script>
     </body>
 </html>
