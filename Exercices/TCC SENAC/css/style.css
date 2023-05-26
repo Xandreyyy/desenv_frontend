@@ -33,12 +33,20 @@ nav ul{
 
 header{
     margin: 0 20px;
-    /* padding: 10px 0; */
 }
 
 #div_deNav, #div_userConta{
     margin-top: 20px;
     display: block;
+}
+
+.navLista1 li, .navLista2 li{
+    margin-right: 14px;
+    padding: 3px;
+}
+
+#div_userConta li{
+    font-size: 18px;
 }
 
 .container_flex{
@@ -50,10 +58,12 @@ header ul li a{
     text-decoration: none;
     font-family: 'Indie Flower', cursive;
     font-weight: bold;
+    transition: 0.5s;
 }
 
 #item_conta{
     color: rgb(1, 206, 1);
+    transition: 0.5s;
 }
 
 #item_conta:hover{
@@ -71,6 +81,7 @@ main button{
     border: none;
     color: white;
     background-color: #59AE04;
+    transition: 0.5s;
     font-size: 22px;
     cursor: pointer;
     display: flex;
@@ -87,7 +98,7 @@ main button:hover{
 /*https://prnt.sc/UbsUVrGtDPDR - estilização interessante*/
 
 .container_main{
-    background-image: url(./images/background_body.png);
+    background-image: url(../images/background_body.png);
     background-size: cover; /*cobre o espaço com a imagem*/
     background-position: center center; /*(lado da imagem)centraliza o centro da img no centro da tela  (posição da tela)*/
     max-width: 1360px;
@@ -133,12 +144,12 @@ main button:hover{
 .container_novidade h2{
     color: white;
     width: 100%;
-    margin: 300px 0 50px 0;
+    margin: 270px 0 50px 0;
     font-size: 35px;
 }
 
 .novidade{
-    max-width: 396px;
+    max-width: 100%;
     background-color: rgba(128, 128, 128, 0.767);
     border-radius: 12px;
     padding: 30px;
@@ -146,26 +157,29 @@ main button:hover{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 30%;
+    width: 40%;
     text-align: justify;
     font-size: 16px;
-    margin-bottom: 20px;
+    margin-bottom: 27px;
+    margin: 0 5% 28px;
+    transition: 0.5s;
+}
+
+#botao_novidade{
+    display: none;
 }
 
 .novidade h3{
     color: white;
-    font-size: 20px;
+    font-size: 25px;
     margin-bottom: 10px;
 }
 
 .novidade p{
+    font-size: 17px;
     margin-bottom: 20px;
 }
 
 .imagem_novidade{
-    width: 390px;
-}
-
-.item_central{
-    margin: 0 5%;
+    width: 100%;
 }
