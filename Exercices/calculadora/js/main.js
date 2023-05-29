@@ -1,42 +1,30 @@
 $(document).ready(function(){
     const input = $("#calcular")
-    //resetar campo
+  
+    // resetar campo
     $("#resetar").on("click", function(){
-        input.val("")
+      input.val("")
     })
-
-    //escuta botoes numericos
+  
+    // escuta botões numericos
     $(".botaoNumerico").on("click", function(){
-        let valorCalc = $(this).attr("value")
-        $(input).val(`${input.val()}${valorCalc}`)
+      let valorCalc = $(this).attr("value")
+      input.val(`${input.val()}${valorCalc}`)
     })
-    
-    //escuta botoes de operacoes
-    let operacaoEsc
+
+    // escuta botões de operacoes
     $(".botaoOperacao").on("click", function(){
-        let valorOp = $(this).attr("value")
-        $(input).val(input.val() + valorOp)
-        return operacaoEsc = $(this).attr("value")
+      let operacao = $(this).attr("value")
+      input.val(`${input.val()}${operacao}`)
     })
 
-    function calcular(){
-        arraySplit = input.val().split(operacaoEsc)
-        valor1 = parseFloat(arraySplit[0])
-        valor2 = parseFloat(arraySplit[1])
-        if (operacaoEsc == "+"){
-            return valor1 + valor2
-        }else if (operacaoEsc == "-"){
-            return valor1 - valor2
-        }else if (operacaoEsc == "*"){
-            return valor1 * valor2
-        }else if (operacaoEsc == "/"){
-            return valor1 / valor2
-        }
-    }
-
-    resultados = []
+    $("#botaoP").on("click", function(){
+      let parenteses = $(this).attr("value")
+      input.val(`${input.val()}${parenteses}`)
+    })
+  
     $("#Bresultado").on("click", function(){
-        $(input).val(calcular())
-        operacaoEsc = []
+        let calcular = eval(input.val())
+        input.val(calcular)
     })
-})
+  })

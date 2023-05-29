@@ -10,36 +10,52 @@
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    width: 50%;
+    width: 30%;
+    height: 50%;
 }
 
 h1{
-    font-size: 3em;
+    font-size: 4em;
 }
 
 input{
     max-width: 100%;
-    padding: 8px 40px;
+    padding: 25px 50px;
+    font-size: 2em;
 }
 
 #botoesNumericos, #botoesOperacoes{
     display: flex;
     justify-content: center;
-    font-size: 30px;
+    width: 100%;
 }
 
-.botaoNumerico, .botaoOperacao, .botaoResultado{
+#botoesNumericos{
+    background-color: red;
+    max-height: 500px;
+    width: 500px;
+    flex-flow: row wrap;
+}
+
+#botoesOperacoes{
+    background-color: yellowgreen;
+}
+
+.botaoNumerico, .botaoOperacao, .botaoResultado, #resetar{
     background-color: rgb(88, 88, 88);
     border-radius: 6px;
-    margin: 5% 5%;
-    padding: 6px;
+    padding: 30px;
+    margin: 5px;
     cursor: pointer;
+    font-size: 50px;
+    /* flex-wrap: wrap; */
+    transition: 0.15s;
+}
+
+.botaoNumerico:hover, .botaoOperacao:hover, .botaoResultado:hover, #resetar:hover{
+    background-color: rgb(0, 141, 141);
 }
 
 body{
     background-color: rgb(114, 114, 114);
-}
-
-#resetar{
-    padding: 5px;
 }

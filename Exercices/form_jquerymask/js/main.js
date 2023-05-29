@@ -1,6 +1,12 @@
 //validação mais precisa - expressões regulares
 //replicar for mais tarde - https://flexiple.com/javascript/javascript-capitalize-first-letter/
 $(document).ready(function(){
+    $("#enviar").on("click", function(){
+        let teste = "10*(5+5)"
+        console.log(eval(teste))
+    })
+
+
     $("#formCadastro").validate({
         rules:{
             entrada_nome:{
