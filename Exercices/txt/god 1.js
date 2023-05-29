@@ -135,3 +135,45 @@ function recomendarProduto(produtos, produto, i) {
 recomendarProduto(produtos, produto, i)
 
 -- Exercício 9 --
+// ==280 +20%
+// 281 até 700 +15%
+// 701 até 1500 +10%
+// 1500++ 5%
+//salário inserido; percentual aplicado; valor do aumento; salário atual
+
+function calcSal() {
+    let sal
+    while (true) {
+        sal = prompt(`Insira o valor do salário: `)
+        if (sal == null){
+            return
+        }
+        sal = parseFloat(sal)
+        if (isNaN(sal)){
+            alert(`Insira apenas números!`)
+        }else{
+            break
+        }
+    }
+    let dif, pct, pctAp
+    if (sal <=280){
+        pctAp = 20
+        pct = sal + (sal * pctAp/100)
+        dif = pct - sal
+    }else if (sal >280 && sal <=700){
+        pctAp = 15
+        pct = sal + (sal * pctAp/100)
+        dif = pct - sal
+    }else if (sal >700 && sal <=1500){
+        pctAp = 10
+        pct = sal + (sal * pctAp/100)
+        dif = pct - sal
+    }else{
+        pctAp = 5
+        pct = sal + (sal * pctAp/100)
+        dif = pct - sal
+    }
+    alert(`Salário: ${sal}\nPercentual aplicado: ${pctAp}\nValor do aumento: ${dif.toFixed(2)}\nSalário atual: ${pct}`)
+}
+
+calcSal()

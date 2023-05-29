@@ -1,49 +1,39 @@
 $(document).ready(function(){
     const input = $("#calcular")
-    //resetar campo
+    let valorAnterior = null
+  
+    // resetar campo
     $("#resetar").on("click", function(){
-        input.val("")
+      input.val("")
+      valorAnterior = null
     })
-
-    //escuta botoes numericos
+  
+    // escuta botões numericos
     $(".botaoNumerico").on("click", function(){
-        let valorCalc = $(this).attr("value")
-        $(input).val(`${input.val()}${valorCalc}`)
+      const valorCalc = $(this).attr("value")
+      input.val(`${input.val()}${valorCalc}`)
     })
-    
-    //escuta botoes de operacoes
-    let operacaoEsc
+  
+    // escuta botões de operacoes
     $(".botaoOperacao").on("click", function(){
-        let valorOp = $(this).attr("value")
-        $(input).val(input.val() + valorOp)
-        return operacaoEsc = $(this).attr("value")
+      const operacao = $(this).attr("value")
+      if (valorAnterior === null){
+        valorAnterior = input.val()
+        input.val("")
+      }else{
+        const concatenar = `${valorAnterior}${input.val()}`
+        valorAnterior = eval(concatenar)
+        input.val("")
+      }
+      input.val(`${input.val()}${operacao}`)
     })
-
-
-    const operacoes = ["+", "-", "*", "/"]
-    function calcular(){
-        for (let i = 0; i < input.val().length; i++) {
-            let operacao
-            
-            arraySplit = input.val().split(operacaoEsc)
-            valor1 = parseFloat(arraySplit[0])
-            valor2 = parseFloat(arraySplit[1])
-        }
-
-        if (operacaoEsc == "+"){
-            return valor1 + valor2
-        }else if (operacaoEsc == "-"){
-            return valor1 - valor2
-        }else if (operacaoEsc == "*"){
-            return valor1 * valor2
-        }else if (operacaoEsc == "/"){
-            return valor1 / valor2
-        }
-    }
-
-    resultados = []
+  
+    // calcular e mostrar resultado
     $("#Bresultado").on("click", function(){
-        $(input).val(calcular())
-        operacaoEsc = []
+      const operacaoCompleta = `${valorAnterior}${input.val()}`
+      const resultado = eval(operacaoCompleta)
+      input.val(resultado)
+      valorAnterior = null
     })
-})
+  })
+  
