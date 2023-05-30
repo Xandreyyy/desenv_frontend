@@ -1,0 +1,194 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Indie Flower', cursive;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*formatando o header*/
+.container{
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header{
+    border-bottom: 1px solid #ccc;
+    padding: 16px 0;
+    margin-bottom: 60px;
+}
+
+/*estilizando o submenu*/
+
+.submenu{
+    display: none;
+    border: 1px solid red;
+    /*faz com que o submenu não dependa de ninguém*/
+    position: absolute;
+    width: 300px;
+    left: 0;
+    top: 100%;
+}
+
+.submenu li{
+    display: block;
+}
+
+.menu > li{
+    /**/
+    float: left;
+    list-style: none;
+    padding: 16px;
+    /*deixar transparent para depois usar o jQuery para que indique o posicionamento do curso no menu*/
+    border-top: 4px solid transparent;
+    position: relative;
+}
+
+.clear{
+    clear: both;
+}
+
+.menu li:hover .submenu{
+    display: block;
+}
+
+.menu li:hover{
+    border-color: red;
+}
+
+.submenu li{
+    display: block;
+    padding: 8px;
+}
+/*fim da formatação do header*/
+
+.conteudo{
+    /*é como se ele botasse o item dentro de uma célula*/
+    display: grid;
+    /*quantas colunas o grid terá, por padrão mostra por colunas*/
+    grid-template-columns: 70% 30%;
+}
+
+.noticia img{
+    max-width: 100%;
+}
+
+.destaque{
+    margin-bottom: 56px;
+}
+
+.destaque .noticia a{
+    display: flex;
+    font-size: 2em;
+}
+
+.destaque .noticia img{
+    margin-right: 8px;
+    font-size: 2em;
+}
+
+section h2{
+    margin-bottom: 32px;
+}
+
+aside{
+    padding-left: 40px;
+}
+
+aside .noticia{
+    margin-bottom: 24px;
+}
+
+/*????*/
+.noticias{
+    display: grid;
+    grid-template-columns: repeat(3, 32.6%);
+    column-gap: 1%;
+    row-gap: 5%;
+}
+
+.btnmenu{
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.btnmenu button{
+    padding: 8px;
+}
+
+/*a mediaquery vira um map quando se passa um parâmetro*/
+@media screen and (max-width: 760px) {
+    .conteudo{
+        display: block;
+    }
+    .container{
+        max-width: 90%;
+    }
+    .destaque .noticia a{
+        display: block;
+        font-size: 1.5em;
+    }
+    .destaque .noticia img{
+        margin-right: 0;
+    }
+    .noticias{
+        display: block;
+    }
+    .noticias .noticia{
+        margin-bottom: 32px;
+    }
+    aside{
+        padding-left: 0;
+    }
+    header div.container{
+        flex-direction: column;
+    }
+    .submenu{
+        display: block;
+        width: 300px;
+        position: relative;
+        border: none;
+    }
+    /*essa alteração só afetará aos "Esportes" e "Economia"*/
+    .menu > li{
+        clear: both;
+    }
+
+    .submenu li{
+        display: block;
+        padding: 8px;
+    }
+}
+
+/*quando, pelo menos, entrar nessa resolução, o botão desaparecerá [pode-se ler: qualquer tela maior que: 1024px]*/
+@media screen and (min-width: 1024px) {
+    .btnmenu{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 761px) and (max-width: 1023){
+    .container{
+        max-width: 90%;
+    }
+
+    .btnmenu{
+        display: none;
+    }
+
+    .detaque .noticia a{
+        font-size: 1.5em;
+    }
+
+    .noticias{
+        grid-template-columns: repeat(3, 49%);
+    }
+}
