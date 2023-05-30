@@ -12,6 +12,11 @@
     margin: 0 auto;
     width: 30%;
     height: 50%;
+    flex-wrap: wrap;
+}
+
+#cabecalho{
+    display: flex;
 }
 
 h1{
@@ -24,7 +29,8 @@ input{
     font-size: 2em;
 }
 
-#botoesNumericos, #botoesOperacoes{
+#botoesNumericos,
+#botoesOperacoes{
     display: flex;
     justify-content: center;
     width: 100%;
@@ -41,18 +47,27 @@ input{
     background-color: yellowgreen;
 }
 
-.botaoNumerico, .botaoOperacao, .botaoResultado, #resetar{
+.botaoNumerico,
+.botaoOperacao,
+.botaoResultado,
+#resetar{
     background-color: rgb(88, 88, 88);
     border-radius: 6px;
     padding: 30px;
     margin: 5px;
     cursor: pointer;
     font-size: 50px;
-    /* flex-wrap: wrap; */
     transition: 0.15s;
 }
 
-.botaoNumerico:hover, .botaoOperacao:hover, .botaoResultado:hover, #resetar:hover{
+#resetar{
+    width: 100px;
+}
+
+.botaoNumerico:hover,
+.botaoOperacao:hover,
+.botaoResultado:hover,
+#resetar:hover{
     background-color: rgb(0, 141, 141);
 }
 
