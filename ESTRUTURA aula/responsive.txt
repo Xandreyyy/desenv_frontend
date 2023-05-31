@@ -32,3 +32,8 @@ passa as instruções da construção da página de acordo com a tela (<meta nam
 
 Media Query e BreakPoint fazem parte do layout responsivo.
 (às vezes usamos repositórios de imagems para usar imagens na aplicação, com isso, o site pode ser mais pesado)
+
+
+VPN = Virtual Private Network
+ou Tunneling: trafegar infos. dentro de um tubo - sabemos que há um túnel embaixo do muro e que está passando conteúdo,
+porém não sabemos a quantidade e nem o que é.

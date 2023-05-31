@@ -1,0 +1,177 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+nav li{
+    display: inline;
+}
+
+nav a{
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    margin-right: 5px;
+    transition: 0.5s;
+}
+
+nav a:hover{
+    color: #ccc;
+}
+
+header h1, #icone_carrinho, #carQtd{
+    color: white;
+}
+
+#icone_carrinho{
+    font-size: 40px;
+}
+
+.form{
+    display: flex;
+    align-items: center;
+}
+header h1{
+    font-size: 40px;
+}
+
+header input{
+    padding: 12px;
+    border-radius: 12px;
+    margin: 0 10px;
+    border: none;
+}
+
+header input:focus{
+    border: 1px solid red;
+    outline: none;
+}
+
+header button{
+    padding: 10px;
+    border-radius: 12px;
+    background-color: white;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.5s;
+}
+
+header button:hover{
+    background-color: #ccc;
+}
+
+header{
+    background-color: #000000;
+    padding: 40px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    /* z-index: 1; */
+}
+
+header .container{
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cFlex{
+    display: flex;
+}
+
+#sProdutos{
+    padding-top: 100px;
+}
+
+/*pedir explicação ????? - Por que ficou assim? e por que funcionou*/
+
+main{
+    width: 100%;
+}
+
+main h2{
+    font-size: 30px;
+    padding-bottom: 14px;
+    border-bottom: 4px solid black;
+}
+
+.produto{
+    max-width: 100%;
+    width: 22%;
+    margin: 0 10px;
+}
+
+.produto button{
+    padding: 10px;
+    width: 100%;
+    border-radius: 9px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    margin-top: 12px;
+    transition: 0.2s;
+    font-size: 15px;
+}
+
+.icone_mais{
+    font-size: 20px;
+    font-weight: bolder;
+    color: rgb(38, 184, 62);
+}
+
+#bunda{
+    display: flex;
+    align-items: center;
+}
+
+.produto button:hover{
+    background-color: rgb(70, 70, 70);
+}
+
+.produtos{
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.produtos img{
+    height: 150px;
+}
+
+#about img{
+    height: 400px;
+}
+
+#about{
+    padding-top: 100px;
+    display: flex;
+}
+
+.conteudo_sobre{
+    margin-left: 20px;
+}
+
+.conteudo_sobre h2{
+    margin-bottom: 5px;
+    font-size: 27px;
+}
+
+.conteudo_sobre p{
+    font-size: 18px;
+}
+
+@media screen and (min-width: 641px) and (max-width: 1023) {
+    .produto{
+        width: 55%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    
+}
