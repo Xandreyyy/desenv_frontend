@@ -41,6 +41,7 @@ header h1, #icone_carrinho, #carQtd{
 }
 header h1{
     font-size: 40px;
+    font-style: italic;
 }
 
 header input{
@@ -96,10 +97,12 @@ main{
     width: 100%;
 }
 
-main h2{
+main h2, .conteudo_sobre h2{
     font-size: 30px;
     padding-bottom: 14px;
     border-bottom: 4px solid black;
+    width: fit-content;
+    font-style: italic;
 }
 
 .produto{
@@ -120,15 +123,15 @@ main h2{
     font-size: 15px;
 }
 
+/* .produto h3, .produto p{
+    margin-top: 20px;
+    text-align: center;
+} */
+
 .icone_mais{
     font-size: 20px;
     font-weight: bolder;
     color: rgb(38, 184, 62);
-}
-
-#bunda{
-    display: flex;
-    align-items: center;
 }
 
 .produto button:hover{
@@ -164,18 +167,29 @@ main h2{
 
 .conteudo_sobre p{
     font-size: 18px;
+    margin-top: 20px;
 }
 
 @media screen and (min-width: 641px) and (max-width: 1023px) {
     .produto {
-        width: 75%;
+        width: 70%;
     }
     .produtos{
         display: grid;
         grid-template-columns: repeat(2, 50%);
+        margin: 0 auto;
+    }
+    #about{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .conteudo_sobre{
+        margin-top: 23px;
     }
 }
 
-@media screen and (max-width: 640px) {
+/* @media screen and (max-width: 640px) {
     
-}
+} */

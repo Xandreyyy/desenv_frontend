@@ -37,3 +37,41 @@ Media Query e BreakPoint fazem parte do layout responsivo.
 VPN = Virtual Private Network
 ou Tunneling: trafegar infos. dentro de um tubo - sabemos que há um túnel embaixo do muro e que está passando conteúdo,
 porém não sabemos a quantidade e nem o que é.
+
+
+BOOTSTRAP - É um framework baseado em JavaScript, e não uma biblioteca (está um nível acima)
+Com ele é possível estilizar/criar:
+    *Campos |
+    *Fontes |- formulário   
+    *Botões |
+    *Grid
+    *Tabelas
+    *etc...
+CDN - biblioteca que não é local, uma biblioteca que está sendo acessada de forma externa.
+
+Um dado solto não representa nada, mas ao juntar um dado com outro dado forma-se uma informação.
+COLUNA: relaciona dados;
+GRID: organiza elementos, e também pode relacionar dados.
+
+EM BOOTSRAP:
+(por padrão divide a tela em 12 colunas)
+chamar uma linha: class="row"
+chamar uma coluna: class="col"
+".container>.row>.col*7>img+h3{Produto #}"
+
+--
+Classes do Bootstrap para tabelas:
+    *table-primary
+    *table-secondary
+    *table-sucess
+    *table-danger
+    *table-warning
+    *table-info
+    ----------------- (modos de visualização)
+    *table-light
+    *table-dark
+    *table-striped
+    *table-striped-columns
+    *table-hover (para tabelas longas)
+A respeito dessas clsses, no lugar do "table", caso queira estilizar um botão, apenas substituir o "table" por "btn"
+-   Accordion faz um o efeito de "slideDown", o mesmo efeito ao clicar em um botão de FAQ.
