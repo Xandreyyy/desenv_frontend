@@ -91,7 +91,7 @@ header .container{
     padding-top: 100px;
 }
 
-/*pedir explicação ????? - Por que ficou assim? e por que funcionou*/
+/*pedir explicação ????? - Por que ficou assim?*/
 
 main{
     width: 100%;
@@ -176,8 +176,7 @@ main h2, .conteudo_sobre h2{
     }
     .produtos{
         display: grid;
-        grid-template-columns: repeat(2, 50%);
-        margin: 0 auto;
+        grid-template-columns: repeat(2, 40%);
     }
     #about{
         display: flex;
