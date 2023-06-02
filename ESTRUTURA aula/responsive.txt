@@ -75,3 +75,7 @@ Classes do Bootstrap para tabelas:
     *table-hover (para tabelas longas)
 A respeito dessas clsses, no lugar do "table", caso queira estilizar um botão, apenas substituir o "table" por "btn"
 -   Accordion faz um o efeito de "slideDown", o mesmo efeito ao clicar em um botão de FAQ.
+
+css:
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+

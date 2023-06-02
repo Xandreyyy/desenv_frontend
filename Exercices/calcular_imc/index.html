@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular IMC</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <form>
+            <h1>Calculadora de IMC</h1>
+            <label class="form-label" for="peso">Insira seu peso:</label>
+            <input class="form-control" type="text" min="0" max="500" step="0.01" id="peso" required/>
+            <label class="form-label" for="altura">Insira sua altura:</label>
+            <input class="form-control" type="number" min="0" max="500" step="0.01" id="altura" required/>
+            <div>
+                <button class="btn btn-success" type="submit">Calcular</button>
+            </div>
+        </form>
+    </div>
+
+    <table class="table table-striped">
+        <thead>
+            <th>Resultado</th>
+            <th>Situação</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Abaixo de 17</td>
+                <td class="tdInject" value="0">Muito abaixo do peso</td>
+            </tr>
+            <tr>
+                <td>Entre 17 e 18,49</td>
+                <td class="tdInject" value="1">Abaixo do peso</td>
+            </tr>
+            <tr>
+                <td>Entre 18,5 e 24,99</td>
+                <td class="tdInject" value="2">Peso normal</td>
+            </tr>
+            <tr>
+                <td>Entre 25 e 29,99</td>
+                <td class="tdInject" value="3">Acima do peso</td>
+            </tr>
+            <tr>
+                <td>Entre 30 e 34,99</td>
+                <td class="tdInject" value="4">Obesidade I</td>
+            </tr>
+            <tr>
+                <td>Entre 35 e 39,99</td>
+                <td class="tdInject" value="5">Obesidade II (severa)</td>
+            </tr>
+            <tr>
+                <td>Acima de 40</td>
+                <td class="tdInject" value="7">Obesidade III (mórbida)</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <div class="container" id="resultado_div">
+        <div id="cabecalho_resul">
+            <h2>Resultado: <span id="titulo_resul">msg padrão</span></h2>
+            <p id="desc_resul">desc padrão</p>
+        </div>
+        <div id="dicas_resul">
+            <h3>Dicas:</h3>
+            <ul>
+                <li><p>Busque orientação médica: Consultar um profissional de saúde é fundamental para entender a sua situação específica e receber orientações adequadas;</p></li>
+                <li><p>Opte por uma dieta equilibrada, rica em nutrientes e pobre em calorias vazias. Priorize alimentos naturais, como frutas, legumes, grãos integrais e proteínas magras;</p></li>
+                <li><p>Pratique atividades físicas regularmente, de acordo com a sua capacidade e orientação médica. Escolha atividades que goste e que possam ser incorporadas na sua rotina diária;</p></li>
+                <li><p>Controle as porções: Tenha cuidado com o tamanho das porções e evite comer em excesso. Faça refeições equilibradas e evite beliscar entre as refeições;</p></li>
+                <li><p>Busque suporte emocional: A mudança de hábitos pode ser desafiadora, e o apoio emocional é importante nesse processo. Busque o suporte de familiares, amigos ou profissionais de saúde para ajudar no seu caminho rumo a um estilo de vida mais saudável.</p></li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+    </script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

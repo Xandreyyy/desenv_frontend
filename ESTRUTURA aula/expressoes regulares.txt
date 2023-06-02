@@ -11,4 +11,7 @@ $("nome").bind("keyup blur", function(){
     i.val(i.val().replace(/[^a-z A-Z]/g, ""))
 })
 
+O "^" significa negação
+O "/g" significa que a nível global a regência está verificando se condiz com o que está dentro dos colchetes.
+
 debuggar é verificar se cada linha do código está funcionando

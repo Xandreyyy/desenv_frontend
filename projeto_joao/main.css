@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-color: #E9873E;
+    /* padding-top: 100px; */
+}
+
+header{
+    display: flex;
+    padding: 8px;
+    margin-bottom: 16px;
+    justify-content: center;
+    background-color: #FF7100;
+}
+
+header img{
+    display: flex;
+    align-self: flex-end;
+    height: 50px;
+}
+
+header h1{
+    color: ghostwhite;
+}
+
+.container{
+    display: flex;
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: space-evenly;
+}
+
+#form_padaria{
+    display: grid;
+}
+
+#paes{
+    display: none;
+}
+
+/* #numero_de_paes{
+    display: none;
+} */
+
+#receber_numero_de_paes_franceses, #receber_numero_de_massinhas_doces, #receber_numero_de_baguetes{
+    display: none;
+    border: none;
+    border-bottom: #000 2px solid;
+    border-radius: 5px;
+    width: 100px;
+}
+
+#numero_de_paes{
+    display: none;
+    width: 100px;
+}
+
+#enviar_paes_franceses{
+    display: none;
+    width: 100px;
+}
+
+#enviar_baguetes{
+    display: none;
+    width: 100px;
+}
+
+#botao_sair{
+    display: none;
+    width: 100px;
+}
+
+#numero_de_paes button{
+    display: block;
+    padding: 3px;
+    font-size: large;
+}
+
+/* #continuar_vendendo{
+    display: none;
+    padding: 3px;
+    font-size: large;
+} */
+
+/* form label{
+    display: grid;
+    color: #FFF;
+    font-weight: bold;
+} */
+
+form button{
+    background-color: #FF7100;
+    color: #FFF;
+    font-size: 20px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    padding: 8px;
+    margin-top: 16px;
+}
+
+button:hover{
+    background-color: #FF7B12;
+}
+
+.images{
+    display: flex;
+}
+
+#forno_cheio{
+    display: none;
+    height: 390px;
+    border-radius: 7px;
+}
+
+#forno_vazio{
+    height: 390px;
+    display: none;
+    border-radius: 7px;
+}
+
+#estoque{
+    display: none;
+    height: 390px;
+}
+
+#calendario{
+    display: flex;
+    height: 390px;
+}
+
+#caixa{
+    display: none;
+    height: 390px;
+}
+
+#pao_fances{
+    display: none;
+    height: 390px;
+}
+
+#selecao_de_paes{
+    display: none;
+    height: 390px;
+}
+
+#texto_assar{
+    display: none;
+}
+
+#texto_vender{
+    display: none;
+}
+
+#texto_forno{
+    display: none;
+}
+
+#texto_estoque{
+    display: none;
+}
+
+#texto_caixa{
+    display: none;
+}
+
+#texto_calendario{
+    display: block;
+}
+
+p{
+    color: ghostwhite;
+}

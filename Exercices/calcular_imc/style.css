@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+label{
+    display: block;
+}
+
+form{
+    width: 500px;
+    text-align: center;
+}
+
+form button{
+    margin-top: 10px;
+}
+
+#resultado_div{
+    display: block;
+}
+
+#resultado_div{
+    display: none;
+    width: 700px;
+    margin-top: 40px;
+    background-color: #ccc;
+}
+
+.table{
+    width: 500px;
+}

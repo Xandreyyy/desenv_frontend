@@ -105,14 +105,8 @@ main h2, .conteudo_sobre h2{
     font-style: italic;
 }
 
-.produto{
-    max-width: 100%;
-    width: 22%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
+/*estes itens estavam embaixo da estilização do .produto, porém, ao ler a estilização
+dos itens, um deles resetava o margin, então defini essas duas estilizações antes do .produto*/
 
 .item1{
     margin-right: 20px;
@@ -121,6 +115,14 @@ main h2, .conteudo_sobre h2{
 .item3{
     margin: 0 20px;
 }
+
+.produto{
+    max-width: 100%;
+    width: 22%;
+    margin-top: 20px;
+}
+
+
 
 .produto button{
     padding: 10px;
@@ -134,10 +136,17 @@ main h2, .conteudo_sobre h2{
     font-size: 15px;
 }
 
-/* .produto h3, .produto p{
-    margin-top: 20px;
+#txtProduto{
+    margin-top: 14px;
+}
+
+.produto h3{
     text-align: center;
-} */
+}
+
+.produto p{
+    margin-top: 10px;
+}
 
 .icone_mais{
     font-size: 20px;
@@ -150,14 +159,13 @@ main h2, .conteudo_sobre h2{
 }
 
 .produtos{
-    margin-top: 20px;
     flex-wrap: wrap;
 }
 
 .produtos img{
-    display: flex;
-    justify-content: center;
+    border-radius: 3px;
     height: 150px;
+    width: 100%;
 }
 
 #about img{
@@ -171,10 +179,9 @@ main h2, .conteudo_sobre h2{
 
 .conteudo_sobre{
     display: flex;
-    margin-left: 20px;
 }
 
-.conteudo_sobre h2{
+/* .conteudo_sobre h2{
     margin-bottom: 5px;
     font-size: 27px;
 }
@@ -182,7 +189,7 @@ main h2, .conteudo_sobre h2{
 .conteudo_sobre p{
     font-size: 18px;
     margin-top: 20px;
-}
+} */
 
 #txtSobre{
     margin-left: 10px;
@@ -208,7 +215,7 @@ footer span{
     }
     .produtos{
         display: grid;
-        grid-template-columns: repeat(2, 40%);
+        grid-template-columns: repeat(2, 50%);
     }
     #about{
         display: flex;
