@@ -1,17 +1,140 @@
-Para criar uma expressão regular usa-se "[]"
-Caso eu queira apenas caracteres alfabéticos - "a-z", em maiúscula: "A-Z"~
-Caso eu queira apenas caracteres numéricos - "0-9"
+RegEx serve para identificar padrões de caracteres em um texto.
+(verificar e-mail: [a-z]{1}[\w\.\-]{1,}@[a-z]{1,}\.[a-z]{1,5}(\.[\w]{1,})?(\.[\w]{1,})?)
 
-o "keyup blur" é um variante do "keyup" que evita caracteres sejam digitados digitados dentro do campo (tanto num. quando alfab.)
-g, tudo que a expressão regular não for o que ela aceita, substitui por ""
+Definir um regex: /aq iria a regex/ ou também é possível usar um Constructor. ex) /rei/, ele está procurando um elemento que possui a letra r, seguida da letra e e a letra i (também é possível usar o pipe /rei|raio/)
+Definir conjuntos: [aq iria a regex]. ex) /[rei]/, ele está procurando um elemento com a letra r, ou e ou i
+Para poder encontrar mais ocorrências, usar operador "pipe" |: /a|e|i|o|u/
+Definir range: [regex-regex]; exemplo: [a-z] - procurará todas as letras de "a" até "z" e pelo "ao quadrado"
+Definir para negar um conjunto: [^a-z|A-Z] - aceitará tudo que não for um caractere alfabético
 
 
-$("nome").bind("keyup blur", function(){
-    let i = $(this)
-    i.val(i.val().replace(/[^a-z A-Z]/g, ""))
-})
 
-O "^" significa negação
-O "/g" significa que a nível global a regência está verificando se condiz com o que está dentro dos colchetes.
 
-debuggar é verificar se cada linha do código está funcionando
+===============================================================================
+As regex existem duas formas de caracteres, os literais, que representam o valor literal do caractere como
+abc123 e os metacaracteres que possuem funções distintas dentro de um contexto na regex.
+
+Por exemplo: [/a-z/] - o hífen é interpretado de forma especial na regex, para fazer para que ele seja
+lido como um caractere literal, basta adicionar \-, ele perderá essa interpretação diferente.
+O exemplo ficaria: [/a\-n/] - ele irá procurar todos os "a", todos os "-" e todos os "o"
+===============================================================================
+
+Parâmetros modificadores do RegEx (eles vão fora da "/"):
+i - remove o case-sensitive;
+g - permite retornar todos os valores daquele caractere;
+*Para misturar os parâmetros modificadores basta apenas adicionar um atrás do outro: /[a-c|0-5]/ig
+
+Shorthands do RegEx:
+*Para cada shorthand, se mudar de minúscula para maiúscula, significará negação (^).
+
+[0-9] = \d (de digit)
+[a-z|A-Z|0-9_] = \w (de words characters)
+[\r\n\t\f\v ] = \s (de space)
+(https://gist.github.com/alexandreservian/124db2fab8a75474dd6fdc4f17f93a5d) - perguntar ao prof para que serve isto https://prnt.sc/Lz68iFIygQBv
+
+Quantificadores do RegEx:
+
+let numeros = "1, 10, 100, 1000"
+console.log(numeros.match(/10+/ig))
+console.log(numeros.match(/10*/ig))
+console.log(numeros.match(/10?/ig))
+
+estes três primeiros quantificadores retornam arrays
++ = um ou mais == {1,} \\ faz retornar todo o elemento da ocorrência ([10, 100, 1000])
+* = faz retornar todo o elemento junto com o primeiro caractere ([1, 10, 100, 1000])
+? = faz retornar o elemento fornecido ou o primeiro caractere ([1, 10, 10, 10])
+
+{num} = multiplica o valor das ocorrências
+A respeito desse último quantificador, é possível fazer as seguintes coisas:
+    *Extrair os primeiros N caracteres no início da string:
+    17894 RegEx -> /[0-9]{4}/ = 1789
+
+    *Extrair os últimos N caracteres no final da string:
+        ($ = final da string)
+    74982 RegEx -> /[0-9]{4}$/ = 4982
+
+    *Extrair strings com N caracteres:
+        (^ = começo da linha)
+    82034 RegEx -> /^[0-9]{4}$/ = 82034 - explicação: primeiro define o começo da linha, quaisquer caractere numerico com 4 digitos, depois o o final da linha de aplica o mesmo, ficando então, uma string inteira.
+
+    *Extrair uma string misturada com números e letras:
+    79324-a RegEx -> /^[0-9]+[-][a-z]$/ = 79324-a - explicação: o "+" faz extrair todas as ocorrências que forem numéricas neste contexto.
+    92430-u RegEx -> /^[0-9]+[-][a-z]$/ = 92430-u
+
+
+VALIDANDO UM CPF:
+    413.455.290-74
+    /[\d]{3}[.][\d]{3}[.][\d]{3}[-][\d]{2}/
+    (no lugar do "\d" daria para usar "[0-9]")
+
+SUBSTITUINDO DATA EUA PELA DATA BR:
+    Formato da data: 2020-08-21
+    /([\d]{4})[-]([\d]{2})[-]([\d]{2})/
+    Para substituir no VS Code, é preciso usar: $3/$2/$1
+
+    *Explicação: os "()" definem um grupo, com isso, selecionamos o grupo dos números que desejamos manipular, e como por padrão os grupos são
+    numerados da esquerda para direita de forma prograssiva, nós queremos que o grupo 3 (o dia) vá para o primeiro lugar, e o grupo 1 (o ano) vá para
+    o terceiro lugar, por isso colocamos tudo nesta ordem: $3/$2/$1
+
+
+
+
+
+
+
+
+
+
+EXEMPLO DE REGEX SENDO USADO PARA VALIDAR CAMPO COM JQUERY:
+------------------------------------------------------------------------------------
+    O "keyup blur" é um variante do "keyup" que evita caracteres sejam digitados digitados dentro do campo (tanto num. quando alfab.)
+    g, tudo que a expressão regular não for o que ela aceita, substitui por ""
+
+
+    $("nome").bind("keyup blur", function(){
+        let i = $(this)
+        i.val(i.val().replace(/[^a-z A-Z]/g, ""))
+    })
+------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+let nome = "Eduardo da Silva Souza 83924"
+Funções que a RegEx utiliza (usando a expressão para testar o texto):
+*exec() - let expressao_exec = (expressão regular).exec(texto)
+    ex) console.log(expressao_exec) - retornará um array com o(s) valor(es) encontrado(s), senão, null
+
+*test() - let expressao_test = (expressão regular).test(texto)
+    ex) console.log(expressao_test) - retornará true caso encontre uma ocorrência ou false caso não encontre
+
+
+
+
+Funções que utilizam RegEx (usando texto para testar a regex):
+*Para saber se uma função utiliza expressões regulares, apenas verifique a telinha de informações sobre o comando; (https://prnt.sc/lxi-CnG1Yh1Y)
+    *search() - percorre a string e retorna o valor da PRIMEIRA posição onde o elemento se encontra
+        e.g) console.log(nome.search("Silva")) - apenas procurará na string onde o "Silva", com letra maiúscula, começa
+        ex) console.log(nome.search(/silva/i)) - retornará 11, caso ele não encontre o valor, ele retornará -1
+
+    *match() - com base na string, ele retorna um array indicando o valor onde o elemento começa
+        e.g) console.log(nome.match("a")) - retornará ["a": index 3]
+        ex) console.log(nome.match(/a/i)) - retornará ["a", "a", "a", "a"] e também o tamanho do array, indicando quantas ocorrências houveram, do contrário retornará null
+
+    *replace() - substitui um caractere ou uma string por outra
+        e.g) console.log(nome.replace("Eduardo", "Alexandre")) - retornará "Alexandre da Silva Souza"
+        ex) console.log(nome.replace(/d/ig, 5)) - retornará "E5uar5o 5a Silva Souza"
+
+DEFININDO PADRÕES COM REGEX:
+
+console.log(nome.match(/[a-e|A-E|0-3]/ig))
+Retornará: ["a", "a", "a", "a", "d", "d", "2", "3"] - perceba que ele retornou na ordem de ocorrência
+
+
+

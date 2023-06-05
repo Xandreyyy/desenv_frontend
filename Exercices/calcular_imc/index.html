@@ -12,10 +12,16 @@
     <div class="container">
         <form>
             <h1>Calculadora de IMC</h1>
-            <label class="form-label" for="peso">Insira seu peso:</label>
-            <input class="form-control" type="text" min="0" max="500" step="0.01" id="peso" required/>
-            <label class="form-label" for="altura">Insira sua altura:</label>
-            <input class="form-control" type="number" min="0" max="500" step="0.01" id="altura" required/>
+            <div class="form-floating">
+                <input class="form-control" placeholder="Insira seu peso em kg" required type="text" min="0" max="500" step="0.01" id="peso"/>
+                <label class="form-label" for="peso">Peso (kg)</label>
+                <p class="erroEntradaP"></p>
+            </div>
+            <div class="form-floating">
+                <input class="form-control" placeholder="Insira sua altura em m" required type="text" min="0" max="500" step="0.01" id="altura"/>
+                <label class="form-label" for="altura">Altura (m)</label>
+                <p class="erroEntradaA"></p>
+            </div>
             <div>
                 <button class="btn btn-success" type="submit">Calcular</button>
             </div>
@@ -29,32 +35,32 @@
         </thead>
         <tbody>
             <tr>
-                <td>Abaixo de 17</td>
-                <td class="tdInject" value="0">Muito abaixo do peso</td>
+                <td id="tdbgcolorResul0">Abaixo de 17</td>
+                <td id="tdbgcolorSitu0">Muito abaixo do peso <strong><span id="span0"></span></strong></td>
             </tr>
             <tr>
-                <td>Entre 17 e 18,49</td>
-                <td class="tdInject" value="1">Abaixo do peso</td>
+                <td id="tdbgcolorResul1">Entre 17 e 18,49</td>
+                <td id="tdbgcolorSitu1">Abaixo do peso <strong><span id="span1"></span></strong></td>
             </tr>
             <tr>
-                <td>Entre 18,5 e 24,99</td>
-                <td class="tdInject" value="2">Peso normal</td>
+                <td id="tdbgcolorResul2">Entre 18,5 e 24,99</td>
+                <td id="tdbgcolorSitu2">Peso normal <strong><span id="span2"></span></strong></td>
             </tr>
             <tr>
-                <td>Entre 25 e 29,99</td>
-                <td class="tdInject" value="3">Acima do peso</td>
+                <td id="tdbgcolorResul3">Entre 25 e 29,99</td>
+                <td id="tdbgcolorSitu3">Acima do peso <strong><span id="span3"></span></strong></td>
             </tr>
             <tr>
-                <td>Entre 30 e 34,99</td>
-                <td class="tdInject" value="4">Obesidade I</td>
+                <td id="tdbgcolorResul4">Entre 30 e 34,99</td>
+                <td id="tdbgcolorSitu4">Obesidade I <strong><span id="span4"></span></strong></td>
             </tr>
             <tr>
-                <td>Entre 35 e 39,99</td>
-                <td class="tdInject" value="5">Obesidade II (severa)</td>
+                <td id="tdbgcolorResul5">Entre 35 e 39,99</td>
+                <td id="tdbgcolorSitu5">Obesidade II (severa) <strong><span id="span5"></span></strong></td>
             </tr>
             <tr>
-                <td>Acima de 40</td>
-                <td class="tdInject" value="7">Obesidade III (mórbida)</td>
+                <td id="tdbgcolorResul6">Acima de 40</td>
+                <td id="tdbgcolorSitu6">Obesidade III (mórbida) <strong><span id="span6"></span></strong></td>
             </tr>
         </tbody>
     </table>
@@ -63,6 +69,11 @@
     <div class="container" id="resultado_div">
         <div id="cabecalho_resul">
             <h2>Resultado: <span id="titulo_resul">msg padrão</span></h2>
+            <h3>Dados:</h3>
+            <ul>
+                <li><span class="itemresul">Peso:</span> <span id="kgInject"></span></li>
+                <li><span class="itemresul">Altura:</span> <span id="heightInject"></span></li>
+            </ul>
             <p id="desc_resul">desc padrão</p>
         </div>
         <div id="dicas_resul">

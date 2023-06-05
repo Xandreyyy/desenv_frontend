@@ -8,10 +8,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0 auto;
 }
 
-label{
-    display: block;
+input{
+    margin-top: 10px;
 }
 
 form{
@@ -32,8 +33,83 @@ form button{
     width: 700px;
     margin-top: 40px;
     background-color: #ccc;
+    padding-bottom: 2px;
+    border-radius: 5px;
+}
+
+#cabecalho_resul ul{
+    list-style: none;
+}
+
+.itemresul{
+    font-size: 17px;
+    font-weight: 500;
 }
 
 .table{
     width: 500px;
+    margin: 0 auto;
+}
+
+.esconderP{
+    display: none;
+}
+
+.erroEntradaP, .erroEntradaA{
+    display: block;
+    background-color: red;
+    border-radius: 7px;
+    padding: 2px;
+    color: white;
+    margin-top: 2px;
+}
+.erroEntradaP, .erroEntradaA{
+    display: block;
+    background-color: red;
+    border-radius: 7px;
+    padding: 2px;
+    color: white;
+    margin-top: 2px;
+}
+
+.campoError, .campoError:focus{
+    outline: 1px solid red;
+    border: 2px solid red;
+}
+
+/*MUDA A COR DAS CÉLULAS*/
+
+.tdbgcolor0{
+    transition: 1s;
+    background-color: rgb(255, 97, 40) !important;
+}
+
+.tdbgcolor1{
+    transition: 1s;
+    background-color: orange !important;
+}
+
+.tdbgcolor2{
+    transition: 1s;
+    background-color: yellowgreen !important;
+}
+
+.tdbgcolor3{
+    transition: 1s;
+    background-color: rgb(230, 230, 0) !important;
+}
+
+.tdbgcolor4{
+    transition: 1s;
+    background-color: rgb(192, 196, 0) !important;
+}
+
+.tdbgcolor5{
+    transition: 1s;
+    background-color: rgb(255, 129, 71) !important;
+}
+
+.tdbgcolor6{
+    transition: 1s;
+    background-color: rgba(255, 8, 8, 0.795) !important;
 }
