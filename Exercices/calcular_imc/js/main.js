@@ -4,14 +4,12 @@ const msgResul = document.getElementById("resultado_div")
 
 const msgPeso = document.querySelector(".erroEntradaP")
 const msgAltura = document.querySelector(".erroEntradaA")
+
 msgPeso.style.display = "none"
 msgAltura.style.display = "none"
-//SÓ AJUSTAR AS MSG DE ERRO E ACABOU
-//usar um querySelector para cada <p> com a classe de cada um e injetar os textos
 
+let arrayPeso = [], arrayAltura = []
 
-
-let calculando = true
 peso.addEventListener("keyup", function(e){
     let i = this
     //regex: ao botar \D junto com a negação, o \D se torna \d, por isso usei ^\d, o resto dá para entender
@@ -28,21 +26,16 @@ peso.addEventListener("keyup", function(e){
         msgPeso.innerHTML = null
     }
 
-    if (calculando == true){
-        const removerResul1 = document.getElementById(`span${titleInject()}`)
-        removerResul1.innerHTML = null
-        msgResul.style = "display: none"
-        document.getElementById(`tdbgcolorResul${titleInject()}`).classList.remove(`tdbgcolor${titleInject()}`)
-        document.getElementById(`tdbgcolorSitu${titleInject()}`).classList.remove(`tdbgcolor${titleInject()}`)
+    if (i.value != ""){
+        arrayPeso.splice(0, 1, i.value)
     }
 
+    inputsResets()
 })
-
 
 altura.addEventListener("keyup", function(){
     let i = this
     i.value = i.value.replace(/[^\d\.,]/g, "")
-
 
     const regexCm = /^0/
     if (regexCm.test(i.value)){
@@ -55,20 +48,17 @@ altura.addEventListener("keyup", function(){
         msgAltura.innerHTML = null
     }
 
-    if (calculando == true){
-        const removerResul1 = document.getElementById(`span${titleInject()}`)
-        removerResul1.innerHTML = null
-        msgResul.style = "display: none"
-        document.getElementById(`tdbgcolorResul${titleInject()}`).classList.remove(`tdbgcolor${titleInject()}`)
-        document.getElementById(`tdbgcolorSitu${titleInject()}`).classList.remove(`tdbgcolor${titleInject()}`)
+    if (i.value != ""){
+        arrayAltura.splice(0, 1, i.value)
     }
 
+    inputsResets()
 })
 
 function verificarPeso(pValue) {
     const vPeso = pValue.value;
     const regexPeso = /^[\d]{1,3}([\.,][\d]{1,2})?$/;
-  
+
     if (!regexPeso.test(vPeso)) {
       msgPeso.style.display = "block";
       msgPeso.innerHTML = "Peso inválido!";
@@ -76,6 +66,19 @@ function verificarPeso(pValue) {
     } else {
       msgPeso.style.display = "none";
       return true;
+    }
+}
+
+function inputsResets() {
+    if (arrayAltura != [] && arrayPeso != []){
+        //bloco para resetar página
+        const removerResul1 = document.getElementById(`span${titleInject()}`)
+        removerResul1.innerHTML = null
+
+        msgResul.style = "display: none"
+
+        document.getElementById(`tdbgcolorResul${titleInject()}`).classList.remove(`tdbgcolor${titleInject()}`)
+        document.getElementById(`tdbgcolorSitu${titleInject()}`).classList.remove(`tdbgcolor${titleInject()}`)
     }
 }
 
@@ -153,7 +156,12 @@ function verificarPeso(pValue) {
 function verificarAltura(aValue) {
     const vAltura = aValue.value
     const regexAltura = /^[\d]{1}[\.,][\d]{1,2}$/g
-    return regexAltura.test(vAltura)
+    if (!regexAltura.test(vAltura)){
+        msgAltura.innerHTML = "Altura inválida!"
+        return false
+    }else{
+        return true
+    }
 }
 
 let imc = 0
@@ -247,12 +255,13 @@ form.addEventListener("submit", function (e) {
     if (verificarPeso(peso) && verificarAltura(altura)){
         msgResul.style = "display: block"
         calcIMC()
-        descInject()
         titleInject()
+        descInject()
         marcarTabela(titleInject())
         injectResults(peso, altura)
         peso.value = ""
         altura.value = ""
-        return calculando = false
+        arrayAltura = []
+        arrayPeso = []
     }
 })

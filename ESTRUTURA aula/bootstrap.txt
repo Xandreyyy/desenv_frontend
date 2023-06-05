@@ -1,1 +1,26 @@
 Centralizar div: https://youtu.be/TyyVxSgJI6w?t=551
+
+Bootstrap avançado:
+    *cards;
+    *carousel;
+    *menu-dropdown
+
+A partir de agora criaremos mais pastas em um projeto, então cada arquivo externo precisa estar na pasta lib (library)
+
+CARDS:
+    *envolver em um container
+    *criar uma linha
+    *criar uma coluna com 4 de tamanho
+    *para cada card, ou seja, para cada item, envolver em uma div.card
+        *os cards possuem sua estrutura: header > body > footer
+
+CAROUSEL:
+    *envolver em uma div.carousel
+    *um carrocel interno .carousel-inner
+    *para cada item do carrocel: carousel-item
+
+cérebro de ominídio, ou seja, cérebro de quem caça, por isso, as cores mais vivas chama a atenção do olho humano, e também por esse motivo é interessante montar um pptx com cores vivas para uma apresentação
+
+DROPDOWN:
+    *definir uma .dropdown
+    *definir um botão (botão encadiará uma ação no próprio dropdown)

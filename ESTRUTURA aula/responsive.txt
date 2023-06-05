@@ -48,6 +48,7 @@ Com ele é possível estilizar/criar:
     *Tabelas
     *etc...
 CDN - biblioteca que não é local, uma biblioteca que está sendo acessada de forma externa.
+    *É possível salvar a CDN localmente, apenas baixar o arquivo min do framework e salvar na pasta "lib" (library).
 
 Um dado solto não representa nada, mas ao juntar um dado com outro dado forma-se uma informação.
 COLUNA: relaciona dados;

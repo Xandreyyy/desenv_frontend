@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel</title>
+    <link rel="stylesheet" href="./lib/bootstrap.css">
+    <style>
+        /* .carousel-item{
+            max-height: 340px;
+        } */
+        img{
+            max-height: 500px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="carrocelMain" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div data-bs-interval="3000" class="carousel-item active">
+                   <img src="https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823_1280.jpg">
+                   <div class="carousel-caption">
+                        <h5>Árovres em outono</h5>
+                   </div>
+                </div>
+                <div data-bs-interval="3000" class="carousel-item">
+                    <img src="https://cdn.pixabay.com/photo/2016/05/05/02/37/sunset-1373171_1280.jpg">
+                    <div class="carousel-caption">
+                        <h5>Paisagem ao atardecer</h5>
+                   </div>
+                 </div>
+                 <div data-bs-interval="3000" class="carousel-item">
+                    <img src="https://cdn.pixabay.com/photo/2018/09/23/18/30/drop-3698073_1280.jpg">
+                    <div class="carousel-caption">
+                        <h5>Gota d'água</h5>
+                   </div>
+                 </div>
+            </div>
+            <button class="carousel-control-prev" data-bs-target="#carrocelMain" data-bs-slide="prev" type="buton">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" data-bs-target="#carrocelMain" data-bs-slide="next" type="buton">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carrocelMain" class="active" data-bs-slide-to="0"></button>
+                <button type="button" data-bs-target="#carrocelMain" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carrocelMain" data-bs-slide-to="2"></button>
+            </div>
+        </div>
+        <script src="./lib/bootstrap.js">
+        </script>
+    </div>
+</body>
+</html>
