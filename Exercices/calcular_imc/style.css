@@ -51,10 +51,6 @@ form button{
     margin: 0 auto;
 }
 
-.esconderP{
-    display: none;
-}
-
 .erroEntradaP, .erroEntradaA{
     display: block;
     background-color: red;

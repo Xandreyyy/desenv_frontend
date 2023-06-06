@@ -8,14 +8,18 @@ const msgAltura = document.querySelector(".erroEntradaA")
 msgPeso.style.display = "none"
 msgAltura.style.display = "none"
 
-let arrayPeso = [], arrayAltura = []
+let arrayPeso = []
+let arrayAltura = []
+const regexCm = /^0/
+//Comentar código; o teste lógico de verificar se os arrays eram vazios então resetar os inputs, não estava dando certo porque haviam funções
+//sendo chamadas em lugares que não deviam, uma delas e uma que recebeu alterações foi a função calcIMC()
 
-peso.addEventListener("keyup", function(e){
+
+peso.addEventListener("keyup", function(){
     let i = this
     //regex: ao botar \D junto com a negação, o \D se torna \d, por isso usei ^\d, o resto dá para entender
     i.value = i.value.replace(/[^\d\.,]/g, "")
 
-    const regexCm = /^0/
     if (regexCm.test(i.value)){
         msgPeso.style.display = "block"
         msgPeso.innerHTML = "O peso inserido não está em kg!"
@@ -28,8 +32,8 @@ peso.addEventListener("keyup", function(e){
 
     if (i.value != ""){
         arrayPeso.splice(0, 1, i.value)
+        console.log(`Valor peso sendo pushado: ${i.value}`)
     }
-
     inputsResets()
 })
 
@@ -37,7 +41,6 @@ altura.addEventListener("keyup", function(){
     let i = this
     i.value = i.value.replace(/[^\d\.,]/g, "")
 
-    const regexCm = /^0/
     if (regexCm.test(i.value)){
         msgAltura.style.display = "block"
         msgAltura.innerHTML = "A altura inserida não está em metros!"
@@ -50,27 +53,14 @@ altura.addEventListener("keyup", function(){
 
     if (i.value != ""){
         arrayAltura.splice(0, 1, i.value)
+        console.log(`Valor altura sendo pushado: ${i.value}`)
     }
-
     inputsResets()
 })
 
-function verificarPeso(pValue) {
-    const vPeso = pValue.value;
-    const regexPeso = /^[\d]{1,3}([\.,][\d]{1,2})?$/;
-
-    if (!regexPeso.test(vPeso)) {
-      msgPeso.style.display = "block";
-      msgPeso.innerHTML = "Peso inválido!";
-      return false;
-    } else {
-      msgPeso.style.display = "none";
-      return true;
-    }
-}
 
 function inputsResets() {
-    if (arrayAltura != [] && arrayPeso != []){
+    if (arrayAltura.length !== 0 && arrayPeso.length !== 0){
         //bloco para resetar página
         const removerResul1 = document.getElementById(`span${titleInject()}`)
         removerResul1.innerHTML = null
@@ -81,7 +71,6 @@ function inputsResets() {
         document.getElementById(`tdbgcolorSitu${titleInject()}`).classList.remove(`tdbgcolor${titleInject()}`)
     }
 }
-
 // function verificarPeso(pValue) {
 //     const vPeso = pValue.value
 //     //regex: obrigatório colocar 1 número, diferente do resto dos grupos que não é obrigatório inserir um número. O 1º grupo é para validar um dígito, com exceção do 2º,
@@ -153,10 +142,25 @@ function inputsResets() {
 //     }
 // }
 
+function verificarPeso(pValue) {
+    const vPeso = pValue.value;
+    const regexPeso = /^[\d]{1,3}([\.,]{1}[\d]{1,2})?$/;
+
+    if (!regexPeso.test(vPeso)) {
+      msgPeso.style.display = "block";
+      msgPeso.innerHTML = "Peso inválido!";
+      return false;
+    } else {
+      msgPeso.style.display = "none";
+      return true;
+    }
+}
+
 function verificarAltura(aValue) {
     const vAltura = aValue.value
-    const regexAltura = /^[\d]{1}[\.,][\d]{1,2}$/g
+    const regexAltura = /^[\d]{1}([\.,]{1}[\d]{1,2})?$/g
     if (!regexAltura.test(vAltura)){
+        msgAltura.style.display = "block"
         msgAltura.innerHTML = "Altura inválida!"
         return false
     }else{
@@ -165,11 +169,12 @@ function verificarAltura(aValue) {
 }
 
 let imc = 0
-function calcIMC() {
-    imc = parseFloat(peso.value) / parseFloat((altura.value * altura.value))
+function calcIMC(pesoV, alturaV) {
+    imc = parseFloat(pesoV.value) / parseFloat((alturaV.value * alturaV.value))
     imc = imc.toFixed(2)
     return imc
 }
+
 
 function titleInject() {
     const span = document.getElementById("titulo_resul")
@@ -254,14 +259,15 @@ form.addEventListener("submit", function (e) {
     e.preventDefault()
     if (verificarPeso(peso) && verificarAltura(altura)){
         msgResul.style = "display: block"
-        calcIMC()
+        calcIMC(peso, altura)
         titleInject()
         descInject()
         marcarTabela(titleInject())
         injectResults(peso, altura)
         peso.value = ""
         altura.value = ""
-        arrayAltura = []
-        arrayPeso = []
+        arrayAltura = [null]
+        arrayPeso = [null]
+        console.log(`Peso: ${arrayPeso}\nAltura: ${arrayAltura}`)
     }
 })
