@@ -3,7 +3,14 @@ Centralizar div: https://youtu.be/TyyVxSgJI6w?t=551
 Bootstrap avançado:
     *cards;
     *carousel;
-    *menu-dropdown
+    *menu-dropdown;
+    *modal;
+    *navbar;
+    *abas;
+    *toast.
+data-bs = dar função a um elemento
+    *data-bs-toggle="modal" - ele vai mostrar e ocultar o elemento modal
+    *data-bs-target="idElemento" - ele vai indicar em qual elemento o data-bs-toggle="modal" ele vai aplicar o efeito de mostrar e ocultar
 
 A partir de agora criaremos mais pastas em um projeto, então cada arquivo externo precisa estar na pasta lib (library)
 
@@ -24,3 +31,11 @@ cérebro de ominídio, ou seja, cérebro de quem caça, por isso, as cores mais 
 DROPDOWN:
     *definir uma .dropdown
     *definir um botão (botão encadiará uma ação no próprio dropdown)
+
+MODAL:
+    *os modals possuem sua estrutura: header > body > footer
+    *modal por padrão não são exibidos, eles apenas aparecem quando acontece uma ação (geralmente realizada por um botão)
+    -modal genérico:
+
+NAVBAR:
+    *estrutura: <header> > .navbar > <nav> > <ul>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="./lib/bootstrap.css">
+    <style>
+        /* quando o nav bar for ativo */
+        .navbar-nav .nav-link.active{
+            color: white;
+        }
+
+        .nav-link{
+            text-align: center;
+        }
+
+        section{
+            height: 100vh;
+            background-color: #ccc;
+            padding: 80px;
+        }
+
+        /*top e left significa que ficará ancorado na esquerda e em cima*/
+        /*por que, caso o header estiver dentro de uma .container, a estilização abaixo não se aplica?*/
+        header{
+            position: sticky;
+            top: 0;
+            left: 0;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header id="cabecalho">
+        <!-- lg é sobre o viewport, quando a tela for de desktop -->
+        <div class="navbar navbar-expand-lg">
+            <!-- container do bs tem 1320px de largura -->
+            <div class="container">
+                <h1>Título do site </h1>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- antes do 'id="menu"' daria para adicionar: style="justify-content: flex-end;", porém, o bs consegue acessar essas propriedades direto na classe -->
+                <nav class="collapse navbar-collapse justify-content-end" id="menu">
+                    <!-- por que ao adicionar navbar mais uma vez ele não "ganha" o width: 100%? -->
+                    <ul class="nav navbar-nav nav-pills">
+                        <li class="nav-item"><a href="#inicio" class="nav-link active">Início</a></li>
+                        <li class="nav-item"><a href="#produtos" class="nav-link">Produtos</a></li>
+                        <li class="nav-item"><a href="#promocoes" class="nav-link">Promoções</a></li>
+                        <li class="nav-item"><a href="#contato" class="nav-link">Contato</a></li>
+                    </ul>
+                </nav>
+                <button type="button" class="btn btn-warning" id="btn-checar-emails">Checar mensagens</button>
+            </div>
+        </div>
+    </header>
+    <div data-bs-spy="scroll" data-bs-target="#cabecalho">
+        <section id="inicio">
+            <h2>Início</h2>
+        </section>
+        <section id="produtos">
+            <h2>Produtos</h2>
+            <div class="container">
+                <nav class="nav nav-tabs">
+                <!-- <nav class="nav nav-pills"> -->
+                    <button data-bs-toggle="tab" data-bs-target="#aba1" type="button" class="nav-link active">Eletrônicos</button>
+                    <button data-bs-toggle="tab" data-bs-target="#aba2" type="button" class="nav-link">Masculino</button>
+                    <button data-bs-toggle="tab" data-bs-target="#aba3" type="button" class="nav-link">Feminino</button>
+                    <button data-bs-toggle="tab" data-bs-target="#aba4" type="button" class="nav-link">Infantil</button>
+                    <button data-bs-toggle="tab" data-bs-target="#aba5" type="button" class="nav-link">Jardim</button>
+                </nav>
+                <div class="tab-content">
+                    <div id="aba1" class="tab-pane active">
+                        Conteúdo da aba de Eletrônicos
+                    </div>
+                    <div id="aba2" class="tab-pane">
+                        Conteúdo da aba de Masculino
+                    </div>
+                    <div id="aba3" class="tab-pane">
+                        Conteúdo da aba de Feminino
+                    </div>
+                    <div id="aba4" class="tab-pane">
+                        Conteúdo da aba de Infantil
+                    </div>
+                    <div id="aba5" class="tab-pane">
+                        Conteúdo da aba de Jardim
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="promocoes">
+            <h2>Promoções</h2>
+        </section>
+        <section id="contato">
+            <h2>Contato</h2>
+        </section>
+    </div>
+    <!-- em JS vanilla seria: position: fixed, bottom: 0, end:0 -->
+    <div class="toast-container position-fixed bottom-0 end-0">
+        <div class="toast" id="mensagem-alerta">
+            <header class="toast-header">
+                <strong>Importante</strong>
+            </header>
+            <div class="toast-body">
+                <p>Você tem 12 mensagems não lidas!</p>
+                <div class="mt-2 pt-2 border-top">
+                    <button data-bs-dismiss="toast" class="btn btn-danger" type="button">Descartar</button>
+                </div>
+            </div>
+            <!-- <footer>
+                <div class="mt-2 pd-2 border-top-1">
+                    <button data-bs-dismiss class="btn btn-danger" type="button">Descartar</button>
+                </div>
+            </footer> -->
+        </div>
+    </div>
+    <script src="./lib/bootstrap.js">
+    </script>
+    <script>
+        const ativarToast = document.getElementById("btn-checar-emails")
+        const mensagem = document.getElementById("mensagem-alerta")
+        //verificar se possui um valor válido:
+        if (ativarToast){
+            ativarToast.addEventListener("click", function(){
+                //toast recebe um objeto bootstrap (o show() é uma função do bs) da classe Toast():
+                const toast = new bootstrap.Toast(mensagem)
+                toast.show()
+            })
+        }
+    </script>
+</body>
+</html>

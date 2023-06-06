@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <link rel="stylesheet" href="./lib/bootstrap.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalEx1">Abrir Modal</button>
+                <div class="modal" id="modalEx1">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5>Título do Modal</h5>
+                            </div>
+                            <div class="modal-body">
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus perspiciatis eveniet ipsam natus ducimus nihil facilis quisquam sapiente explicabo iure laborum itaque cumque, iusto saepe exercitationem aspernatur autem quaerat ut?</p>
+                            </div>
+                            <div class="modal-footer">
+                                <h5>Rodapé do Modal</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalYN">Modal Y/N</button>
+                <div class="modal" id="modalYN" data-bs-backdrop="static">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5>Título do Modal</h5>
+                            </div>
+                            <div class="modal-body">
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus perspiciatis eveniet ipsam natus ducimus nihil facilis quisquam sapiente explicabo iure laborum itaque cumque, iusto saepe exercitationem aspernatur autem quaerat ut?</p>
+                            </div>
+                            <div class="modal-footer">
+                                <h5>Rodapé do Modal</h5>
+                                <button class="btn btn-danger" type="button" data-bs-dismiss="modal">Cancelar</button>
+                                <button class="btn btn-success" type="button" data-bs-dismiss="modal">Confirmar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalFechar">Fechar Modal</button>
+                <div class="modal" id="modalFechar" data-bs-backdrop="static">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5>Título do Modal</h5>
+                                <button data-bs-dismiss="modal" class="btn btn-close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus perspiciatis eveniet ipsam natus ducimus nihil facilis quisquam sapiente explicabo iure laborum itaque cumque, iusto saepe exercitationem aspernatur autem quaerat ut?</p>
+                            </div>
+                            <div class="modal-footer">
+                                <h5>Rodapé do Modal</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./lib/bootstrap.js">
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            const modalExemplo = new bootstrap.Modal("#modalEx1")
+            setTimeout(function(){
+                modalExemplo.show()
+            }, 2000)
+        })
+    </script>
+</body>
+</html>
