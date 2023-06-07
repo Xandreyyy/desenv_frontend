@@ -1,0 +1,36 @@
+.navbar-brand img{
+    border-radius: 6px;
+    height: 65px;
+}
+
+form{
+    display: flex;
+    max-height: 33px;
+}
+
+form input, form input:focus{
+    border-radius: 12px;
+    margin-right: 3px;
+    border: 1px solid black;
+    outline: none;
+}
+
+header{
+    background-color: rgb(2, 67, 206);
+}
+
+header .container > a/*, header .container > a*/{
+    color: white;
+}
+
+header ul a{
+    color: white !important;
+}
+
+header ul a:hover{
+    color: rgb(194, 194, 194) !important;
+}
+
+.col-5 > h1, .col-3 > h2{
+    font-size: 28px;
+}
