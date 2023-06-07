@@ -16,61 +16,60 @@
     </style>
 </head>
 <body>
-    <header>
-        <div class="navbar bg-primary">
-            <div class="container">
-                <a class="navbar-brand" href="#">
-                    <!-- daria para adicionar: class="align-text-bottom" -->
-                    <img src="./lib/foxnews.png" alt="Logomarca Foxnews"/>
-                    Foxnews
-                </a>
-                <nav>
-                    <!-- navbar-brand: forma conveniente de adicionar e estilizar o logotipo ou o nome da marca em uma barra de navegação responsiva -->
-                    <ul class="nav justify-content-lg-between">
-                        <li class="nav-item"><a class="nav-link" href="#">últimas notícias</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">newsletter</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">regiões</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">serviços</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">sobre nós</a></li>
-                    </ul>
-                </nav>
-                <!-- Por que ao remover o <form> de dentro da <nav> o ele se alinhou com os itens da nav? (https://prnt.sc/JuvJ1hB2FG01)-->
-                <form>
-                    <input type="search" placeholder="pesquisar notícia"/>
-                    <button class="btn btn-dark"><span class="material-symbols-outlined">search</span></button>
-                </form>
-            </div>
+    <header class="navbar bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <!-- daria para adicionar: class="align-text-bottom" -->
+                <img src="./lib/foxnews.png" alt="Logomarca Foxnews"/>
+                Foxnews
+            </a>
+            <nav>
+                <!-- navbar-brand: forma conveniente de adicionar e estilizar o logotipo ou o nome da marca em uma barra de navegação responsiva -->
+                <ul class="nav justify-content-lg-between">
+                    <li class="nav-item"><a class="nav-link" href="#">últimas notícias</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">newsletter</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">regiões</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">serviços</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">sobre nós</a></li>
+                </ul>
+            </nav>
+            <!-- Por que ao remover o <form> de dentro da <nav> o ele se alinhou com os itens da nav? (https://prnt.sc/JuvJ1hB2FG01)-->
+            <form>
+                <input type="search" placeholder="pesquisar notícia"/>
+                <button class="btn btn-dark"><span class="material-symbols-outlined">search</span></button>
+            </form>
         </div>
     </header>
+    <!-- SEÇÃO: CABEÇALHO -->
     <div class="container">
-        <div class="row">
+        <div class="row justify-content-between">
             <div class="col-5">
-                <h1>em destaque</h1>
+                <h1>relevante</h1>
                 <div class="carousel slide" data-bs-ride="carousel" id="carouselHighlight">
                     <div class="carousel-inner">
                         <div class="carousel-item active" data-bs-interval="2000">
-                            <img src="./lib/noticia_nova1.png"/>
+                            <img src="./lib/noticia_nova1.png" alt="Deputado do STF"/>
                             <div class="carousel-caption">
                                 notícia 1
                             </div>
                         </div>
 
                         <div class="carousel-item" data-bs-interval="2000">
-                            <img src="./lib/noticia_nova2.png"/>
+                            <img src="./lib/noticia_nova2.png" alt="Pessoa manipulando dinheiro"/>
                             <div class="carousel-caption">
                                 notícia 2
                             </div>
                         </div>
 
                         <div class="carousel-item" data-bs-interval="2000">
-                            <img src="./lib/noticia_nova3.png"/>
+                            <img src="./lib/noticia_nova3.png" alt="Político dando entrevista"/>
                             <div class="carousel-caption">
                                 notícia 3
                             </div>
                         </div>
 
                         <div class="carousel-item" data-bs-interval="2000">
-                            <img src="./lib/noticia_nova4.png"/>
+                            <img src="./lib/noticia_nova4.png" alt="Paleontólogos em uma caverna"/>
                             <div class="carousel-caption">
                                 notícia 4
                             </div>
@@ -90,8 +89,37 @@
                     </div>
                 </div>
             </div>
-            <div class="col-3">
+            <!-- SEÇÃO: ÚLTIMA NOTÍCIA -->
+            <div id="col_new" class="col-3">
                 <h2>última notícia</h2>
+                <div id="ultimaNoticia">
+                    <h4>economia</h4>
+                    <img src="./lib/ultima_noticia.png" alt="Cédulas e moedas de euro"/>
+                    <h5>título da notícia</h5>
+                    <p>Lorem ipsum dolor si amet, conectetur adipisicing elit. Vero obcaecati sequi.</p>
+                </div>
+            </div>
+            <!-- SEÇÃO: NOVIDADES -->
+            <div id="col_novidades" class="col-3">
+                <h2>notícias recorrentes</h2>
+                <div class="novidade">
+                    <h4>economia</h4>
+                    <img src="https://via.placeholder.com/270x180" alt="Foto novidade 1"/>
+                    <h5>título da notícia</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt fugiat itaque reiciendis accusamus eos nihil archi.</p>
+                </div>
+                <div class="novidade">
+                    <h4>economia</h4>
+                    <img src="https://via.placeholder.com/270x180" alt="Foto novidade 1"/>
+                    <h5>título da notícia</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt fugiat itaque reiciendis accusamus eos nihil archi.</p>
+                </div>
+                <div class="novidade">
+                    <h4>economia</h4>
+                    <img src="https://via.placeholder.com/270x180" alt="Foto novidade 1"/>
+                    <h5>título da notícia</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt fugiat itaque reiciendis accusamus eos nihil archi.</p>
+                </div>
             </div>
         </div>
     </div>

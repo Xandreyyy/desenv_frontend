@@ -1,0 +1,26 @@
+/* *{
+    margin: 0;
+    padding: 0;
+}
+Não precisa dessa estilização já que o BS tá cuidando disso*/
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar-brand{
+    font-family: 'Pacifico', cursive;
+}
+
+.navbar{
+    background-color: #e15f41;
+}
+
+.nav .nav-link.active{
+    background-color: white;
+    color: #e15f41;
+}
+
+.nav .nav-link, .navbar-brand, .navbar-brand:hover{
+    color: white;
+}

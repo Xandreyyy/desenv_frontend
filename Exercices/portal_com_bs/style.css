@@ -34,3 +34,49 @@ header ul a:hover{
 .col-5 > h1, .col-3 > h2{
     font-size: 28px;
 }
+
+#ultimaNoticia{
+    width: 258px;
+}
+
+#ultimaNoticia img{
+    height: 180px;
+    border-radius: 6px;
+}
+
+#ultimaNoticia h4{
+    color: #666666;
+    border-bottom: 1.5px solid #666666;
+    font-size: 20px;
+    width: 270px;
+}
+
+#ultimaNoticia h5{
+    color: #666666;
+    margin: 0;
+}
+
+/*daria para usar: text-align:justify; - word-spacing:-2px;*/
+#ultimaNoticia p{
+    color: #a1a1a1;
+    font-size: 15px;
+    text-align: justify;
+    word-break: break-all;
+}
+
+#col_new{
+    padding-top: 31px;
+    margin-left: 20px;
+}
+
+#col_new h2{
+    font-size: 23px;
+}
+
+#col_novidades{
+    padding-top: 315px;
+}
+.novidade h4{
+    width: 270px;
+    border-bottom: 1px solid rgb(38, 0, 255) ;
+}
