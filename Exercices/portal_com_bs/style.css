@@ -39,6 +39,11 @@ header ul a:hover{
     margin-bottom: 2px;
 }
 
+#col_new{
+    padding-top: 31px;
+    margin-left: 20px;
+}
+
 #ultimaNoticia{
     width: 100%
 }
@@ -57,31 +62,28 @@ header ul a:hover{
 }
 
 #ultimaNoticia h5{
-    color: #666666;
     margin: 0;
 }
 
 /*daria para usar: text-align:justify; e word-spacing:-2px;*/
 #ultimaNoticia p{
-    color: #a1a1a1;
     font-size: 15px;
     text-align: justify;
     word-break: break-all;
 }
 
-#col_new{
-    padding-top: 31px;
-    margin-left: 20px;
-}
-
-#col_new h2{
-    font-size: 23px;
-}
-
-#col_novidades{
-    padding-top: 325px;
-}
 .novidade h4{
-    width: 270px;
+    width: 220px;
     border-bottom: 1px solid rgb(38, 0, 255) ;
+}
+
+.cards{
+    display: flex;
+    max-width: 990px;
+    flex-wrap: wrap;
+}
+
+/*explicação: por que não precisa do float: right;?*/
+aside{
+    float: right;
 }
