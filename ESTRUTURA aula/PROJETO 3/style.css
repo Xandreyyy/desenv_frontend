@@ -8,9 +8,9 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 
-.navbar-brand{
+/* .navbar-brand{
     font-family: 'Pacifico', cursive;
-}
+} */
 
 .navbar{
     background-color: #e15f41;
@@ -23,4 +23,16 @@ body{
 
 .nav .nav-link, .navbar-brand, .navbar-brand:hover{
     color: white;
+}
+
+.section-title{
+    font-family: 'Pacifico', cursive;
+}
+
+.section-title span{
+    color: #e15f41;
+}
+
+#sobre_o_restaurante{
+    background-color: #ffeae6;
 }

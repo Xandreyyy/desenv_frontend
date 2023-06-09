@@ -4,8 +4,8 @@
     box-sizing: border-box;
 }
 
-html{
-    background-color: #022C44;
+body{
+    background-color: #012f49;
 }
 
 .container{
@@ -115,7 +115,7 @@ main button:hover{
 /*https://prnt.sc/UbsUVrGtDPDR - estilização interessante*/
 
 .container_main{
-    background-image: url(../images/background_body.png);
+    background-image: url(../lib/images/background_body.png);
     background-size: cover; /*cobre o espaço com a imagem*/
     background-position: center center; /*(lado da imagem) centraliza o centro da img no centro da tela (posição da tela)*/
     max-width: 1360px;
@@ -167,7 +167,6 @@ main button:hover{
 }
 
 .novidade{
-    max-width: 100%;
     background-color: rgba(128, 128, 128, 0.767);
     border-radius: 12px;
     padding: 30px;
@@ -202,18 +201,20 @@ main button:hover{
     width: 100%;
 }
 
-#mostrarMais_novidades{
+#mostrarNovidades, #esconderNovidades{
     background-color: rgba(255, 255, 255, 0);
     color: white;
-    padding: 8px;
     border-radius: 12px;
     cursor: pointer;
-    display: flex;
-    justify-content: baseline;
+    padding: 7px;
     transition: 0.4s;
 }
 
-#mostrarMais_novidades:hover{
+#mostrarNovidades p, #esconderNovidades p{
+    margin: 0;
+}
+
+#mostrarNovidades:hover, #esconderNovidades:hover{
     background-color: rgba(255, 255, 255, 0.336);
     color: white;
     transition: 0.4s;
@@ -223,8 +224,4 @@ main button:hover{
     font-size: 18px;
     color: black;
     padding: 5px 0 0 3px;
-}
-
-#mostrarMenos_novidades{
-    display: none;
 }

@@ -1,9 +1,18 @@
 $(document).ready(function(){
     // deixar botões de novidades dinâmicos
-    $("#mostrarMais_novidades").on("click", function(){
-        $("#novidadesplus").slideDown()
-        $("#novidadeplus").addClass("novidade")
+    const maisNovidades = $("#novidadesplus")
+    $("#mostrarNovidades").on("click", function(){
+        $("#mostrarNovidades").css("visibility", "hidden")
+        $(maisNovidades).slideDown()
+        $(maisNovidades).css("display", "flex")
     })
+
+    $("#esconderNovidades").on("click", function(){
+        $(maisNovidades).slideUp()
+        $("#mostrarNovidades").css("visibility", "visible")
+    })
+
+    
 })
 
 // .container_novidade {
