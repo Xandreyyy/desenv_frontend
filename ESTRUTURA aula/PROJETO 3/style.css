@@ -21,18 +21,46 @@ body{
     color: #e15f41;
 }
 
-.nav .nav-link, .navbar-brand, .navbar-brand:hover{
+.navbar-brand, .navbar-brand:hover, .nav-link:hover, #cabecalho .nav-link{
     color: white;
+}
+
+.navbar-toggler{
+    background-color: #eae6ff;
 }
 
 .section-title{
     font-family: 'Pacifico', cursive;
 }
 
-.section-title span{
+#sobre_o_restaurante, #cardapios{
+    background-color: #ffeae6;
+}
+
+.text-colored{
     color: #e15f41;
 }
 
-#sobre_o_restaurante{
-    background-color: #ffeae6;
+.nav-cardapios .nav-link.active, #contato button{
+    background-color: #e15f41;
+    color: rgb(255, 255, 255);
+}
+
+.nav-cardapios .nav-link{
+    color: #e15f41;
+}
+
+.social_links li{
+    list-style: none;
+    margin-right: 10px;
+}
+
+.social_links a{
+    text-decoration: none;
+}
+
+@media screen and (max-width: 640px){
+    .carousel-item img{
+        height: 280px;
+    }
 }
