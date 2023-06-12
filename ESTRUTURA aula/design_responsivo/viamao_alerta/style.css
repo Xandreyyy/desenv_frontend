@@ -181,7 +181,7 @@ aside .noticia{
     }
 
     .btnmenu{
-        display: none;
+        display: block;
     }
 
     .detaque .noticia a{
