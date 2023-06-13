@@ -1,0 +1,37 @@
+SASS -  Syntactically Awesome Style Sheets (folhas de estilo com uma sintaxe incrível)
+SASS evita redundâncias em arquivos CSS.
+
+no terminal -> npm install -g sass
+npm = node pack manager
+-g = instalação será global, ou seja, terá acesso a todas as pastas
+sass = item a ser instalado
+
+npm install -g sass
+cd .\projeto_SASS\
+npm init
+
+
+
+Caso dê o erro: "npm should be run outside of the Node.js REPL, in your normal shell":
+é necessário sair do node.js (usando .exit ou 2x CTRL + C) para aí sim depois poder usar o npm install
+
+Após dar tudo certo, é necessário, usando o cd ./, ir na pasta onde o projeto está alocado, chegando nele o 1º comando é:
+npm init
+dar enter até concluir e finalizar com "yes"
+
+executar novamente: npm i --save-dev sass
+npm = node pack manager
+i = instalação vai ser nos arquivos SASS
+--save = permitir que o próprio arquivo SASS instale as dependências necessárias para ser usado
+-dev = instalar pacote de desenvolvedor
+
+pasta build - 
+pasta src - 
+
+add em "scripts" do arquivo package.json
+"sass": "sass source/main.scss build/main.css"
+nos scripts, no final do script, adicionar dentro das aspas "--watch"
+
+para fazer com que o git add . não adicione uma pasta, é necessário criar um arquivo dentro da pasta do projeto com o nome ".gitignore". Nela, apenas será escrito o nome da pasta para ser ignorada.
+
+para linkar um arquivo scss para outro arquivo scss basta usar "@use 'nome do arquivo'" (não precis colocar extensão)

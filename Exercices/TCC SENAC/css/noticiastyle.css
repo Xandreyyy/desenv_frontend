@@ -137,3 +137,12 @@ ul li a:hover{
     align-items: flex-end;
     color: white;
 }
+
+.noticiabg{
+    background-color: #002547;
+    color: white;
+}
+
+.userArticleC{
+    height: 40px;
+}
