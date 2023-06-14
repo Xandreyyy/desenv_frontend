@@ -146,3 +146,13 @@ ul li a:hover{
 .userArticleC{
     height: 40px;
 }
+
+.nomeChamp{
+    width: fit-content;
+    border-bottom: 3px solid rgb(0, 94, 66);
+    margin-left: 8px;
+}
+
+.carousel{
+    width: 400px;
+}
