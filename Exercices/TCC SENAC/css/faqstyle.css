@@ -125,63 +125,6 @@ ul li a:hover{
     display: none;
 }
 
-.imagem_fundonoticia{
-    background-image: url(../lib/images/img_noticia1.png);
-    opacity: 0.6;
-    background-size: cover;
-    background-position: center center;
-    width: 95%;
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
+.row{
     color: white;
-}
-
-.noticiabg{
-    background-color: #002547;
-    color: white;
-}
-
-.noticiabg div{
-    height: fit-content;
-}
-
-.bgcorrecaobug{
-    background-color: rgba(0, 170, 119, 0.5);
-    width: 290px;
-    border-radius: 12px;
-}
-
-.userArticleC{
-    height: 40px;
-}
-
-.nomeChamp{
-    width: fit-content;
-    border-bottom: 3px solid rgb(0, 94, 66);
-    margin-left: 8px;
-}
-
-.nomeAtt{
-    width: 90px;
-    border-bottom: 3px solid rgb(0, 170, 119);
-    height: fit-content;
-}
-
-.carousel{
-    width: 600px;
-}
-
-.bi-check-all::before{
-    height: 30px;
-    font-size: 22px;
-}
-
-footer{
-    padding: 20px;
-    background-color: #011c2c;
-    text-align: center;
-    color: white;
-    margin: 0;
 }

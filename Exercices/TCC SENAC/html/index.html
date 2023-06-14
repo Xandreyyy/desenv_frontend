@@ -1,3 +1,6 @@
+<!-- send to: jtsilva@senacrs.com.br
+assunto: avaliação final
+msg: github link & vercel -->
 <!DOCTYPE html>
 <html lang="pt-BR">
     <head>
@@ -29,14 +32,14 @@
                                     <li class="dropdown-item">atualizações</li>
                                 </ul>
                             </div>
-                            <li class="navitem"><a href="#cosmeticos">cosméticos</a></li>
+                            <li class="navitem"><a href="#cosmeticos" class="nav-item">cosméticos</a></li>
                             <li class="navitem"><a href="#">comprar cash</a></li>
                             <div class="dropdown">
                                 <li class="dropdown-toggle navitem" data-bs-toggle="dropdown">suporte</li>
                                 <ul class="dropdown-menu bg-info-subtle">
                                     <li class="dropdown-item">enviar ticket</li>
                                     <li class="dropdown-item">contate-nos</li>
-                                    <li class="dropdown-item">FAQ</li>
+                                    <li class="dropdown-item"><a href="./faq.html" class="nav-link">FAQ</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -323,7 +326,7 @@
                                 </div>
                             </div>
                             <div class="card-footer">
-                                <button class="btn btn-success" data-bs-toggle="modal" data-bs-target=".rlzCompra" value="Passe de batalha">ADQUIRIR</button>
+                                <button class="btn btn-success" data-bs-toggle="modal" data-bs-target=".compraCash" value="Passe de batalha">ADQUIRIR</button>
                             </div>
                         </div>
                     </div>
@@ -360,8 +363,29 @@
                                 <button data-bs-dismiss="modal" class="btn-close btn-close-white"></button>
                             </div>
                             <div class="modal-body">
-                                <h6>realizando compra como <span id="usuarioCompra">(usuário)</span></h6>
-                                <h6>itens <span id="qtdCompra">((qtd. itens))</span>: <span id="itemCompra">(cosmético)</span></h6>
+                                <h6>realizando compra como <span class="verde" id="usuarioCompra">user</span></h6>
+                                <h5>Tem certeza que você deseja comprar:</h5>
+                                <h6><span id="itemCompra" class="verde">button.value</span> (<span id="qtdCompra" class="verde">qtd</span>) por <span id="itemPrice" class="verde">000</span> cash?</h6>
+                            </div>
+                            <div class="modal-footer justify-content-start">
+                                <button class="btn btn-success" data-bs-dismiss="modal">confirmar</button>
+                                <button class="btn btn-danger" data-bs-dismiss="modal">cancelar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- building... -->
+                <div class="modal compraCash" data-bs-backdrop="static">
+                    <div class="modal-dialog">
+                        <div class="modal-content bg-dark">
+                            <div class="modal-header">
+                                <h5 class="modal-title">REALIZAR COMPRA</h5>
+                                <button data-bs-dismiss="modal" class="btn-close btn-close-white"></button>
+                            </div>
+                            <div class="modal-body">
+                                <h6>realizando compra como <span class="verde" id="usuarioCompra">user</span></h6>
+                                <h5>Você está prestes a comprar <span id="itemCompra" class="verde">cash</span> por R$<span id="itemCompra" class="verde">00.00</span>:</h5>
                                 <label class="form-label">CPF:</label>
                                 <input class="form-control" type="text"/>
                                 <label class="form-label">forma de pagamento:</label>
@@ -379,9 +403,6 @@
                                 <button class="btn btn-danger" data-bs-dismiss="modal">cancelar</button>
                             </div>
                         </div>
-                    </div>
-                    <div id="esconderNovidades">
-                        <p>mostrar menos<span class="span_setaNoticia">△</p></span>
                     </div>
                 </div>
             </div>
