@@ -125,7 +125,16 @@ ul li a:hover{
     display: none;
 }
 
-.row{
+.bgcfundo{
+    background-color: #002547;
     color: white;
+    border-radius: 6px;
 }
 
+.eErro{
+    padding: 6px 6px 6px 4px;
+    background: rgb(201, 0, 0);
+    border-radius: 6px;
+    margin-top: 3px;
+    display: none;
+}
