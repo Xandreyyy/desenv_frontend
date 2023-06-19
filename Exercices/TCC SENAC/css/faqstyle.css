@@ -8,10 +8,14 @@ body{
     background-color: #022C44;
 }
 
-.container, footer{
+.container{
     max-width: 1360px;
     width: 100%;
     margin: 0 auto;
+}
+
+nav li{
+    display: inline;
 }
 
 header{
@@ -23,22 +27,37 @@ header{
     border-radius: 6px;
 }
 
-#logo_header{
+/*?????
+#imgSparta{
+    display: flex;
+    pesquisar o que faz esse item align-self: baseline;
+    align-self: baseline;
     width: 90px;
+    margin-right: 100px;
     position: sticky;
     cursor: pointer;
-    transition: 0.6s;
+    transition: 0.5s;
+}*/
+
+#logo_header{
+    display: flex;
+    width: 90px;
+    margin-right: 100px;
+    position: sticky;
+    cursor: pointer;
+    transition: 0.5s;
+    width: 90px;
+    /* position: static; */
+    position: sticky;
+    cursor: pointer;
+    transition: 0.5s;
 }
 
 #logo_header:hover{
-    width: 100px;
+    transform: scale(1.10);
 }
 
-.dropdown{
-    color: white;
-}
-
-#navLista1 li, .dropdown-toggle{
+#navLista1 li{
     margin-right: 20px;
 }
 
@@ -48,64 +67,60 @@ header{
     justify-content: space-between;
 }
 
-nav li{
-    display: inline;
-}
+/* nav ul{
+    solução de alinhamento vertical chatGPT
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+} */
 
 nav > .container{
     display: flex;
     align-items: flex-end;
+    /* height: 90px; */
     justify-content: space-between;
 }
 
-.mHamburguer{
-    width: 32px;
-    cursor: pointer;
-}
-
-.mHamburguer span{
-    width: 100%;
-    height: 2px;
-    background-color: white;
-    display: block;
-    margin-bottom: 6px;
-}
-
+/*?????
 #imgSparta{
     display: flex;
+    pesquisar o que faz esse item align-self: baseline;
     align-self: baseline;
     margin-right: 100px;
-}
-
-.container_flex{
-    display: flex;
-}
+}*/
 
 .navitem, .navitem a{
     color: white;
-    text-decoration: none;
     font-family: 'Indie Flower', cursive;
     font-weight: bold;
     cursor: pointer;
     transition: 0.5s;
 }
 
-.dropdown-item{
-    cursor: pointer;
+.dropdown-toggle:hover{
+    color: rgb(211, 210, 210);
 }
 
-nav li a{
-    text-decoration: none;
-}
+/*.dropdown{
+    color: white;
+    /* por que ao usar width: 100% o "comprar cash fica em um bloco?" */
+    /* width: 100%;
+}*/
 
 #navLista2{
     padding-right: 32px;
+}
+
+#navLista1 li a:hover{
+    color: rgb(211, 210, 210);
 }
 
 #navLista2 li a{
     color: rgb(1, 206, 1);
     transition: 0.5s;
     font-size: 19px;
+    margin-left: 30px;
     text-decoration: none;
 }
 
@@ -113,15 +128,7 @@ nav li a{
     color: rgb(0, 167, 0);
 }
 
-ul li a:hover{
-    color: rgb(211, 210, 210);
-}
-
-#navLista2 li{
-    margin-left: 30px;
-}
-
-.dropdown-toggle::after{
+.dropdown-toggle::after {
     display: none;
 }
 
