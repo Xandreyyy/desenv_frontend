@@ -14,10 +14,6 @@ body{
     margin: 0 auto;
 }
 
-nav li{
-    display: inline;
-}
-
 header{
     position: sticky;
     top: 0;
@@ -27,37 +23,19 @@ header{
     border-radius: 6px;
 }
 
-/*?????
-#imgSparta{
-    display: flex;
-    pesquisar o que faz esse item align-self: baseline;
-    align-self: baseline;
-    width: 90px;
-    margin-right: 100px;
-    position: sticky;
-    cursor: pointer;
-    transition: 0.5s;
-}*/
-
 #logo_header{
-    display: flex;
-    width: 90px;
-    margin-right: 100px;
-    position: sticky;
-    cursor: pointer;
-    transition: 0.5s;
     width: 90px;
     /* position: static; */
     position: sticky;
     cursor: pointer;
-    transition: 0.5s;
+    transition: 0.6s;
 }
 
 #logo_header:hover{
-    transform: scale(1.10);
+    width: 100px;
 }
 
-#navLista1 li{
+#navLista1 li, .dropdown-toggle{
     margin-right: 20px;
 }
 
@@ -65,6 +43,10 @@ header{
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
+}
+
+nav li{
+    display: inline;
 }
 
 /* nav ul{
@@ -82,13 +64,17 @@ nav > .container{
     justify-content: space-between;
 }
 
-/*?????
+/*?????*/
 #imgSparta{
     display: flex;
-    pesquisar o que faz esse item align-self: baseline;
+    /*pesquisar o que faz esse item align-self: baseline;*/
     align-self: baseline;
     margin-right: 100px;
-}*/
+}
+
+.container_flex{
+    display: flex;
+}
 
 .navitem, .navitem a{
     color: white;
@@ -102,11 +88,11 @@ nav > .container{
     color: rgb(211, 210, 210);
 }
 
-/*.dropdown{
+.dropdown{
     color: white;
     /* por que ao usar width: 100% o "comprar cash fica em um bloco?" */
-    /* width: 100%;
-}*/
+    /* width: 100%; */
+}
 
 #navLista2{
     padding-right: 32px;
@@ -120,7 +106,6 @@ nav > .container{
     color: rgb(1, 206, 1);
     transition: 0.5s;
     font-size: 19px;
-    margin-left: 30px;
     text-decoration: none;
 }
 
@@ -128,12 +113,8 @@ nav > .container{
     color: rgb(0, 167, 0);
 }
 
-.dropdown-toggle::after {
-    display: none;
-}
-
-.container_flex{
-    display: flex;
+#navLista2 li{
+    margin-left: 30px;
 }
 
 .container_main{
@@ -307,7 +288,9 @@ main button:hover{
     border: 1px solid greenyellow;
 }
 
-
+.dropdown-toggle::after {
+    display: none;
+}
 
 #pesquisa_cosm{
     display: flex;
