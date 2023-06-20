@@ -23,20 +23,25 @@ header{
     border-radius: 6px;
 }
 
+nav li{
+    display: inline;
+}
+
+/*nav > .container{
+    display: flex;
+    align-items: flex-end;
+    height: 90px; 
+    justify-content: space-between;
+}*/
+
 #logo_header{
     width: 90px;
-    /* position: static; */
-    position: sticky;
     cursor: pointer;
-    transition: 0.6s;
+    transition: 0.4s;
 }
 
 #logo_header:hover{
-    width: 100px;
-}
-
-#navLista1 li, .dropdown-toggle{
-    margin-right: 20px;
+    transform: scale(1.06);
 }
 
 #navLista1{
@@ -45,11 +50,15 @@ header{
     justify-content: space-between;
 }
 
-nav li{
-    display: inline;
+#navLista1 li, .dropdown-toggle{
+    margin-right: 20px;
 }
 
-/* nav ul{
+#navLista1 li a:hover{
+    color: rgb(211, 210, 210);
+}
+
+/*nav ul{
     solução de alinhamento vertical chatGPT
     display: flex;
     justify-content: space-between;
@@ -57,26 +66,15 @@ nav li{
     width: 100%;
 } */
 
-nav > .container{
-    display: flex;
-    align-items: flex-end;
-    /* height: 90px; */
-    justify-content: space-between;
-}
-
-/*?????*/
+/*?????
 #imgSparta{
     display: flex;
-    /*pesquisar o que faz esse item align-self: baseline;*/
+    pesquisar o que faz esse item align-self: baseline;
     align-self: baseline;
     margin-right: 100px;
-}
+}*/
 
-.container_flex{
-    display: flex;
-}
-
-.navitem, .navitem a{
+.navitem{
     color: white;
     font-family: 'Indie Flower', cursive;
     font-weight: bold;
@@ -84,7 +82,7 @@ nav > .container{
     transition: 0.5s;
 }
 
-.dropdown-toggle:hover{
+.dropdown-toggle:hover, .navitem:hover{
     color: rgb(211, 210, 210);
 }
 
@@ -94,17 +92,20 @@ nav > .container{
     /* width: 100%; */
 }
 
-#navLista2{
-    padding-right: 32px;
+.dropdown-item:active{
+    color: black;
+    background-color: transparent;
 }
 
-#navLista1 li a:hover{
-    color: rgb(211, 210, 210);
+/*compensar padding padrão dos menus dropdowns*/
+#navLista2{
+    padding-right: 32px;
 }
 
 #navLista2 li a{
     color: rgb(1, 206, 1);
     transition: 0.5s;
+    margin-left: 30px;
     font-size: 19px;
     text-decoration: none;
 }
@@ -113,8 +114,12 @@ nav > .container{
     color: rgb(0, 167, 0);
 }
 
-#navLista2 li{
-    margin-left: 30px;
+.dropdown-toggle::after {
+    display: none;
+}
+
+.container_flex{
+    display: flex;
 }
 
 .container_main{
@@ -286,10 +291,6 @@ main button:hover{
 .cabecalho_cosmeticos input:focus{
     outline: none;
     border: 1px solid greenyellow;
-}
-
-.dropdown-toggle::after {
-    display: none;
 }
 
 #pesquisa_cosm{

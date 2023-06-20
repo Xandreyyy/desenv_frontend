@@ -15,7 +15,7 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-md">
-            <div class="container container_flex">
+            <div class="container">
                 <ul id="navLista1">
                     <button class="navbar-toggler navbar-dark" data-bs-toggle="collapse" data-bs-target="#navbarDD">
                         <span class="navbar-toggler-icon"></span>
@@ -24,35 +24,35 @@
                         <div class="dropdown">
                             <li class="dropdown-toggle navitem" data-bs-toggle="dropdown">comunidade</li>
                             <ul class="dropdown-menu bg-info-subtle">
-                                <li class="dropdown-item">fórum</li>
-                                <li class="dropdown-item">eventos</li>
-                                <li class="dropdown-item">atualizações</li>
+                                <a href="#" class="nav-link"><li class="dropdown-item">fórum</li></a>
+                                <a href="#" class="nav-link"><li class="dropdown-item">eventos</li></a>
+                                <a href="#" class="nav-link"><li class="dropdown-item">atualizações</li></a>
                             </ul>
                         </div>
-                        <li class="navitem"><a href="../index.html#cosmeticos">cosméticos</a></li>
-                        <li class="navitem"><a href="#">comprar cash</a></li>
+                        <a href="../index.html#cosmeticos" class="nav-link"><li class="navitem">cosméticos</li></a>
+                        <a href="#" class="nav-link"><li class="navitem">comprar cash</li></a>
                         <div class="dropdown">
-                            <li class="dropdown-toggle navitem" data-bs-toggle="dropdown">suporte</li>
+                            <li class="dropdown-toggle navitem nav-link" data-bs-toggle="dropdown">suporte</li>
                             <ul class="dropdown-menu bg-info-subtle">
-                                <li class="dropdown-item">enviar ticket</li>
-                                <li class="dropdown-item">contate-nos</li>
-                                <li class="dropdown-item"><a href="../html/faq.html">FAQ</a></li>
+                                <a href="#" class="nav-link"><li class="dropdown-item">enviar ticket</li></a>
+                                <a href="#" class="nav-link"><li class="dropdown-item">contate-nos</li></a>
+                                <a href="faq.html" class="nav-link"><li class="dropdown-item">FAQ</li></a>
                             </ul>
                         </div>
                     </div>
                 </ul>
-                <div id="imgSparta" class="navbar-brand">
+                <div class="navbar-brand">
                     <a href="../index.html"><img src="../lib/images/logo_sparta.png" id="logo_header" alt="Logo, Sparta"/></a>
                 </div>
                 <ul id="navLista2">
-                    <li class="navitem"><a href="#">criar</a></li>
+                    <li class="navitem"><a href="createacc.html">criar</a></li>
                     <li class="navitem"><a href="#">entrar</a></li>
                 </ul>
             </div>
         </nav>
     </header>
-    <div class="row mt-4">
-        <div class="col-sm-5 bgcfundo pt-3 pb-3 m-auto">
+    <div class="row mt-4 container">
+        <div class="col-sm-5 m-auto bgcfundo pt-3 pb-3">
             <div class="row">
                 <div class="col-sm-8 m-auto">
                     <h1>CRIAR CONTA:</h1>
@@ -77,9 +77,9 @@
         </div>
     </div>
     <div class="toast-container">
-        <div class="toast position-fixed bottom-0 end-0" id="msgCadastroSucess">
+        <div class="toast position-fixed end-0 bottom-0" id="msgCadastroSucess">
             <div class="toast-header text-bg-dark">
-                <h3 class="bg-success">SUCESSO!</h3>
+                <h3 class="bg-success rounded">SUCESSO!</h3>
             </div>
             <div class="toast-body text-bg-dark">
                 <p>Parabéns! Você concluiu seu cadastro! Clique <a href="../index.html">aqui</a> para voltar ao menu.</p>
