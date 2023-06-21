@@ -17,43 +17,46 @@ msg: github link & vercel -->
     </head>
     <body>
         <header>
-            <nav class="navbar navbar-expand-md">
-                <div class="container container_flex">
-                    <ul id="navLista1">
-                        <button class="navbar-toggler navbar-dark" data-bs-toggle="collapse" data-bs-target="#navbarDD">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="navbar-collapse collapse" id="navbarDD">
-                            <div class="dropdown">
-                                <li class="dropdown-toggle navitem" data-bs-toggle="dropdown">comunidade</li>
+            <nav class="navbar navbar-expand-sm">
+                <div class="container position-relative">
+                    <!-- PESQUISAR DIFERENÇA DE INLINE PARA DISPLAY FLEX -->
+                    <button class="navbar-toggler navbar-dark" data-bs-toggle="collapse" data-bs-target="#navDD">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="navbar-collapse collapse" id="navDD">
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                <p class="nav-item dropdown-toggle" data-bs-toggle="dropdown">comunidade</p>
                                 <ul class="dropdown-menu bg-info-subtle">
-                                    <a href="#" class="nav-link"><li class="dropdown-item">fórum</li></a>
-                                    <a href="#" class="nav-link"><li class="dropdown-item">eventos</li></a>
-                                    <a href="#" class="nav-link"><li class="dropdown-item">atualizações</li></a>
+                                    <li class="dropdown-item"><a href="#" class="nav-link">fórum</a></li>
+                                    <li class="dropdown-item"><a href="#" class="nav-link">eventos</a></li>
+                                    <li class="dropdown-item"><a href="#" class="nav-link">atualizações</a></li>
                                 </ul>
-                            </div>
-                            <a href="#cosmeticos" class="nav-link"><li class="navitem">cosméticos</li></a>
-                            <a href="#" class="nav-link"><li class="navitem">comprar cash</li></a>
-                            <div class="dropdown">
-                                <li class="dropdown-toggle navitem nav-link" data-bs-toggle="dropdown">suporte</li>
+                            </li>
+                            <li class="nav-item"><a href="#cosmeticos" class="nav-link">cosméticos</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link">comprar cash</a></li>
+                            <li class="nav-item dropdown">
+                                <p class="nav-item dropdown-toggle" data-bs-toggle="dropdown">suporte</p>
                                 <ul class="dropdown-menu bg-info-subtle">
-                                    <a href="#" class="nav-link"><li class="dropdown-item">enviar ticket</li></a>
-                                    <a href="#" class="nav-link"><li class="dropdown-item">contate-nos</li></a>
-                                    <a href="./html/faq.html" class="nav-link"><li class="dropdown-item">FAQ</li></a>
+                                    <li class="dropdown-item"><a href="#" class="nav-link">enviar ticket</a></li>
+                                    <li class="dropdown-item"><a href="#" class="nav-link">contate-nos</a></li>
+                                    <li class="dropdown-item"><a href="./html/faq.html" class="nav-link">FAQ</a></li>
                                 </ul>
-                            </div>
-                        </div>
-                    </ul>
+                            </li>
+                        </ul>
+                    </div>
                     <div class="navbar-brand">
                         <a href="./index.html"><img src="./lib/images/logo_sparta.png" id="logo_header" alt="Logo, Sparta"/></a>
                     </div>
                     <ul id="navLista2">
-                        <li class="navitem"><a href="./html/createacc.html">criar</a></li>
-                        <li class="navitem"><a href="#">entrar</a></li>
+                        <li><a href="./html/createacc.html">criar</a></li>
+                        <li><a href="#">entrar</a></li>
                     </ul>
                 </div>
             </nav>
         </header>
+        
+        
         <!-- main também tem um img (aplicado pelo css) -->
         <main class="container_main container_flex">
             <button type="button">BAIXAR</button>

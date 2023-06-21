@@ -11,6 +11,9 @@ $(document).ready(function(){
             btnNovidades.addClass("mostrarMenos")
             btnNovidades.html('<p>mostrar menos<span class="span_setaNoticia">△</p></span>')
         }else{
+            $("html").animate({
+                scrollTop: $("#novidadesPadrao").offset().top
+            }, 0)
             divNovidades.slideUp()
             btnNovidades.removeClass("mostrarMenos")
             btnNovidades.appendTo("#novidadesPadrao")
