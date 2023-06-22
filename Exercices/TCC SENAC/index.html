@@ -17,46 +17,43 @@ msg: github link & vercel -->
     </head>
     <body>
         <header>
-            <nav class="navbar navbar-expand-sm">
-                <div class="container position-relative">
+            <nav class="navbar navbar-expand-md">
+                <div class="container">
+                    <!-- TEM QUE ANIMAR O HOVER DOS NAV-LINKS -->
                     <!-- PESQUISAR DIFERENÇA DE INLINE PARA DISPLAY FLEX -->
-                    <button class="navbar-toggler navbar-dark" data-bs-toggle="collapse" data-bs-target="#navDD">
+                    <button class="navbar-toggler navbar-dark m-auto" data-bs-toggle="collapse" data-bs-target="#navDD">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="navbar-collapse collapse" id="navDD">
-                        <ul class="navbar-nav">
+                    <div class="navbar-collapse collapse justify-content-between align-items-baseline" id="navDD">
+                        <ul class="navbar-nav align-items-center">
                             <li class="nav-item dropdown">
-                                <p class="nav-item dropdown-toggle" data-bs-toggle="dropdown">comunidade</p>
-                                <ul class="dropdown-menu bg-info-subtle">
+                                <p class="nav-item dropdown-toggle fontStyle nav-link" data-bs-toggle="dropdown">comunidade</p>
+                                <ul class="dropdown-menu bg-info-subtle position-absolute">
                                     <li class="dropdown-item"><a href="#" class="nav-link">fórum</a></li>
                                     <li class="dropdown-item"><a href="#" class="nav-link">eventos</a></li>
                                     <li class="dropdown-item"><a href="#" class="nav-link">atualizações</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item"><a href="#cosmeticos" class="nav-link">cosméticos</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link">comprar cash</a></li>
+                            <li class="nav-item fontStyle"><a href="#cosmeticos" class="nav-link">cosméticos</a></li>
+                            <li class="nav-item fontStyle"><a href="#" class="nav-link">comprar cash</a></li>
                             <li class="nav-item dropdown">
-                                <p class="nav-item dropdown-toggle" data-bs-toggle="dropdown">suporte</p>
-                                <ul class="dropdown-menu bg-info-subtle">
+                                <p class="nav-item dropdown-toggle fontStyle nav-link" data-bs-toggle="dropdown">suporte</p>
+                                <ul class="dropdown-menu bg-info-subtle position-absolute">
                                     <li class="dropdown-item"><a href="#" class="nav-link">enviar ticket</a></li>
                                     <li class="dropdown-item"><a href="#" class="nav-link">contate-nos</a></li>
                                     <li class="dropdown-item"><a href="./html/faq.html" class="nav-link">FAQ</a></li>
                                 </ul>
                             </li>
                         </ul>
+                        <a class="navbar-brand" href="./index.html"><img src="./lib/images/logo_sparta.png" id="logo_header" alt="Logo, Sparta"/></a>
+                        <ul class="navbar-nav align-items-center" id="navListaConta">
+                            <li class="nav-item fontStyle"><a class="nav-link" href="#">entrar</a></li>
+                            <li class="nav-item fontStyle"><a class="nav-link" href="./html/createacc.html">criar</a></li>
+                        </ul>
                     </div>
-                    <div class="navbar-brand">
-                        <a href="./index.html"><img src="./lib/images/logo_sparta.png" id="logo_header" alt="Logo, Sparta"/></a>
-                    </div>
-                    <ul id="navLista2">
-                        <li><a href="./html/createacc.html">criar</a></li>
-                        <li><a href="#">entrar</a></li>
-                    </ul>
                 </div>
             </nav>
         </header>
-        
-        
         <!-- main também tem um img (aplicado pelo css) -->
         <main class="container_main container_flex">
             <button type="button">BAIXAR</button>

@@ -11,26 +11,46 @@ body{
 .container{
     max-width: 1360px;
     width: 100%;
-    margin: 0 auto;
 }
 
 header{
     position: sticky;
     top: 0;
     z-index: 1;
+    height: 100px;
     background-color: rgba(1, 41, 65, 0.95);
 }
 
-nav li{
-    display: inline;
+.fontStyle{
+    font-family: 'Indie Flower', cursive;
+    font-weight: bold;
 }
 
-/*nav > .container{
-    display: flex;
-    align-items: flex-end;
-    height: 90px; 
-    justify-content: space-between;
-}*/
+/*remove o margin default dos elementos*/
+.dropdown, header p{
+    margin: 0px;
+}
+
+/*comunidade & suporte, cosméticos & comprar cash*/
+.navbar-collapse p, .navbar-collapse .fontStyle a.nav-link{
+    color: white;
+    cursor: pointer;
+}
+
+.navbar-collapse p:hover, .navbar-collapse .nav-link.show{
+    color: white;
+}
+
+#navListaConta li a{
+    color: rgb(1, 206, 1);
+    text-decoration: none;
+    font-size: 17px;
+    transition: 0.5s;
+}
+
+#navListaConta li a:hover{
+    color: rgb(0, 167, 0);
+}
 
 #logo_header{
     width: 90px;
@@ -42,21 +62,12 @@ nav li{
     transform: scale(1.06);
 }
 
-#navLista1{
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-}
+/* .dropdown-menu{
+    width: 25%;
+    position: absolute;
+} */
 
-#navLista1 li, .dropdown-toggle{
-    margin-right: 20px;
-}
-
-#navLista1 li a:hover{
-    color: rgb(211, 210, 210);
-}
-
-/*nav ul{
+/* pint000 nav ul{
     solução de alinhamento vertical chatGPT
     display: flex;
     justify-content: space-between;
@@ -72,52 +83,14 @@ nav li{
     margin-right: 100px;
 }*/
 
-.navitem{
+/* .dropdown{
     color: white;
-    font-family: 'Indie Flower', cursive;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.5s;
-}
-
-.dropdown-toggle:hover, .navitem:hover{
-    color: rgb(211, 210, 210);
-}
-
-.dropdown{
-    color: white;
-    /* por que ao usar width: 100% o "comprar cash fica em um bloco?" */
-    /* width: 100%; */
-}
-
-.dropdown-item:active{
-    color: black;
-    background-color: transparent;
-}
-
-/*compensar padding padrão dos menus dropdowns*/
-#navLista2{
-    padding-right: 32px;
-}
-
-#navLista2 li a{
-    color: rgb(1, 206, 1);
-    transition: 0.5s;
-    margin-left: 30px;
-    font-size: 19px;
-    text-decoration: none;
-}
-
-#navLista2 li a:hover{
-    color: rgb(0, 167, 0);
-}
+    pint000 por que ao usar width: 100% o "comprar cash fica em um bloco?"
+    width: 100%;
+} */
 
 .dropdown-toggle::after {
     display: none;
-}
-
-.container_flex{
-    display: flex;
 }
 
 .container_main{
@@ -145,7 +118,7 @@ main button:hover{
     color: rgb(214, 214, 214);
 }
 
-/*https://prnt.sc/UbsUVrGtDPDR - estilização interessante*/
+/*pint000 https://prnt.sc/UbsUVrGtDPDR - estilização interessante*/
 
 .container_main{
     background-image: url(../lib/images/background_body.png);
@@ -332,27 +305,14 @@ footer{
     .navbar-brand{
         display: none;
     }
-    /*"criar" e "entrar" perdem a formatação*/
-    #navLista1, #navLista2, #navLista2 li a{
-        margin: 0;
-        padding: 0;
-        font-size: 16px;
+    header{
+        max-height: 299px;
+        height: 100%;
     }
-    /*"criar" recebe margin-right para não ficar colado com o "entrar"*/
-    #navLista2 li a[href="./html/createacc.html"]{
-        margin-right: 5px;
+    .nav-item, .nav-link{
+        max-width: 91px;
+        width: 100%;
     }
-    #navLista1{
-        margin: 0;
-        display: flex;
-        align-items: center;
-    }
-    /*estilização dos itens do menu-hamburguer
-    .navbar-collapse{
-        display: block;
-        padding-left: 7px;
-        font-size: 14px;
-    }*/
     /*===== ↑ estlizações do header =====*/
     #novidades .novidade{
         width: 90%;

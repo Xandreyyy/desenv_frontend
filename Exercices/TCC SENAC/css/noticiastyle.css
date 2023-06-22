@@ -11,20 +11,45 @@ body{
 .container{
     max-width: 1360px;
     width: 100%;
-    margin: 0 auto;
 }
 
 header{
     position: sticky;
     top: 0;
-    left: 0;
     z-index: 1;
+    height: 100px;
     background-color: rgba(1, 41, 65, 0.95);
-    border-radius: 6px;
 }
 
-nav li{
-    display: inline;
+.fontStyle{
+    font-family: 'Indie Flower', cursive;
+    font-weight: bold;
+}
+
+/*remove o margin default dos elementos*/
+.dropdown, header p{
+    margin: 0px;
+}
+
+/*comunidade & suporte, cosméticos & comprar cash*/
+.navbar-collapse p, .navbar-collapse .fontStyle a.nav-link{
+    color: white;
+    cursor: pointer;
+}
+
+.navbar-collapse p:hover, .navbar-collapse .nav-link.show{
+    color: white;
+}
+
+#navListaConta li a{
+    color: rgb(1, 206, 1);
+    text-decoration: none;
+    font-size: 17px;
+    transition: 0.5s;
+}
+
+#navListaConta li a:hover{
+    color: rgb(0, 167, 0);
 }
 
 #logo_header{
@@ -37,56 +62,22 @@ nav li{
     transform: scale(1.06);
 }
 
-#navLista1{
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-}
-
-#navLista1 li, .dropdown-toggle{
-    margin-right: 20px;
-}
-
-#navLista1 li a:hover{
-    color: rgb(211, 210, 210);
-}
-
-.navitem{
-    color: white;
-    font-family: 'Indie Flower', cursive;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.5s;
-}
-
-.dropdown-toggle:hover, .navitem:hover{
-    color: rgb(211, 210, 210);
-}
-
-.dropdown{
-    color: white;
-}
-
-.dropdown-item:active{
-    color: black;
-    background-color: transparent;
-}
-
-/*compensar padding padrão dos menus dropdowns*/
-#navLista2{
-    padding-right: 32px;
-}
-
-#navLista2 li a{
-    color: rgb(1, 206, 1);
-    transition: 0.5s;
-    margin-left: 30px;
-    font-size: 19px;
-    text-decoration: none;
-}
-
-#navLista2 li a:hover{
-    color: rgb(0, 167, 0);
+@media screen and (min-width: 360px) and (max-width: 767px){
+    .navbar-brand{
+        display: none;
+    }
+    header{
+        max-height: 299px;
+        height: 100%;
+    }
+    .nav-item, .nav-link{
+        max-width: 91px;
+        width: 100%;
+    }
+    /*===== ↑ estlizações do header =====*/
+    #novidades .novidade{
+        width: 90%;
+    }
 }
 
 .dropdown-toggle::after {
