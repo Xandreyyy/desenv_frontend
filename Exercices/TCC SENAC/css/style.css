@@ -10,6 +10,8 @@ body{
 
 .container{
     max-width: 1360px;
+    /* por que ao aplicar esse padding a página cria uma rolagem horizontal?
+    padding: 0;*/
     width: 100%;
 }
 
@@ -24,6 +26,7 @@ header{
 .fontStyle{
     font-family: 'Indie Flower', cursive;
     font-weight: bold;
+    font-size: 1.1em;
 }
 
 /*remove o margin default dos elementos*/
@@ -37,8 +40,8 @@ header{
     cursor: pointer;
 }
 
-.navbar-collapse p:hover, .navbar-collapse .nav-link.show{
-    color: white;
+.navbar-collapse p:hover, .navbar-collapse .nav-link.show, .navbar-collapse .fontStyle a.nav-link:hover{
+    color: rgb(221, 221, 221);
 }
 
 #navListaConta li a{
@@ -98,7 +101,7 @@ header{
 }
 
 main button{
-    padding: 19px 0;
+    padding: 8px 0;
     width: 240px;
     border-radius: 12px;
     border: none;
@@ -109,6 +112,7 @@ main button{
     cursor: pointer;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     margin-bottom: 40px;
 }
@@ -116,6 +120,13 @@ main button{
 main button:hover{
     background-color: #458802;
     color: rgb(214, 214, 214);
+}
+
+main button > small{
+    font-size: 14px;
+    margin: 0;
+    color: #ccc;
+    font-style: italic;
 }
 
 /*pint000 https://prnt.sc/UbsUVrGtDPDR - estilização interessante*/
@@ -134,28 +145,16 @@ main button:hover{
     margin-top: 30px;
 }
 
+#novidades{
+    padding: 20px;
+}
+
 #novidades a{
     text-decoration: none;
 }
 
-#novidades img{
-    height: 230px;
-    border-radius: 12px;
-    width: 100%;
-}
-
 #novidades h2{
     text-align: center;
-}
-
-.lermais{
-    font-weight: 600;
-    color: gold;
-    transition: 0.5s;
-}
-
-.lermais:hover{
-    color: rgb(185, 158, 3);
 }
 
 .container_novidade{
@@ -163,6 +162,8 @@ main button:hover{
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
+    /* espaçamento 20px row e 20px cloumn */
+    gap: 20px;
 }
 
 .container_novidade h2{
@@ -175,6 +176,17 @@ main button:hover{
 .novidade{
     background-color: rgba(128, 128, 128, 0.767);
     border-radius: 12px;
+    width: 45%;
+    padding: 20px;
+}
+
+.novidade img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* .novidade{   
+    border-radius: 12px;
     padding: 30px;
     display: flex;
     align-items: center;
@@ -182,28 +194,35 @@ main button:hover{
     flex-direction: column;
     width: 40%;
     text-align: justify;
+    word-break: break-all;
     font-size: 16px;
     margin: 0 5% 20px;
     transition: 0.5s;
+}
+
+.novidade img{
+    width: 100%;
+} */
+
+.novidade h3{
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 #novidadesplus{
     display: none;
 }
 
-.novidade h3{
-    color: white;
-    font-size: 25px;
-    margin-bottom: 10px;
+.botaomostrar{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
 }
 
-.novidade p{
-    font-size: 17px;
-    margin-bottom: 20px;
-}
-
-.imagem_novidade{
-    height: 100%;
+#divMostrarNov p{
+    margin: 0;
 }
 
 #divMostrarNov{
@@ -217,12 +236,7 @@ main button:hover{
 
 #divMostrarNov:hover{
     background-color: rgba(255, 255, 255, 0.336);
-    color: white;
     transition: 0.4s;
-}
-
-#divMostrarNov p{
-    margin: 0;
 }
 
 .span_setaNoticia{
@@ -231,7 +245,17 @@ main button:hover{
     padding: 5px 0 0 3px;
 }
 
-#carrosselCosmeticos{
+.lermais{
+    font-weight: 600;
+    color: gold;
+    transition: 0.5s;
+}
+
+.lermais:hover{
+    color: rgb(185, 158, 3);
+}
+
+.carousel-inner{
     max-width: 500px;
 }
 
@@ -247,16 +271,16 @@ main button:hover{
 }
 
 #cosmeticos h1{
+    margin-top: 100px;
     text-align: center;
 }
 
 .cabecalho_cosmeticos input{
     padding: 8px;
-    width: 250px;
+    width: 237px;
     height: 100%;
     border-radius: 12px;
     border: 1px solid transparent;
-    margin-top: 15px;
 }
 
 .cabecalho_cosmeticos input:focus{
@@ -265,17 +289,26 @@ main button:hover{
 }
 
 #pesquisa_cosm{
+    margin: 30px 0 50px;
     display: flex;
-    align-items: flex-end;
-    margin-bottom: 80px;
+    align-items: center;
+    justify-content: center;
 }
 
-.cabecalho_cosmeticos i{
-    background-color: black;
-    font-size: 1.8em;
-    border-radius: 44%;
-    margin-left: 6px;
+i.bi.bi-search{
+    margin-left: 5px;
+    font-size: 24px;
+    background-color: rgba(0, 34, 54, 0.95);
+    height: 35px;
+    width: 30px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
     cursor: pointer;
+}
+
+i.bi.bi-search::before{
+    margin-left: 3px;
 }
 
 footer{
@@ -306,7 +339,7 @@ footer{
         display: none;
     }
     header{
-        max-height: 299px;
+        max-height: 325px;
         height: 100%;
     }
     .nav-item, .nav-link{
@@ -314,11 +347,42 @@ footer{
         width: 100%;
     }
     /*===== ↑ estlizações do header =====*/
-    #novidades .novidade{
-        width: 90%;
+    #novidades{
+        padding: 0;
+    }
+    .novidade{
+        width: 80%;
+    }
+    .carousel-inner{
+        max-width: 335px;
+    }
+    #rowCosmeticos{
+        padding: 20px;
+        justify-content: center;
+    }
+    #rowCosmeticos .card-header{
+        text-align: center;
+    }
+    .col-md-3.pt-5{
+        width: 80%;
     }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-    
+    #novidades{
+        padding: 0;
+    }
+    .novidade{
+        width: 40%;
+    }
+    #rowCosmeticos{
+        padding: 20px;
+        justify-content: center;
+    }
+    #rowCosmeticos .card-header{
+        text-align: center;
+    }
+    .col-md-3.pt-5{
+        width: 45%;
+    }
 }

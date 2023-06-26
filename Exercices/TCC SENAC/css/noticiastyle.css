@@ -24,6 +24,7 @@ header{
 .fontStyle{
     font-family: 'Indie Flower', cursive;
     font-weight: bold;
+    font-size: 1.1em;
 }
 
 /*remove o margin default dos elementos*/
@@ -37,8 +38,8 @@ header{
     cursor: pointer;
 }
 
-.navbar-collapse p:hover, .navbar-collapse .nav-link.show{
-    color: white;
+.navbar-collapse p:hover, .navbar-collapse .nav-link.show, .navbar-collapse .fontStyle a.nav-link:hover{
+    color: rgb(221, 221, 221);
 }
 
 #navListaConta li a{
@@ -60,24 +61,6 @@ header{
 
 #logo_header:hover{
     transform: scale(1.06);
-}
-
-@media screen and (min-width: 360px) and (max-width: 767px){
-    .navbar-brand{
-        display: none;
-    }
-    header{
-        max-height: 299px;
-        height: 100%;
-    }
-    .nav-item, .nav-link{
-        max-width: 91px;
-        width: 100%;
-    }
-    /*===== ↑ estlizações do header =====*/
-    #novidades .novidade{
-        width: 90%;
-    }
 }
 
 .dropdown-toggle::after {
@@ -143,4 +126,19 @@ footer{
     text-align: center;
     color: white;
     margin: 0;
+}
+
+@media screen and (min-width: 360px) and (max-width: 767px){
+    .navbar-brand{
+        display: none;
+    }
+    header{
+        max-height: 325px;
+        height: 100%;
+    }
+    .nav-item, .nav-link{
+        max-width: 91px;
+        width: 100%;
+    }
+    /*===== ↑ estlizações do header =====*/
 }

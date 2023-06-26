@@ -41,7 +41,6 @@ $(document).ready(function(){
     }
 
     //validador de senhas não adicionei porque vou entregar o quanto antes, pretendo termianr este projeto.
-
     $("form").on("submit", function(e){
         e.preventDefault()
         if (validarEmail(iEmail.val()) && validarNickname(iNick.val())){

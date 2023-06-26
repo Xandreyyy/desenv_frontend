@@ -7,18 +7,23 @@ $(document).ready(function(){
             divNovidades.slideDown()
             divNovidades.css("display", "flex")
 
-            btnNovidades.appendTo(divNovidades).css("align-items", "flex-end")
-            btnNovidades.addClass("mostrarMenos")
+            btnNovidades.appendTo(divNovidades)
+            btnNovidades.toggleClass("mostrarMenos")
+            $("#divMostrarNov").attr("title", "clique para mostrar menos!")
             btnNovidades.html('<p>mostrar menos<span class="span_setaNoticia">△</p></span>')
         }else{
             $("html").animate({
                 scrollTop: $("#novidadesPadrao").offset().top
             }, 0)
             divNovidades.slideUp()
-            btnNovidades.removeClass("mostrarMenos")
+            btnNovidades.toggleClass("mostrarMenos")
             btnNovidades.appendTo("#novidadesPadrao")
+            $("#divMostrarNov").attr("title", "clique para mostrar menos!")
             btnNovidades.html('<p>mostrar mais<span class="span_setaNoticia">▽</p></span>')
         }
+    })
+    $(".bi-search").on("click", function(){
+        console.log($("#pesquisa_cosm input").val())
     })
 })
 
