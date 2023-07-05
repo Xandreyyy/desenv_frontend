@@ -49,33 +49,35 @@
             </div>
         </nav>
     </header>
-    <div class="row mt-4 container">
-        <div class="col-sm-5 m-auto bgcfundo pt-3 pb-3">
-            <div class="row">
-                <div class="col-sm-8 m-auto">
-                    <h1>CRIAR CONTA:</h1>
-                    <form class="needs-validation" novalidate autocomplete="off">
-                        <label class="form-label mt-2" for="nickname">Nickname:</label>
-                        <input class="form-control" type="text" id="nickname"/>
-                        <p class="eErro eNickname"></p>
+    <div class="container">
+        <div class="row mt-4 justify-content-center align-items-md-center">
+            <div class="col-sm-12 col-md-6 pt-3 pb-3 bgcfundo">
+                <h1 class="text-center">CRIAR CONTA:</h1>
+                <form class="needs-validation" novalidate autocomplete="off">
+                    <div class="row justify-content-center">
+                        <div class="col-sm-12 col-md-6">
+                            <label class="form-label mt-2" for="nickname">Nickname:</label>
+                            <input class="form-control" type="text" id="nickname"/>
+                            <p class="eErro eNickname"></p>
 
-                        <label class="form-label mt-2" for="e-mail">E-mail:</label>
-                        <input class="form-control" type="text" id="e-mail"/>
-                        <p class="eErro eEmail"></p>
+                            <label class="form-label mt-2" for="e-mail">E-mail:</label>
+                            <input class="form-control" type="text" id="e-mail"/>
+                            <p class="eErro eEmail"></p>
 
-                        <label class="form-label mt-2" for="senha">Senha:</label>
-                        <input class="form-control" type="password" id="senha"/>
-                        <p class="eErro eSenha"></p>
+                            <label class="form-label mt-2" for="senha">Senha:</label>
+                            <input class="form-control" type="password" id="senha"/>
+                            <p class="eErro eSenha"></p>
 
-                        <button class="btn btn-outline-success mt-4" id="btnCreate" type="submit">criar</button>
-                        <button class="btn btn-outline-danger mt-4" id="btnCancel" type="reset">cancelar</button>
-                    </form>
-                </div>
+                            <button class="btn btn-outline-success mt-4" id="btnCreate" type="submit">criar</button>
+                            <button class="btn btn-outline-danger mt-4" id="btnCancel" type="reset">cancelar</button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
     <div class="toast-container">
-        <div class="toast position-fixed end-0 bottom-0" id="msgCadastroSucess">
+        <div class="toast" id="msgCadastroSucess">
             <div class="toast-header text-bg-dark">
                 <h3 class="bg-success rounded">SUCESSO!</h3>
             </div>

@@ -80,6 +80,10 @@ header{
     color: white;
 }
 
+.row{
+    font-size: 1em;
+}
+
 .noticiabg{
     background-color: #002547;
     color: white;
@@ -111,10 +115,6 @@ header{
     height: fit-content;
 }
 
-.carousel{
-    width: 600px;
-}
-
 .bi-check-all::before{
     height: 30px;
     font-size: 22px;
@@ -141,4 +141,7 @@ footer{
         width: 100%;
     }
     /*===== ↑ estlizações do header =====*/
+    .carousel-inner{
+        max-width: 335px;
+    }
 }

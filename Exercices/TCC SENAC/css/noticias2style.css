@@ -16,6 +16,7 @@ body{
 header{
     position: sticky;
     top: 0;
+    right: 0;
     z-index: 1;
     height: 100px;
     background-color: rgba(1, 41, 65, 0.95);
@@ -67,26 +68,6 @@ header{
     display: none;
 }
 
-.bgcfundo{
-    background-color: #002547;
-    color: white;
-    border-radius: 6px;
-}
-
-.eErro{
-    padding: 6px 6px 6px 4px;
-    background: rgb(201, 0, 0);
-    border-radius: 6px;
-    margin-top: 3px;
-    display: none;
-}
-
-.toast-container{
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-}
-
 @media screen and (min-width: 360px) and (max-width: 767px){
     .navbar-brand{
         display: none;
@@ -100,4 +81,59 @@ header{
         width: 100%;
     }
     /*===== ↑ estlizações do header =====*/
+    .bgNoticia h1:nth-child(1){
+        text-align: center;
+        width: 100%;
+    }
+    .colheader h1{
+        width: 100%;
+    }
+    .navLateral{
+        display: none;
+    }
+}
+
+.colheader{
+    height: 350px;
+    position: relative;
+}
+
+.colheader h1{
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+}
+
+.imgbg{
+    background-image: url(../lib/images/img_noticia1.png);
+    background-position: center center;
+    background-size: cover;
+    height: 100%;
+    opacity: 60%;
+}
+
+.articlebg{
+    background-color: #063753;
+    border-radius: 5px;
+    color: white;
+    height: fit-content;
+}
+
+.navLateral{
+    background-color: #063753;
+    border-radius: 5px;
+    color: white;
+    height: fit-content;
+    padding: 12px;
+    position: sticky;
+    top: 110px;
+    width: 250px;
+    z-index: 2;
+}
+
+ol li{
+    padding-bottom: 8px;
 }

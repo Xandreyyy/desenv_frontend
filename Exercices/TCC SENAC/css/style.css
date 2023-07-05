@@ -222,6 +222,7 @@ main button > small{
 }
 
 #divMostrarNov p{
+    font-size: 1.2em;
     margin: 0;
 }
 
@@ -230,7 +231,7 @@ main button > small{
     color: white;
     border-radius: 12px;
     cursor: pointer;
-    padding: 7px;
+    padding: 0.8em;
     transition: 0.4s;
 }
 
