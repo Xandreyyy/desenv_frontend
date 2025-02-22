@@ -1,22 +1,21 @@
 $(document).ready(function(){
-    let iconeErrado = ''
-    let IDelementos = [], iconesNC = []
 
-    let contador = 1
+    let contador = 0
     $("#btn_OK").click(function(){
         return contador++
     })
     const iconeFeito = $("#concluido")
 
     function criarLinhas() {
-        const iconeErrado = `<img src="./midia/wrongemoji.png" id="tarefa${contador-1}" alt="Emoji indicando erro" title="Tarefa ainda não realizada."/>`
+        const iconeErrado = `<img src="./midia/wrongemoji.png" id="tarefa${contador}" alt="Emoji indicando erro" title="Tarefa ainda não realizada."/>`
+        console.log(contador)
         if ($("#entrada_tarefa").val() != ""){
             const nomeTarefa = $("#entrada_tarefa").val()
             // tarefasNao.push(nomeTarefa)
             // console.log(tarefasNao)
             const linha = $(`<tr style = "display: none">`)
             $(`<td class="iconeTarefa">${iconeErrado}</td>`).appendTo(linha)
-            $(`<td class="nomeTarefa" id="tarefa${contador-1}">${nomeTarefa}</td>`).appendTo(linha)
+            $(`<td class="nomeTarefa" id="tarefa${contador}">${nomeTarefa}</td>`).appendTo(linha)
             $(`</tr>`).appendTo(linha)
             $(linha).appendTo("#tBody")
             $("input").val("")
@@ -50,28 +49,14 @@ $(document).ready(function(){
     $("table").on("click", ".nomeTarefa", function (){
         $(this).css("text-decoration", "line-through")
         let elementoID = this["id"]
-        IDelementos.push(elementoID)
-    
-        let arrayIMG = $("tbody img").toArray()
-        arrayIMG.forEach(function(img) {
-            iconesNC.push($(img).attr('id'))
-        })
-        for (let i = 0; i < iconesNC.length; i++) {
-            if (IDelementos.includes(iconesNC[i])) {
-              $(`tbody img[id="${elementoID}"]`).replaceWith(iconeFeito.clone().css("display", "block"))
-            }
-        }
+        $(`tbody img[id="${elementoID}"]`).replaceWith(iconeFeito.clone().css("display", "block"))
     })
 })
-
-//criar arrays e com esses arrays usar o push e de acordo caso o item for puxado ou não,
-//ou se ele estiver num array aplicar o efeito no item pushado
-
 
 //LambdaTest possibilita testar o software em todos os navegadores
 //$("elemento").append("elemento a ser add") - adiciona na última posição
 //$("elemento").prepend("elemento a ser add") - adiciona na primeira posição
-//$(".nomeDaClasse item").css("color", "red") - dentro do elemento com a classe "nomeDaClasse" todos os items especificados teram a propriedade aplicada
+//$(".nomeDaClasse item").css("color", "red") - dentro do elemento com a classe "nomeDaClasse" todos os items especificados terão a propriedade aplicada
 //$(".nomeDaClasse").find("a").css("color", "red") - dentro do elemento com a classe "nomeDaClasse" o find procurará pelo primeiro elemento "a" e aplicará a propriedade css
 //$(".nomeDaClasse > p").css("color", "red") - o elemento filho "p" de "nomeDaClasse" terá a propriedade css aplicada
 //$("#texto").text("Texto para teste") - o .text injeta um texto no elemento com o id "texto"

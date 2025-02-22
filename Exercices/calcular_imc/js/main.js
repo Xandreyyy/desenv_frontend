@@ -33,7 +33,6 @@ peso.addEventListener("keyup", function(){
     //verifica se o valor que acabou de ser digitado é != "", então aplica um splice na posição 0, 1 elemento para modificar e passo o elemento que vai modificar o array
     if (i.value != ""){
         arrayPeso.splice(0, 1, i.value)
-        console.log(`Valor peso sendo pushado: ${i.value}`)
     }
     inputsResets()
 })
@@ -54,7 +53,6 @@ altura.addEventListener("keyup", function(){
 
     if (i.value != ""){
         arrayAltura.splice(0, 1, i.value)
-        console.log(`Valor altura sendo pushado: ${i.value}`)
     }
     inputsResets()
 })
@@ -277,6 +275,5 @@ form.addEventListener("submit", function (e) {
         altura.value = ""
         arrayAltura = [null]
         arrayPeso = [null]
-        console.log(`Peso: ${arrayPeso}\nAltura: ${arrayAltura}`)
     }
 })

@@ -1,21 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-header, #footer{
-    padding: 16px 0;
-    background-color: #182C61;
-    color: #ffff;
-}
-
 body{
     font-family: 'Roboto', sans-serif;
 }
 
-header h1,
-section h2{
+header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header{
+    padding: 16px 0;
+    background-color: #182C61;
+    color: #ffff;
+    font-family: 'Bungee', cursive;
+}
+
+.container{
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+section h2, footer h2, footer h4{
+    color: #182C61;
     font-family: 'Bungee', cursive;
 }
 
@@ -30,63 +46,42 @@ section h2{
     color: #ffff;
 }
 
-.container{
-    max-width: 1280px;
-    width: 100%;
-    margin: 0 auto;
-    align-items: center;
+#about{
+    display: flex;
+    list-style: none;
 }
 
-header .container{
+.listaicones{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    margin-top: 10px;
+    list-style: none;
+    column-gap: 5px;
 }
 
-header .container,
-section .container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.listaicones img{
+    height: 20px;
 }
 
-.Lplataformas img{
-    height: 24px;
-}
-
-.Lplataformas li{
-    display: inline;
-    margin-right: 8px;
-}
-
-section .container{
-    align-items: flex-start;
+#fachada{
+    margin-right: 25px;
 }
 
 section{
     padding: 24px 0;
-    color: #182C61;
 }
 
-section p{
-    color: black;
+main section div > p{
+    margin-bottom: 5px;
 }
 
-section h2{
-    margin-bottom: 16px;
-}
-
-.fachadaloja{
-    margin-right: 32px;
-}
-
-#contatos .container{
-    display: block;
-}
-
-.contatct-methods{
+#contato > div{
     display: flex;
     justify-content: space-between;
+}
+
+footer h2{
+    height: fit-content;
 }
 
 form input,
@@ -98,7 +93,7 @@ form button{
     padding: 8px;
 }
 
-form textarea {
+form textarea{
     resize: none;
     height: 180px;
 }
@@ -118,15 +113,14 @@ input:focus, textarea:focus {
     outline-color: #182C61;
 }
 
-.RedesSociais img{
+.socialmidia{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    margin-top: 5px;
+}
+
+.socialmidia img{
     height: 24px;
-}
-
-.RedesSociais li{
-    display: inline;
-    margin-right: 8px;
-}
-
-.RedesSociais li a{
-    text-decoration: none;
 }
